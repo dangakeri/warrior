@@ -9,13 +9,14 @@ class FocusContainerWidget extends StatefulWidget {
   final String text;
   final SvgPicture image;
   final String focusMusic;
-  // final VoidCallback callback;
+  final VoidCallback callback;
   const FocusContainerWidget({
     Key? key,
     required this.color,
     required this.image,
     required this.text,
     required this.focusMusic,
+    required this.callback,
 
     // required this.callback,
   }) : super(key: key);
@@ -74,46 +75,22 @@ class _FocusContainerWidgetState extends State<FocusContainerWidget> {
                 const SizedBox(height: 10),
                 Row(
                   children: [
-                    StreamBuilder(
-                        stream: assetsAudioPlayer.isPlaying,
-                        builder: (context, snapshot) {
-                          final bool isPlayingMusic = snapshot.data!;
-                          return GestureDetector(
-                            onTap: () {
-                              if (isPlayingMusic) {
-                                setState(() {
-                                  isPlaying = true;
-                                });
-                                assetsAudioPlayer.pause();
-                              } else {
-                                if (isPlaying == 'true') {
-                                  assetsAudioPlayer.play();
-                                } else {
-                                  assetsAudioPlayer.open(
-                                    Audio("assets/${widget.focusMusic}.mp3"),
-                                    showNotification: true,
-                                    loopMode: LoopMode.single,
-                                  );
-                                }
-                              }
-                            },
-                            child: CircleAvatar(
-                              radius: 20,
-                              backgroundColor: Colors.orange,
-                              child: isPlayingMusic
-                                  ? const Icon(
-                                      Icons.pause,
-                                      color: Colors.white,
-                                      size: 32,
-                                    )
-                                  : const Icon(
-                                      Icons.play_arrow,
-                                      color: Colors.white,
-                                      size: 32,
-                                    ),
-                            ),
-                          );
-                        }),
+                    GestureDetector(
+                      onTap: widget.callback,
+                      child: Container(
+                        height: 40,
+                        width: 60,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(10),
+                            color: Colors.orange),
+                        child: const Center(
+                            child: Text('Start',
+                                style: TextStyle(color: Colors.white))),
+                      ),
+                    ),
+                    // IconButton(
+                    //     onPressed: widget.callback,
+                    //     icon: const Icon(Icons.play_arrow)),
                     const SizedBox(width: 35),
                     const Text(
                       '',

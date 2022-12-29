@@ -4,6 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../widgets/focusContainerWidget.dart';
+import 'play.dart';
 
 class FocusPage extends StatefulWidget {
   const FocusPage({
@@ -82,6 +83,12 @@ class _FocusPageState extends State<FocusPage> {
                 height: 150,
               ),
               focusMusic: 'rain',
+              callback: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const PlayPage(music: 'rain', chakra: 'Perfect Rain');
+                }));
+              },
             ),
             const SizedBox(height: 20),
             FocusContainerWidget(
@@ -92,6 +99,12 @@ class _FocusPageState extends State<FocusPage> {
                 height: 100,
               ),
               focusMusic: 'temple',
+              callback: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const PlayPage(music: 'temple', chakra: 'Temple');
+                }));
+              },
             ),
             const SizedBox(height: 20),
             FocusContainerWidget(
@@ -102,6 +115,12 @@ class _FocusPageState extends State<FocusPage> {
                 height: 150,
               ),
               focusMusic: 'cracking',
+              callback: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const PlayPage(music: 'cracking', chakra: 'Cracking');
+                }));
+              },
             ),
             const SizedBox(height: 20),
             FocusContainerWidget(
@@ -112,6 +131,12 @@ class _FocusPageState extends State<FocusPage> {
                 height: 150,
               ),
               focusMusic: 'chewing',
+              callback: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const PlayPage(music: 'chewing', chakra: 'Chewing');
+                }));
+              },
             ),
             const SizedBox(height: 20),
             FocusContainerWidget(
@@ -122,6 +147,12 @@ class _FocusPageState extends State<FocusPage> {
                 height: 50,
               ),
               focusMusic: 'purring',
+              callback: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const PlayPage(music: 'purring', chakra: 'Purring');
+                }));
+              },
             ),
             const SizedBox(height: 20),
             FocusContainerWidget(
@@ -132,6 +163,13 @@ class _FocusPageState extends State<FocusPage> {
                 height: 150,
               ),
               focusMusic: 'breathing',
+              callback: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const PlayPage(
+                      music: 'breathing', chakra: 'Breathing');
+                }));
+              },
             ),
             const SizedBox(height: 20),
             FocusContainerWidget(
@@ -142,6 +180,12 @@ class _FocusPageState extends State<FocusPage> {
                 height: 150,
               ),
               focusMusic: 'nature',
+              callback: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const PlayPage(music: 'nature', chakra: 'Nature');
+                }));
+              },
             ),
             const SizedBox(height: 20),
             FocusContainerWidget(
@@ -152,6 +196,13 @@ class _FocusPageState extends State<FocusPage> {
                 height: 100,
               ),
               focusMusic: 'music',
+              callback: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const PlayPage(
+                      music: 'music', chakra: 'Touching Music');
+                }));
+              },
             ),
             const SizedBox(height: 20),
             FocusContainerWidget(
@@ -162,6 +213,12 @@ class _FocusPageState extends State<FocusPage> {
                 height: 150,
               ),
               focusMusic: 'fire',
+              callback: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const PlayPage(music: 'fire', chakra: 'Fire');
+                }));
+              },
             ),
             const SizedBox(height: 20),
             FocusContainerWidget(
@@ -172,6 +229,12 @@ class _FocusPageState extends State<FocusPage> {
                 height: 100,
               ),
               focusMusic: 'storm',
+              callback: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (context) {
+                  return const PlayPage(music: 'storm', chakra: 'Storm');
+                }));
+              },
             ),
           ],
         ),

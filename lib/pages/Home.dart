@@ -18,8 +18,8 @@ class _HomeState extends State<Home> {
   int index = 0;
   List pages = [
     HomePage(),
-    QuotePage(),
-    IkigaiPage(),
+    // QuotePage(),
+    const IkigaiPage(),
     FocusPage(),
   ];
   @override
@@ -35,15 +35,15 @@ class _HomeState extends State<Home> {
           });
         },
         type: BottomNavigationBarType.fixed,
-        items: [
+        items: const [
           BottomNavigationBarItem(
             icon: Icon(Icons.flourescent),
             label: 'Meditate',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(BootstrapIcons.quote),
-            label: 'Quote',
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(BootstrapIcons.quote),
+          //   label: 'Quote',
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.all_inclusive),
             label: 'Ikigai',

@@ -1,0 +1,9 @@
+# Query: jdk
+# ContextLines: 1
+
+1 result - 1 file
+
+android/app/build.gradle:
+  72  dependencies {
+  73:     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$kotlin_version"
+  74  }
