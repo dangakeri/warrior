@@ -30,7 +30,7 @@ class OnBoardingPage extends StatelessWidget {
             height: 150,
           ),
           title: 'Longetivity',
-          body: 'Live a long a life and nhdfjh'),
+          body: 'Live a long and a healthy life'),
     ];
   }
 

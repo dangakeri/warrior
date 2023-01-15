@@ -37,7 +37,7 @@ class _CreateAccountState extends State<CreateAccount> {
               ],
             ),
             const Text(
-              'Lorem Ipsum è un testo segnaposto utilizzato nel settore della.',
+              'Help us with your name we help in meditating and have good mental growth',
               style: TextStyle(fontSize: 16, fontWeight: FontWeight.w100),
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.3),
