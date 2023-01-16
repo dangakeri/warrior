@@ -92,8 +92,8 @@ flutter:
     - family: Nunito
       fonts:
         # - asset: fonts/Nunito Bold.ttf
-        # - asset: fonts/Nunito Light.ttf
-        - asset: fonts/Nunito Regular.ttf
+        - asset: fonts/Nunito Light.ttf
+        # - asset: fonts/Nunito Regular.ttf
         # - asset: fonts/Nunito-SemiBold.ttf
           style: italic
   #   - family: Trajan Pro

@@ -127,7 +127,7 @@ class IkigaiPage extends StatelessWidget {
                                         'What is Sleep ?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -135,10 +135,10 @@ class IkigaiPage extends StatelessWidget {
                                       children: [
                                         ListTile(
                                           title: Text(
-                                            "What is sleep?\nYou may think nothing is happening when you sleep. But parts of your brain are quite active during sleep. And enough sleep (or lack of it) affects your physical and mental health. When you sleep, your body has a chance to rest and restore energy. A good night’s sleep can help you cope with stress, solve problems or recover from illness. Not getting enough sleep can lead to many health concerns, affecting how you think and feel.\nDuring the night, you cycle through two types of sleep: non-rapid eye movement (non-REM) sleep and rapid eye movement (REM) sleep. Your brain and body act differently during these different phases.",
+                                            "You may think nothing is happening when you sleep. But parts of your brain are quite active during sleep. And enough sleep (or lack of it) affects your physical and mental health. When you sleep, your body has a chance to rest and restore energy. A good night’s sleep can help you cope with stress, solve problems or recover from illness. Not getting enough sleep can lead to many health concerns, affecting how you think and feel.\nDuring the night, you cycle through two types of sleep: non-rapid eye movement (non-REM) sleep and rapid eye movement (REM) sleep. Your brain and body act differently during these different phases.",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
@@ -155,7 +155,7 @@ class IkigaiPage extends StatelessWidget {
                                         'What happens in the brain during sleep?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -166,7 +166,7 @@ class IkigaiPage extends StatelessWidget {
                                             "Researchers continue to study sleep and its effect on us. While we’ve learned a lot about sleep, there’s still much that’s unknown.\nWe know that brain chemicals are very involved in our sleep cycle. Neurotransmitters are chemicals that help the nerves communicate. They control whether we’re awake or asleep, depending on which neurons (nerve cells) they’re acting on:\n• Neurons in the brainstem (where the brain and spinal cord meet) produce neurotransmitters called serotonin and norepinephrine. These chemicals keep our brain active when we’re awake.\n• Neurons located at the base of the brain are responsible for us falling asleep. It seems these neurons turn off the signals that keep us awake.",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
@@ -183,7 +183,7 @@ class IkigaiPage extends StatelessWidget {
                                         'Why do we need sleep?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -194,7 +194,7 @@ class IkigaiPage extends StatelessWidget {
                                             "Sleep helps us in many ways. We need it for:\n• Growth: In children and young adults, deep sleep (sleep that’s harder to wake from) supports growth. The body releases growth hormone during this type of sleep. The body also increases production of proteins, which we need for cell growth and to repair damage.\n• Nervous system function: A lack of sleep affects our memory, performance and ability to think clearly. If a person is severely sleep deprived, they may even experience neurological problems such as mood swings and hallucinations. Sleep also helps our nerve cells. They can repair themselves, so they function at their best. And certain nerve connections get a chance to turn on, strengthening our brain and thinking ability.\n• Survival: Researchers don’t fully understand why sleep is so essential. But studies in animals have shown that getting deprived of REM sleep can shorten lifespans. Lack of sleep may harm the immune system, which protects us from infections.\n• Well-being: People who don’t get enough sleep are at higher risk for developing various health conditions including obesity, diabetes and heart problems",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
@@ -211,7 +211,7 @@ class IkigaiPage extends StatelessWidget {
                                         'What are the stages of sleep?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -222,7 +222,7 @@ class IkigaiPage extends StatelessWidget {
                                             "When you sleep, your brain goes through natural cycles of activity. There are four total stages of sleep, divided into two phases:\n• Non-REM sleep happens first and includes three stages. The last two stage of non-REM sleep is when you sleep deeply. It’s hard to wake up from this stage of sleep.\n• REM sleep happens about an hour to an hour and a half after falling asleep. REM sleep is when you tend to have vivid dreams.\nAs you sleep, your body cycles through non-REM and REM sleep. You usually start the sleep cycle with stage 1 of non-REM sleep. You pass through the other stages of non-REM sleep, followed by a short period of REM sleep. Then the cycle begins again at stage 1.\nA full sleep cycle takes about 90 to 110 minutes. Your first REM period is short. As the night goes on, you’ll have longer REM sleep and less deep sleep.\nWhat is non-REM sleep?\nThree stages make up non-REM sleep.\nStage 1:\nThis stage of light sleeping lasts for five to 10 minutes.\n• Everything starts to slow down, including your eye movement and muscle activity.\n• Your eyes stay closed. If you get woken from stage 1 sleep, you may feel as if you haven’t slept at all. You may remember pieces of images.\n• Sometimes, you may feel like you’re starting to fall and then experience a sudden muscle contraction. Healthcare providers call this motion hypnic myoclonic or hypnic jerk. Hypnic jerks are common and not anything to be concerned about as this occurrence is unlikely to cause any complications or side effects.\nStage 2:\n• This period of light sleep features periods of muscle tone (muscles partially contracting) mixed with periods of muscle relaxation.\n• Your eye movement stops, heart rate slows and body temperature decreases.\n• Brain waves become slower. Occasionally, you’ll have a burst of rapid waves called sleep spindles.\n• Your body prepares to enter deep sleep.\nStages 3\n• This stage is deep sleep.\n• During this stage, your brain produces delta waves, very slow brain waves.\n• It’s hard for someone to wake you up during this stage.\n• You have no eye movement or muscle activity.\n• If you’re woken up, you may feel groggy and disoriented for a few minutes.\nWhat happens during non-REM sleep?\nDuring non-REM stages, your body:\n• Builds bone and muscle.\n• Repairs and regenerates tissues.\n• Strengthens the immune system.\nAs you age, you get less non-REM sleep. Older adults get less deep sleep than younger people.",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
@@ -239,7 +239,7 @@ class IkigaiPage extends StatelessWidget {
                                         'What is REM sleep?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -250,7 +250,7 @@ class IkigaiPage extends StatelessWidget {
                                             "When you enter REM sleep, brain activity increases again, meaning sleep is not as deep. The activity levels are like when you’re awake. That’s why REM sleep is the stage where you’ll have intense dreams.\nAt the same time, major muscles that you normally control (such as arms and legs) can’t move. In effect, they become temporarily paralyzed.\nUsually, REM sleep arrives about an hour and a half after you go to sleep. The first REM period lasts about 10 minutes. Each REM stage that follows gets longer and longer.\nThe amount of REM sleep you experience changes as you age. The percentage of REM sleep:\n• Is highest during infancy and early childhood.\n• Declines during adolescence and young adulthood.\n• Declines even more as you get older.\nWhat else happens to the body in REM sleep?\nBesides increased brain activity and muscle relaxation, your body goes through a series of changes during REM sleep. These changes include:\n• Faster breathing.\n• Increased heart rate and blood pressure.\n• Penile erections.\n• Rapid eye movement",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
@@ -267,7 +267,7 @@ class IkigaiPage extends StatelessWidget {
                                         'What affects sleep quality?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -278,7 +278,7 @@ class IkigaiPage extends StatelessWidget {
                                             "Chemical signals in the brain influence our sleep and wake cycles. Anything that shifts the balance of these neurotransmitters can make us feel drowsier or more awake. For example:\n• Alcohol may help people fall into a light sleep. But it reduces the deeper stages of sleep and REM sleep and leads to more disrupted sleep.\n• Caffeine and pseudoephedrine (drug ingredient) can stimulate the brain. They may cause insomnia, an inability to sleep. Watch out for caffeinated drinks such as coffee and drugs such as diet pills and decongestants.\n• Medications such as antidepressants can cause less REM sleep.\n• People who smoke heavily often sleep lightly and have less REM sleep. They may wake up after a few hours because they experience nicotine withdrawal.\n• Very hot or cold temperatures can disrupt REM sleep. We’re less able to regulate body temperature during REM sleep",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
@@ -295,7 +295,7 @@ class IkigaiPage extends StatelessWidget {
                                         'How much sleep do I need?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -306,7 +306,7 @@ class IkigaiPage extends StatelessWidget {
                                             "Many factors affect how much sleep you need. Age is a big factor:\n• Infants need about 16 hours a day.\n• Toddlers and preschoolers need about 12 hours.\n• Teenagers need about nine hours.\n• Adults need seven to eight (though some are fine with five and others need closer to 10).\n• Pregnant people often need more sleep during the first trimester.",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
@@ -323,7 +323,7 @@ class IkigaiPage extends StatelessWidget {
                                         'What is a sleep debt?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -334,7 +334,7 @@ class IkigaiPage extends StatelessWidget {
                                             "nIf you haven’t slept well or long enough for a few days, you might create a sleep debt. Once your debt builds up, you may feel physically and mentally exhausted. Try to make sure you get enough sleep every night to avoid creating this debt. You can’t necessarily make up your debt by sleeping a lot on the weekends. It’s best to get enough sleep all week long.",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
@@ -351,7 +351,7 @@ class IkigaiPage extends StatelessWidget {
                                         'Can we adapt to needing less sleep?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -362,7 +362,7 @@ class IkigaiPage extends StatelessWidget {
                                             "Generally, people don’t adapt to getting less sleep than they need. You may feel like you’re used to reduced sleep, but it still affects your function. For example, it can harm your judgment and reaction time.",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
@@ -379,7 +379,7 @@ class IkigaiPage extends StatelessWidget {
                                         'What is sleep deprivation?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -390,7 +390,7 @@ class IkigaiPage extends StatelessWidget {
                                             "When you’re sleep deprived, you’re not getting the total amount of sleep you need. Signs of sleep deprivation include:\n• Falling asleep within a few minutes of lying down.\n• Feeling drowsy during the day.\n• Nodding off for microsleeps — short periods of sleep during the day when you’re otherwise awake.\n• Sleep deprivation can be dangerous. Driving while tired causes about 100,000 car accidents each year, according to the National Highway Traffic Safety Administration. It also causes 1,500 deaths. If you feel tired on the road, pull over. It’s not safe to drive if you’re drowsy.",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
@@ -407,7 +407,7 @@ class IkigaiPage extends StatelessWidget {
                                         'What are sleep disorders?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -418,7 +418,7 @@ class IkigaiPage extends StatelessWidget {
                                             "According to the American Sleep Association, at least 40 million Americans experience sleep disorders each year. Another 20 million have occasional sleep issues. These disorders cause sleep deprivation, leading to problems with work, school, driving and social activities.\nThere are more than 70 sleep disorders. A few, known as disruptive sleep disorders, lead to moving around or making sounds. Other sleep disorders involve food. And some sleep disorders overlap with psychiatric conditions. If you have problems with sleep or feel very tired, talk to your healthcare provider about a possible sleep disorder.\nSome of the most common sleep disorders include:\n• Insomnia disorder: Many people experience insomnia at some point in their lives, with trouble falling or staying asleep. Sleeping pills can help in the short-term but behavioral strategies to improve sleep including cognitive behavioral therapy for Insomnia (CBT-i) is a much better long term solution.\n• Narcolepsy: You may suddenly fall asleep during the day, even if you had a good sleep the night before. These “sleep attacks” can last a few seconds or up to 30 minutes. Talk to your provider about your symptoms and additional testing will need to be completed to diagnosis this sleep disorder.\n• Restless legs syndrome (RLS): You may feel unpleasant sensations in your legs (such as prickling or tingling). You may also have an urge to move your legs to get relief. If you have RLS, talk to your healthcare provider about medication to help improve symptoms.\napnea: You may experience periods of interrupted breathing while you sleep, a condition called sleep apnea. Often, getting polysomnography (sleep study) in a sleep center is the best way to get properly diagnosed and treated. Sometimes, weight loss or not sleeping on your back can help. But you may need a special device to help you breathe while you sleep.• Snoring: People who regularly snore can have disturbed sleep. They can also disturb the sleep of their bed partner. Snoring often leads to feeling tired during the day. Several treatment options are available for snoring.",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
@@ -435,7 +435,7 @@ class IkigaiPage extends StatelessWidget {
                                         'What are good sleep habits?',
                                         style: TextStyle(
                                           fontWeight: FontWeight.w500,
-                                          fontSize: 16,
+                                          fontSize: 18,
                                           fontFamily: 'Nunito',
                                           height: 1.5,
                                         ),
@@ -446,7 +446,7 @@ class IkigaiPage extends StatelessWidget {
                                             "Good sleep habits, also called good sleep hygiene, are practices to help you get enough quality sleep.\nDo:\n• Have a sleep schedule: Go to sleep and wake up around the same time every day, even on weekends and vacations.\n• Clear your mind before bed: Make a to-do list early in the evening, so you won’t stay awake in bed and worry about the next day.\n• Create a good sleep environment: Make sure your bed and pillows are comfortable. Turn down the lights and avoid loud sounds. Keep the room at a comfortable temperature.\n• Exercise every day: Stay active but try to avoid exercising during the few hours right before bed.\n• Relax: Before bed, take a warm bath, read or do another relaxing activity.\n• See your healthcare provider: If you’ve been having trouble sleeping or feel extra drowsy during the day, talk to your provider. There are many treatments available for sleep disorders.\nDon’t:\n    • Consume caffeine, nicotine and alcohol late in the day: These substances can interfere with your ability to fall and stay asleep.\n• Lie in bed awake: It’s better to do a soothing activity, like reading, until you feel tired.\n• Nap during the day: A short nap (less than 30 minutes) is OK if you’re very sleepy. But try to avoid naps after 3 p.m.\n• Think negative thoughts: Try to avoid a negative mindset when going to bed, such as, “If I don’t get enough sleep now, I won’t get through my day tomorrow!”\n• Use electronics right before bed: Electronics, such as your phone or tablet, can interfere with your body’s production of melatonin. This hormone gets released before bed to help you feel tired.",
                                             style: TextStyle(
                                               fontWeight: FontWeight.w400,
-                                              fontSize: 14,
+                                              fontSize: 16,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
                                             ),
