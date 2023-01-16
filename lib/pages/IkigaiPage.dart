@@ -731,12 +731,25 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
-                                      title:
-                                          Text('1. Connect with other people'),
+                                      title: Text(
+                                        '1. Connect with other people',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                          fontFamily: 'Nunito',
+                                          height: 1.5,
+                                        ),
+                                      ),
                                       children: [
                                         ListTile(
                                           title: Text(
                                             "Good relationships are important for your mental wellbeing. They can:\n• help you to build a sense of belonging and self-worth\n• give you an opportunity to share positive experiences\n• provide emotional support and allow you to support others\nThere are lots of things you could try to help build stronger and closer relationships:",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 16,
+                                              fontFamily: 'Nunito',
+                                              height: 1.5,
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -746,11 +759,25 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
-                                      title: Text('2. Be physically active'),
+                                      title: Text(
+                                        '2. Be physically active',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                          fontFamily: 'Nunito',
+                                          height: 1.5,
+                                        ),
+                                      ),
                                       children: [
                                         ListTile(
                                           title: Text(
                                             "Being active is not only great for your physical health and fitness. Evidence also shows it can also improve your mental wellbeing by:\n• raising your self-esteem\n• helping you to set goals or challenges and achieve them\n• causing chemical changes in your brain which can help to positively change your mood\nFind out more about getting active",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 16,
+                                              fontFamily: 'Nunito',
+                                              height: 1.5,
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -760,11 +787,25 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
-                                      title: Text('3. Learn new skills'),
+                                      title: Text(
+                                        '3. Learn new skills',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                          fontFamily: 'Nunito',
+                                          height: 1.5,
+                                        ),
+                                      ),
                                       children: [
                                         ListTile(
                                           title: Text(
                                             "Research shows that learning new skills can also improve your mental wellbeing by:\n• boosting self-confidence and raising self-esteem\n• helping you to build a sense of purpose\n• helping you to connect with others\nEven if you feel like you do not have enough time, or you may not need to learn new things, there are lots of different ways to bring learning into your life.\nSome of the things you could try include:",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 16,
+                                              fontFamily: 'Nunito',
+                                              height: 1.5,
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -774,11 +815,25 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
-                                      title: Text('4. Give to others'),
+                                      title: Text(
+                                        '4. Give to others',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                          fontFamily: 'Nunito',
+                                          height: 1.5,
+                                        ),
+                                      ),
                                       children: [
                                         ListTile(
                                           title: Text(
                                             "Research suggests that acts of giving and kindness can help improve your mental wellbeing by:\n• creating positive feelings and a sense of reward\n• giving you a feeling of purpose and self-worth\n• helping you connect with other people\nIt could be small acts of kindness towards other people, or larger ones like volunteering in your local community.\nSome examples of the things you could try include:\n• saying thank you to someone for something they have done for you\n• asking friends, family or colleagues how they are and really listening to their answer\n• spending time with friends or relatives who need support or company\n• offering to help someone you know with DIY or a work project\n• volunteering in your community, such as helping at a school, hospital or care home\nPay attention to the present moment (mindfulness)\nPaying more attention to the present moment can improve your mental wellbeing. This includes your thoughts and feelings, your body and the world around you.\nSome people call this awareness \"mindfulness\". Mindfulness can help you enjoy life more and understand yourself better. It can positively change the way you feel about life and how you approach challenges.\nRead more about mindfulness, including steps you can take to be more mindful in your everyday life.",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 16,
+                                              fontFamily: 'Nunito',
+                                              height: 1.5,
+                                            ),
                                           ),
                                         ),
                                       ],
