@@ -881,7 +881,16 @@ class IkigaiPage extends StatelessWidget {
                                         horizontal: 20),
                                     child: Row(
                                       children: const [
-                                        Text('Connecting with nature'),
+                                        SizedBox(width: 20),
+                                        Text(
+                                          'Connecting with nature',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w500,
+                                            fontSize: 20,
+                                            fontFamily: 'Nunito',
+                                            height: 1.5,
+                                          ),
+                                        ),
                                       ],
                                     ),
                                   ),
@@ -889,11 +898,25 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
-                                      title: Text('1. Live in the moment '),
+                                      title: Text(
+                                        '1. Live in the moment ',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                          fontFamily: 'Nunito',
+                                          height: 1.5,
+                                        ),
+                                      ),
                                       children: [
                                         ListTile(
                                           title: Text(
                                             "To build a connection with nature, you must first detach yourself from all the noise and channel your energy towards nature experiences. You can practice this by first taking out a few minutes within the day to detach yourself from the busy schedules, take deep breaths and spend time taking in the trees, birds, and everything within your natural surroundings.",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 16,
+                                              fontFamily: 'Nunito',
+                                              height: 1.5,
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -904,11 +927,24 @@ class IkigaiPage extends StatelessWidget {
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
                                       title: Text(
-                                          '2. Tune in to all your senses '),
+                                        '2. Tune in to all your senses ',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                          fontFamily: 'Nunito',
+                                          height: 1.5,
+                                        ),
+                                      ),
                                       children: [
                                         ListTile(
                                           title: Text(
                                             "Take a deep breath, feel the wind and sun penetrate your skin, listen closely to the whistling sound of trees and the sound of birds and insects. Focus further on these sounds and engage your sense of smell and taste. Engaging your senses whenever you’re outside allows you to appreciate your natural surrounding rather than passing them by.",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 16,
+                                              fontFamily: 'Nunito',
+                                              height: 1.5,
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -919,11 +955,24 @@ class IkigaiPage extends StatelessWidget {
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
                                       title: Text(
-                                          '3. Combine your creativity with nature'),
+                                        '3. Combine your creativity with nature',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                          fontFamily: 'Nunito',
+                                          height: 1.5,
+                                        ),
+                                      ),
                                       children: [
                                         ListTile(
                                           title: Text(
                                             "You can explore your creativity by taking photos of animals, trees, the sky, water, and all of nature’s surroundings. You could also sit in your favorite spot and draw or paint beautiful natural scenery. This helps to calm your nerves, improve your mood and inspire creative ideas. Time away to think in nature might also help provide you with a new perspective on a problem or worry.",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 16,
+                                              fontFamily: 'Nunito',
+                                              height: 1.5,
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -933,12 +982,25 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
-                                      title:
-                                          Text('4. Read nature books & quotes'),
+                                      title: Text(
+                                        '4. Read nature books & quotes',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                          fontFamily: 'Nunito',
+                                          height: 1.5,
+                                        ),
+                                      ),
                                       children: [
                                         ListTile(
                                           title: Text(
                                             "Reading nature books and quotes is a great way to take your mind on a psychological journey through nature’s beauty. You can read books related to different aspects of nature. For example, you can search out books that explain the history and evolution of animals and plants. You could also go for more creative books. Perhaps read nature poetry or read quotes that spur you towards nature. You can check out our picks of the best 70 nature quotes that are sure to inspire you.",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 16,
+                                              fontFamily: 'Nunito',
+                                              height: 1.5,
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -948,11 +1010,25 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
-                                      title: Text('5. Connect with plants '),
+                                      title: Text(
+                                        '5. Connect with plants ',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                          fontFamily: 'Nunito',
+                                          height: 1.5,
+                                        ),
+                                      ),
                                       children: [
                                         ListTile(
                                           title: Text(
                                             "Do you love trees, flowers, and plants? Having green living things around us is a great way to connect with nature. You can visit a local garden or grow a few plants in your backyard. Take out time to pay attention to the movements of plants. Meditate on their scent. Notice their stems, leaves, roots, and everything in between. You could also take time to study the different kinds of plants, their names and observe how they interact with insects and other organisms.",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 16,
+                                              fontFamily: 'Nunito',
+                                              height: 1.5,
+                                            ),
                                           ),
                                         ),
                                       ],
@@ -962,12 +1038,25 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
-                                      title:
-                                          Text('6. Sit under the night sky '),
+                                      title: Text(
+                                        '6. Sit under the night sky ',
+                                        style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 18,
+                                          fontFamily: 'Nunito',
+                                          height: 1.5,
+                                        ),
+                                      ),
                                       children: [
                                         ListTile(
                                           title: Text(
                                             "If you\'ve always been curious to learn about the stars, sitting under the night sky is an excellent opportunity to do so. You can gather some friends and family to sit with you and explore the night sky. Doing this is a great way to strengthen relationships, connect with nature and find some sense of identity and contemplate our place in the universe.",
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 16,
+                                              fontFamily: 'Nunito',
+                                              height: 1.5,
+                                            ),
                                           ),
                                         ),
                                       ],
