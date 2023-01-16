@@ -57,14 +57,21 @@ class IkigaiPage extends StatelessWidget {
                                   Padding(
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
-                                    child: Text(
-                                      'Diet\n• Eat less, live longer. Feed up to 80% full. People who tend to eat more age more as they use a lot of their energy producing enzymes necessary for digesting food eaten. ~ Hara hachi bu\n• “Eat a wide variety of foods, especially vegetables” – Vegetables are a wide source of minerals necessary for cell and tissue growth. They include Spinach, cabbages, kales and more.\n• Avoid Milk. It contains a protein content that accelerates aging.\n• Rarely take sugar, instead take sugarcane. Sugar is widely known to be the cause of Diabetes, memory loss and rapid aging. People who tend to eat high amount of sugar grow fat and fast causing acne and aging process.\n• Eat a lot of grains as they contain huge amount of energy.\n• Take Jasmine or green tea, as it:\n• Reduce the risk of a heart attack\n• Strengthen the immune system\n• Help relieve stress\n• Lowering cholesterol\n• Lowering blood sugar levels\n• Improving Circulation\n• Promotes bone health\n• Cleansing Diuretics effects.\n• Other diets include:\n“Vegetables such as broccoli and chard, for their high concentration of water, minerals, and fiber\nOily fish such as salmon, mackerel, tuna, and sardines, for all the antioxidants in their fat\nFruits such as citrus, strawberries, and apricots; they are an excellent source of vitamins and help eliminate toxins from the body\nBerries such as blueberries and goji berries; they are rich in phytochemical antioxidants\nDried fruits, which contain vitamins and antioxidants, and give you energy\nGrains such as oats and wheat, which give you energy and contain minerals\nOlive oil, for its antioxidant effects that show in your skin\nRed wine, in moderation, for its antioxidant and vasodilatory properties”\nEliminate:\n“Foods that should be eliminated are refined sugar and grains, processed baked goods, and prepared foods, along with cow’s milk and all its derivatives. Following this diet will help you feel younger and slow the process of premature aging.”',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        fontFamily: 'Nunito',
-                                        height: 1.5,
-                                      ),
+                                    child: ExpansionTile(
+                                      title: Text('Diet'),
+                                      children: [
+                                        ListTile(
+                                          title: Text(
+                                            '• Eat less, live longer. Feed up to 80% full. People who tend to eat more age more as they use a lot of their energy producing enzymes necessary for digesting food eaten. ~ Hara hachi bu\n• “Eat a wide variety of foods, especially vegetables” – Vegetables are a wide source of minerals necessary for cell and tissue growth. They include Spinach, cabbages, kales and more.\n• Avoid Milk. It contains a protein content that accelerates aging.\n• Rarely take sugar, instead take sugarcane. Sugar is widely known to be the cause of Diabetes, memory loss and rapid aging. People who tend to eat high amount of sugar grow fat and fast causing acne and aging process.\n• Eat a lot of grains as they contain huge amount of energy.\n• Take Jasmine or green tea, as it:\n• Reduce the risk of a heart attack\n• Strengthen the immune system\n• Help relieve stress\n• Lowering cholesterol\n• Lowering blood sugar levels\n• Improving Circulation\n• Promotes bone health\n• Cleansing Diuretics effects.\n• Other diets include:\n“Vegetables such as broccoli and chard, for their high concentration of water, minerals, and fiber\nOily fish such as salmon, mackerel, tuna, and sardines, for all the antioxidants in their fat\nFruits such as citrus, strawberries, and apricots; they are an excellent source of vitamins and help eliminate toxins from the body\nBerries such as blueberries and goji berries; they are rich in phytochemical antioxidants\nDried fruits, which contain vitamins and antioxidants, and give you energy\nGrains such as oats and wheat, which give you energy and contain minerals\nOlive oil, for its antioxidant effects that show in your skin\nRed wine, in moderation, for its antioxidant and vasodilatory properties”\nEliminate:\n“Foods that should be eliminated are refined sugar and grains, processed baked goods, and prepared foods, along with cow’s milk and all its derivatives. Following this diet will help you feel younger and slow the process of premature aging.”',
+                                            style: TextStyle(
+                                              fontWeight: FontWeight.w400,
+                                              fontSize: 14,
+                                              fontFamily: 'Nunito',
+                                              height: 1.5,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                   SizedBox(height: 20),
@@ -303,19 +310,111 @@ class IkigaiPage extends StatelessWidget {
                             physics: const BouncingScrollPhysics(),
                             children: [
                               Column(
-                                children: const [
+                                children: [
                                   SizedBox(height: 20),
                                   Padding(
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
-                                    child: Text(
-                                      'Exercise\n1. Exercise controls weight\nExercise can help prevent excess weight gain or help maintain weight loss. When you engage in physical activity, you burn calories. The more intense the activity, the more calories you burn.\nRegular trips to the gym are great, but don\'t worry if you can\'t find a large chunk of time to exercise every day. Any amount of activity is better than none at all. To reap the benefits of exercise, just get more active throughout your day — take the stairs instead of the elevator or rev up your household chores. Consistency is key.\n2. Exercise combats health conditions and diseasesWorried about heart disease? Hoping to prevent high blood pressure? No matter what your current weight is, being active boosts high-density lipoprotein (HDL) cholesterol, the "good" cholesterol, and it decreases unhealthy triglycerides. This one-two punch keeps your blood flowing smoothly, which decreases your risk of cardiovascular diseases.\nRegular exercise helps prevent or manage many health problems and concerns, including:\n• Stroke\n• Metabolic syndrome\n• High blood pressure\n• Type 2 diabetes\n• Depression\n• Anxiety\n• Many types of cancer\n• Arthritis\n• Falls\nIt can also help improve cognitive function and helps lower the risk of death from all causes.\n3. Exercise improves mood\nNeed an emotional lift? Or need to destress after a stressful day? A gym session or brisk walk can help. Physical activity stimulates various brain chemicals that may leave you feeling happier, more relaxed and less anxious.\nYou may also feel better about your appearance and yourself when you exercise regularly, which can boost your confidence and improve your self-esteem.\n4. Exercise boosts energy\nWinded by grocery shopping or household chores? Regular physical activity can improve your muscle strength and boost your endurance.\nExercise delivers oxygen and nutrients to your tissues and helps your cardiovascular system work more efficiently. And when your heart and lung health improve, you have more energy to tackle daily chores.\n5. Exercise promotes better sleepStruggling to snooze? Regular physical activity can help you fall asleep faster, get better sleep and deepen your sleep. Just don\'t exercise too close to bedtime, or you may be too energized to go to sleep.\n6. Exercise puts the spark back into your sex life Do you feel too tired or too out of shape to enjoy physical intimacy? Regular physical activity can improve energy levels and increase your confidence about your physical appearance, which may boost your sex life.\nBut there\'s even more to it than that. Regular physical activity may enhance arousal for women. And men who exercise regularly are less likely to have problems with erectile dysfunction than are men who don\'t exercise.',
-                                      style: TextStyle(
-                                        fontWeight: FontWeight.w400,
-                                        fontSize: 14,
-                                        fontFamily: 'Nunito',
-                                        height: 1.5,
-                                      ),
+                                    child: Row(
+                                      children: const [
+                                        Text(
+                                          'Exercise',
+                                          style: TextStyle(
+                                            fontWeight: FontWeight.w400,
+                                            fontSize: 14,
+                                            fontFamily: 'Nunito',
+                                            height: 1.5,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 20),
+                                    child: ExpansionTile(
+                                      title:
+                                          Text('1. Exercise controls weight'),
+                                      children: [
+                                        ListTile(
+                                          title: Text(
+                                            "Exercise can help prevent excess weight gain or help maintain weight loss. When you engage in physical activity, you burn calories. The more intense the activity, the more calories you burn.\nRegular trips to the gym are great, but don\'t worry if you can\'t find a large chunk of time to exercise every day. Any amount of activity is better than none at all. To reap the benefits of exercise, just get more active throughout your day — take the stairs instead of the elevator or rev up your household chores. Consistency is key.",
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 20),
+                                    child: ExpansionTile(
+                                      title: Text(
+                                          '2. Exercise combats health conditions and diseases'),
+                                      children: [
+                                        ListTile(
+                                          title: Text(
+                                            "Worried about heart disease? Hoping to prevent high blood pressure? No matter what your current weight is, being active boosts high-density lipoprotein (HDL) cholesterol, the \"good\" cholesterol, and it decreases unhealthy triglycerides. This one-two punch keeps your blood flowing smoothly, which decreases your risk of cardiovascular diseases.\nRegular exercise helps prevent or manage many health problems and concerns, including:\n• Stroke\n• Metabolic syndrome\n• High blood pressure\n• Type 2 diabetes\n• Depression\n• Anxiety\n• Many types of cancer\n• Arthritis\n• Falls\nIt can also help improve cognitive function and helps lower the risk of death from all causes.",
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 20),
+                                    child: ExpansionTile(
+                                      title: Text('3. Exercise improves mood'),
+                                      children: [
+                                        ListTile(
+                                          title: Text(
+                                            "Need an emotional lift? Or need to destress after a stressful day? A gym session or brisk walk can help. Physical activity stimulates various brain chemicals that may leave you feeling happier, more relaxed and less anxious.\nYou may also feel better about your appearance and yourself when you exercise regularly, which can boost your confidence and improve your self-esteem.",
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 20),
+                                    child: ExpansionTile(
+                                      title: Text('4. Exercise boosts energy'),
+                                      children: [
+                                        ListTile(
+                                          title: Text(
+                                            "Winded by grocery shopping or household chores? Regular physical activity can improve your muscle strength and boost your endurance.\nExercise delivers oxygen and nutrients to your tissues and helps your cardiovascular system work more efficiently. And when your heart and lung health improve, you have more energy to tackle daily chores.",
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 20),
+                                    child: ExpansionTile(
+                                      title: Text(
+                                          '5. Exercise promotes better sleep'),
+                                      children: [
+                                        ListTile(
+                                          title: Text(
+                                            "Struggling to snooze? Regular physical activity can help you fall asleep faster, get better sleep and deepen your sleep. Just don\'t exercise too close to bedtime, or you may be too energized to go to sleep.",
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                  const Padding(
+                                    padding:
+                                        EdgeInsets.symmetric(horizontal: 20),
+                                    child: ExpansionTile(
+                                      title: Text(
+                                          '6. Exercise puts the spark back into your sex life'),
+                                      children: [
+                                        ListTile(
+                                          title: Text(
+                                            "Do you feel too tired or too out of shape to enjoy physical intimacy? Regular physical activity can improve energy levels and increase your confidence about your physical appearance, which may boost your sex life.\nBut there\'s even more to it than that. Regular physical activity may enhance arousal for women. And men who exercise regularly are less likely to have problems with erectile dysfunction than are men who don\'t exercise.",
+                                          ),
+                                        ),
+                                      ],
                                     ),
                                   ),
                                   SizedBox(height: 20),
