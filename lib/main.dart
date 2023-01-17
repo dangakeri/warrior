@@ -21,6 +21,9 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  final Brightness brightness =
+      WidgetsBinding.instance.platformDispatcher.platformBrightness;
+
   DarkThemeProvider themeChangeProvider = DarkThemeProvider();
 
   void getCurrentTheme() async {
