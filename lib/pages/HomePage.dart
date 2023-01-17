@@ -1,3 +1,4 @@
+import 'package:Warriors/consts/app_colors.dart';
 import 'package:Warriors/pages/play.dart';
 import 'package:Warriors/pages/settings.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
@@ -472,7 +473,7 @@ class _HomePageState extends State<HomePage> {
               image: Image.asset('assets/muladhara.jpeg', height: 50),
               content:
                   'Characterized by the emotions of survival\nstability, ambition, and self-sufficiency.',
-              color: Colors.red,
+              color: AppColors.grayWeb,
             ),
           ),
           const SizedBox(height: 20),
@@ -546,7 +547,7 @@ class _HomePageState extends State<HomePage> {
               image: Image.asset('assets/Svadisthana.jpeg', height: 50),
               content:
                   'Its attributes include the basic need for\nsexuality,as well as creativity and\nself-worth. ',
-              color: Colors.orange,
+              color: AppColors.silverChalice,
             ),
           ),
           const SizedBox(height: 20),
@@ -619,7 +620,7 @@ class _HomePageState extends State<HomePage> {
               image: Image.asset('assets/Manipura.jpeg', height: 50),
               content:
                   'Characterized by emotions like ego, anger,\nand aggression. ',
-              color: Colors.yellow,
+              color: AppColors.Gainsboro,
             ),
           ),
           const SizedBox(height: 20),
@@ -692,7 +693,7 @@ class _HomePageState extends State<HomePage> {
               image: Image.asset('assets/Anahata.png', height: 50),
               content:
                   'Characterized by emotions of love,trust,\ncompassion, attachment,and passion. ',
-              color: Colors.green,
+              color: AppColors.platinum,
             ),
           ),
           const SizedBox(height: 20),
@@ -766,7 +767,7 @@ class _HomePageState extends State<HomePage> {
               image: Image.asset('assets/Visuddha.jpeg', height: 50),
               content:
                   'Associated with inspiration, healthy\nexpression, faith, and the ability to\ncommunicate well. ',
-              color: Colors.blue,
+              color: AppColors.alibaster,
             ),
           ),
           const SizedBox(height: 20),
@@ -839,7 +840,7 @@ class _HomePageState extends State<HomePage> {
               image: Image.asset('assets/ajna.jpeg', height: 50),
               content:
                   'Its attributes are intelligence, intuition,\ninsight, and self-knowledge. ',
-              color: Colors.indigo,
+              color: AppColors.cultured,
             ),
           ),
           const SizedBox(height: 20),
@@ -912,7 +913,7 @@ class _HomePageState extends State<HomePage> {
               image: Image.asset('assets/Sahasrara.jpeg', height: 50),
               content:
                   ' It is the center of spirituality,\nenlightenment, and dynamic thought\nand energy. ',
-              color: Colors.purple,
+              color: AppColors.ghostWhite,
             ),
           ),
         ],
