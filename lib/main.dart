@@ -45,9 +45,9 @@ class _MyAppState extends State<MyApp> {
     });
     SystemChrome.setSystemUIOverlayStyle(
       // code for changing the color of status bar color
-      const SystemUiOverlayStyle(
+      SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        // systemNavigationBarColor: Colors.white,
+        systemNavigationBarColor: Theme.of(context).buttonColor,
       ),
     );
     return MultiProvider(

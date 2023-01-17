@@ -67,7 +67,7 @@ class IkigaiContainerWidget extends StatelessWidget {
                       height: 35,
                       width: 80,
                       decoration: BoxDecoration(
-                        color: AppColors.platinum,
+                        color: Theme.of(context).cardColor,
                         borderRadius: BorderRadius.circular(150),
                       ),
                       child: Center(

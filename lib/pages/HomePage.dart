@@ -1,5 +1,6 @@
 import 'package:Warriors/consts/app_colors.dart';
 import 'package:Warriors/pages/See%20all/see_allPage.dart';
+import 'package:Warriors/pages/chakraPage.dart';
 import 'package:Warriors/pages/play.dart';
 import 'package:Warriors/pages/settings.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
@@ -138,7 +139,7 @@ class _HomePageState extends State<HomePage> {
                   height: MediaQuery.of(context).size.height * 0.3,
                   width: double.infinity,
                   decoration: BoxDecoration(
-                    color: Colors.white,
+                    color: Theme.of(context).cardColor,
                     borderRadius: BorderRadius.circular(20),
                     boxShadow: [
                       BoxShadow(
@@ -228,7 +229,7 @@ class _HomePageState extends State<HomePage> {
             child: Row(
               children: [
                 Text(
-                  'Connect your Chakras, $name ',
+                  'Be a Warrior, $name ',
                   style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
@@ -243,12 +244,12 @@ class _HomePageState extends State<HomePage> {
                       ),
                     );
                   },
-                  child: const Text(
+                  child: Text(
                     'See All',
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 16,
-                      color: Colors.black,
+                      color: Theme.of(context).buttonColor,
                     ),
                   ),
                 ),
@@ -270,10 +271,7 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (_) => const PlayPage(
-                              music: 'muladhara',
-                              chakra: 'Muladhara',
-                            ),
+                            builder: (_) => ChakraPage(),
                           ),
                         );
                       },

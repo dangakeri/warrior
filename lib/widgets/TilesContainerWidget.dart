@@ -19,7 +19,7 @@ class TilesContainerWidget extends StatelessWidget {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
         // color: Colors.grey.withOpacity(.5),
-        color: Colors.white,
+        color: Theme.of(context).cardColor,
         boxShadow: [
           BoxShadow(
             color: Colors.grey.withOpacity(0.1),
@@ -58,8 +58,8 @@ class TilesContainerWidget extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Row(
-                children: const [
-                  CircleAvatar(
+                children: [
+                  const CircleAvatar(
                     backgroundColor: Colors.orange,
                     radius: 15,
                     child: Icon(
@@ -67,10 +67,11 @@ class TilesContainerWidget extends StatelessWidget {
                       color: Colors.white,
                     ),
                   ),
-                  SizedBox(width: 10),
+                  const SizedBox(width: 10),
                   Text(
                     'Start',
                     style: TextStyle(
+                      color: Theme.of(context).buttonColor,
                       fontWeight: FontWeight.w800,
                     ),
                   ),
