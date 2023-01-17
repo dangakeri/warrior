@@ -1,4 +1,5 @@
 import 'package:Warriors/consts/app_colors.dart';
+import 'package:Warriors/pages/See%20all/see_allPage.dart';
 import 'package:Warriors/pages/play.dart';
 import 'package:Warriors/pages/settings.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
@@ -67,9 +68,10 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: Theme.of(context).backgroundColor,
         actions: [
           IconButton(
               onPressed: () {
@@ -77,14 +79,13 @@ class _HomePageState extends State<HomePage> {
                   MaterialPageRoute(builder: (_) => const SettingPage()),
                 );
               },
-              icon: const Icon(
+              icon: Icon(
                 BootstrapIcons.gear,
-                color: Colors.orange,
+                color: Theme.of(context).buttonColor,
               )),
           const SizedBox(width: 10),
         ],
       ),
-      backgroundColor: Colors.white,
       body: ListView(
         physics: const BouncingScrollPhysics(),
         children: [
@@ -152,14 +153,18 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     children: [
                       const SizedBox(height: 40),
-                      const Text(
+                      Text(
                         'Meditate',
                         style: TextStyle(
+                          color: Theme.of(context).buttonColor,
                           fontWeight: FontWeight.bold,
                         ),
                       ),
                       const SizedBox(height: 5),
-                      const Text('Everyday learn new ways to focus'),
+                      Text(
+                        'Everyday learn new ways to focus',
+                        style: TextStyle(color: Theme.of(context).buttonColor),
+                      ),
                       const SizedBox(height: 5),
                       Padding(
                         padding: const EdgeInsets.only(
@@ -173,11 +178,14 @@ class _HomePageState extends State<HomePage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              const Padding(
+                              Padding(
                                 padding: EdgeInsets.only(top: 15.0),
                                 child: Text(
                                   'Believe in something even if it means\nloosing everything',
                                   textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    color: Theme.of(context).buttonColor,
+                                  ),
                                 ),
                               ),
                               const SizedBox(height: 10),
@@ -221,9 +229,27 @@ class _HomePageState extends State<HomePage> {
               children: [
                 Text(
                   'Connect your Chakras, $name ',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
+                  ),
+                ),
+                const Spacer(),
+                TextButton(
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (_) => const SeeAll(),
+                      ),
+                    );
+                  },
+                  child: const Text(
+                    'See All',
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Colors.black,
+                    ),
                   ),
                 ),
               ],
@@ -244,10 +270,11 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (_) => const PlayPage(
-                                    music: 'muladhara',
-                                    chakra: 'Muladhara',
-                                  )),
+                            builder: (_) => const PlayPage(
+                              music: 'muladhara',
+                              chakra: 'Muladhara',
+                            ),
+                          ),
                         );
                       },
                       child: TilesContainerWidget(

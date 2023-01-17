@@ -6,12 +6,14 @@ class ChakrasWidget extends StatelessWidget {
   final String subtitle;
   final Image image;
   final String content;
+  final Color color;
   const ChakrasWidget({
     Key? key,
     required this.text,
     required this.subtitle,
     required this.image,
     required this.content,
+    required this.color,
   }) : super(key: key);
 
   @override
@@ -22,7 +24,7 @@ class ChakrasWidget extends StatelessWidget {
         height: 130,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: Colors.greenAccent,
+          color: color,
           borderRadius: BorderRadius.circular(20),
         ),
         child: Column(children: [
@@ -39,17 +41,19 @@ class ChakrasWidget extends StatelessWidget {
                 const SizedBox(width: 5),
                 Text(
                   text,
-                  style: const TextStyle(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 16,
+                  style: TextStyle(
+                    fontWeight: FontWeight.w600,
+                    color: Theme.of(context).buttonColor,
+                    fontSize: 20,
                   ),
                 ),
                 Text(
                   subtitle,
                   style: TextStyle(
-                    fontWeight: FontWeight.w300,
-                    fontSize: 16,
-                  ),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 18,
+                      fontFamily: "nunito",
+                      color: Theme.of(context).buttonColor),
                 ),
               ],
             ),
@@ -62,12 +66,18 @@ class ChakrasWidget extends StatelessWidget {
                 child: Center(
                     child: Text(
                   content,
-                  style: TextStyle(fontSize: 13),
+                  style: TextStyle(
+                    fontSize: 15,
+                    color: Theme.of(context).buttonColor,
+                  ),
                 )),
               ),
               // Spacer(),
               // const SizedBox(width: 5),
-              ClipRRect(borderRadius: BorderRadius.circular(15), child: image),
+              ClipRRect(
+                borderRadius: BorderRadius.circular(15),
+                child: image,
+              ),
             ],
           )
         ]),

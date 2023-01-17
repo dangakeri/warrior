@@ -1,7 +1,10 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:provider/provider.dart';
 import 'Onboarding/splash_screen.dart';
+import 'Provider/Theme.dart';
+import 'Provider/Theme_colors.dart';
 import 'notifications.dart';
 
 Future<void> main() async {
@@ -11,9 +14,28 @@ Future<void> main() async {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
-  // This widget is the root of your application.
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  DarkThemeProvider themeChangeProvider = DarkThemeProvider();
+
+  void getCurrentTheme() async {
+    themeChangeProvider.darkTheme =
+        await themeChangeProvider.darkThemePreferences.getTheme();
+  }
+
+  @override
+  void initState() {
+    getCurrentTheme();
+
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     AssetsAudioPlayer.setupNotificationsOpenAction((notification) {
@@ -28,14 +50,26 @@ class MyApp extends StatelessWidget {
         // systemNavigationBarColor: Colors.white,
       ),
     );
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Warriors',
-      theme: ThemeData(
-        fontFamily: 'Nunito',
-        primarySwatch: Colors.orange,
-      ),
-      home: const SplashScreen(),
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) {
+          return themeChangeProvider;
+        }),
+      ],
+      child: Consumer<DarkThemeProvider>(builder: (context, themeData, child) {
+        return Consumer<DarkThemeProvider>(
+            builder: (context, themeData, child) {
+          return MaterialApp(
+            debugShowCheckedModeBanner: false,
+            title: 'Warriors',
+            theme: Styles.themeData(
+              themeChangeProvider.darkTheme,
+              context,
+            ),
+            home: const SplashScreen(),
+          );
+        });
+      }),
     );
   }
 }

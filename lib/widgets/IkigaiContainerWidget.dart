@@ -1,3 +1,4 @@
+import 'package:Warriors/consts/app_colors.dart';
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -39,8 +40,10 @@ class IkigaiContainerWidget extends StatelessWidget {
                     children: [
                       Text(
                         text,
-                        style:
-                            const TextStyle(fontSize: 17, color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 17,
+                          color: Theme.of(context).buttonColor,
+                        ),
                       ),
                     ],
                   ),
@@ -49,10 +52,11 @@ class IkigaiContainerWidget extends StatelessWidget {
                     children: [
                       Text(
                         content,
-                        style: const TextStyle(
-                            fontSize: 12,
-                            fontWeight: FontWeight.w100,
-                            color: Colors.white),
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w100,
+                          color: Theme.of(context).buttonColor,
+                        ),
                       ),
                     ],
                   ),
@@ -63,17 +67,26 @@ class IkigaiContainerWidget extends StatelessWidget {
                       height: 35,
                       width: 80,
                       decoration: BoxDecoration(
-                        color: Colors.white,
+                        color: AppColors.platinum,
                         borderRadius: BorderRadius.circular(150),
                       ),
-                      child: Center(child: Text('Learn')),
+                      child: Center(
+                          child: Text(
+                        'Learn',
+                        style: TextStyle(
+                          color: Theme.of(context).buttonColor,
+                        ),
+                      )),
                     ),
                   ),
                 ],
               ),
             ),
             const Spacer(),
-            Padding(padding: const EdgeInsets.only(right: 20), child: image),
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: image,
+            ),
           ],
         ),
       ),

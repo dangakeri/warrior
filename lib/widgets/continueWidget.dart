@@ -20,7 +20,7 @@ class ContinueWidget extends StatelessWidget {
         child: Text(
           text,
           style: TextStyle(
-            color: Colors.white,
+            color: Theme.of(context).buttonColor,
             fontSize: 16,
             fontWeight: FontWeight.bold,
           ),

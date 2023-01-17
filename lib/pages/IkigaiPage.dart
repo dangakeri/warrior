@@ -58,6 +58,7 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
+                                      initiallyExpanded: true,
                                       title: Text(
                                         'Diet',
                                         style: TextStyle(
@@ -123,6 +124,7 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
+                                      initiallyExpanded: true,
                                       title: Text(
                                         'What is Sleep ?',
                                         style: TextStyle(
@@ -511,6 +513,7 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
+                                      initiallyExpanded: true,
                                       title: Text(
                                         '1. Exercise controls weight',
                                         style: TextStyle(
@@ -731,6 +734,7 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
+                                      initiallyExpanded: true,
                                       title: Text(
                                         '1. Connect with other people',
                                         style: TextStyle(
@@ -898,6 +902,7 @@ class IkigaiPage extends StatelessWidget {
                                     padding:
                                         EdgeInsets.symmetric(horizontal: 20),
                                     child: ExpansionTile(
+                                      initiallyExpanded: true,
                                       title: Text(
                                         '1. Live in the moment ',
                                         style: TextStyle(

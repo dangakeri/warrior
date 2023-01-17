@@ -62,13 +62,13 @@ class _FocusContainerWidgetState extends State<FocusContainerWidget> {
                 ),
                 const SizedBox(height: 10),
                 Row(
-                  children: const [
+                  children: [
                     Text(
                       'Focus even more',
                       style: TextStyle(
                           fontSize: 12,
                           fontWeight: FontWeight.w100,
-                          color: Colors.white),
+                          color: Theme.of(context).buttonColor),
                     ),
                   ],
                 ),

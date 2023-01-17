@@ -1,10 +1,12 @@
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../Onboarding/splash_screen.dart';
+import '../Provider/Theme.dart';
 import '../notifications.dart';
 
 class SettingPage extends StatefulWidget {
@@ -39,30 +41,46 @@ class _SettingPageState extends State<SettingPage> {
 
   @override
   Widget build(BuildContext context) {
+    final themeChanger = Provider.of<DarkThemeProvider>(context);
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: Theme.of(context).backgroundColor,
       extendBodyBehindAppBar: false,
       appBar: AppBar(
+        backgroundColor: Theme.of(context).backgroundColor,
         leading: IconButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            icon: const Icon(
+            icon: Icon(
               Icons.arrow_back_ios,
-              color: Colors.black,
+              color: Theme.of(context).buttonColor,
             )),
         elevation: 0,
-        backgroundColor: Colors.white,
         centerTitle: true,
-        title: const Text(
+        title: Text(
           'Settings',
           style: TextStyle(
-            color: Colors.black,
+            color: Theme.of(context).buttonColor,
           ),
         ),
       ),
       body: Column(
         children: [
+          GestureDetector(
+            child: ListTile(
+              leading: const Icon(Icons.brightness_3),
+              trailing: CupertinoSwitch(
+                value: themeChanger.darkTheme,
+                onChanged: (newValue) {
+                  setState(() {
+                    themeChanger.darkTheme = newValue;
+                  });
+                },
+              ),
+              title: const Text('Dark theme'),
+              subtitle: const Text('Toggle to change theme'),
+            ),
+          ),
           GestureDetector(
             onTap: (() {
               showDialog(
@@ -128,9 +146,10 @@ class _SettingPageState extends State<SettingPage> {
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        child: const Text(
+                        child: Text(
                           'Close',
-                          style: TextStyle(color: Colors.orange),
+                          style:
+                              TextStyle(color: Theme.of(context).buttonColor),
                         ))
                   ],
                 ),
@@ -170,9 +189,10 @@ class _SettingPageState extends State<SettingPage> {
                   ),
                   actions: [
                     CupertinoButton(
-                        child: const Text(
+                        child: Text(
                           "Close",
-                          style: TextStyle(color: Colors.orange),
+                          style:
+                              TextStyle(color: Theme.of(context).buttonColor),
                         ),
                         onPressed: () {
                           Navigator.of(context).pop();
@@ -211,9 +231,10 @@ class _SettingPageState extends State<SettingPage> {
                       ),
                       actions: [
                         CupertinoButton(
-                            child: const Text(
+                            child: Text(
                               'Ok',
-                              style: TextStyle(color: Colors.orange),
+                              style: TextStyle(
+                                  color: Theme.of(context).buttonColor),
                             ),
                             onPressed: () async {
                               SharedPreferences prefs =
