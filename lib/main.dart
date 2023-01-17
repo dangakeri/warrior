@@ -5,7 +5,6 @@ import 'package:provider/provider.dart';
 import 'Onboarding/splash_screen.dart';
 import 'Provider/Theme.dart';
 import 'Provider/Theme_colors.dart';
-import 'notifications.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
