@@ -13,6 +13,7 @@ import '../notifications.dart';
 import '../widgets/TilesContainerWidget.dart';
 import '../widgets/chakraswidget.dart';
 import '../widgets/continueWidget.dart';
+import 'See all/breathingPage.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -286,7 +287,7 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (_) => const ChakraPage(),
+                            builder: (_) => const BreathingPage(),
                           ),
                         );
                       },
