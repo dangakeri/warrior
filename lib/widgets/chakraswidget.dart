@@ -9,11 +9,11 @@ class ChakrasWidget extends StatelessWidget {
   final Color color;
   const ChakrasWidget({
     Key? key,
-    required this.text,
     required this.subtitle,
     required this.image,
     required this.content,
     required this.color,
+    required this.text,
   }) : super(key: key);
 
   @override
@@ -21,21 +21,21 @@ class ChakrasWidget extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: Container(
-        height: 130,
+        height: 150,
         width: double.infinity,
         decoration: BoxDecoration(
           color: color,
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(10),
         ),
         child: Column(children: [
           ListTile(
             title: Row(
               children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.circular(20),
-                  child: Image.asset(
-                    'assets/chakra.jpg',
-                    height: 40,
+                Container(
+                  height: 50,
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(50),
+                    child: image,
                   ),
                 ),
                 const SizedBox(width: 5),
@@ -59,26 +59,17 @@ class ChakrasWidget extends StatelessWidget {
             ),
             trailing: const Icon(Icons.arrow_forward_ios),
           ),
-          Row(
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 15),
-                child: Center(
-                    child: Text(
-                  content,
-                  style: TextStyle(
-                    fontSize: 15,
-                    color: Theme.of(context).buttonColor,
-                  ),
-                )),
+          SizedBox(height: MediaQuery.of(context).size.height * 0.01),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 15),
+            child: Center(
+                child: Text(
+              content,
+              style: TextStyle(
+                fontSize: 16,
+                color: Theme.of(context).buttonColor,
               ),
-              // Spacer(),
-              // const SizedBox(width: 5),
-              ClipRRect(
-                borderRadius: BorderRadius.circular(15),
-                child: image,
-              ),
-            ],
+            )),
           )
         ]),
       ),

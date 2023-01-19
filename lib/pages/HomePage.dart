@@ -180,7 +180,7 @@ class _HomePageState extends State<HomePage> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               Padding(
-                                padding: EdgeInsets.only(top: 15.0),
+                                padding: const EdgeInsets.only(top: 15.0),
                                 child: Text(
                                   'Believe in something even if it means\nloosing everything',
                                   textAlign: TextAlign.center,
@@ -216,7 +216,7 @@ class _HomePageState extends State<HomePage> {
                     // ),
                     radius: 25,
                     child: ClipOval(
-                      child: Image.asset('assets/chakra.jpg'),
+                      child: Image.asset('assets/chakra.jpeg'),
                     ),
                   ),
                 ),
@@ -271,17 +271,14 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (_) => ChakraPage(),
+                            builder: (_) => const ChakraPage(),
                           ),
                         );
                       },
-                      child: TilesContainerWidget(
-                        image: Image.asset(
-                          'assets/chakra.jpg',
-                          height: 50,
-                        ),
-                        text: 'Chakras',
-                        content: '',
+                      child: const TilesContainerWidget(
+                        text: 'Meditation',
+                        content: 'Chakras',
+                        image: AssetImage('assets/chakra.jpeg'),
                       ),
                     ),
                     const SizedBox(width: 20),
@@ -289,19 +286,14 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (_) => const PlayPage(
-                                    music: 'aura',
-                                    chakra: 'Svadisthana',
-                                  )),
+                            builder: (_) => const ChakraPage(),
+                          ),
                         );
                       },
-                      child: TilesContainerWidget(
-                        image: Image.asset(
-                          'assets/Svadisthana.jpeg',
-                          height: 50,
-                        ),
-                        text: 'Svadhisthana',
-                        content: 'Below your belly',
+                      child: const TilesContainerWidget(
+                        text: 'Breathing workout',
+                        content: 'Breathing',
+                        image: AssetImage('assets/breathing.jpg'),
                       ),
                     ),
                     const SizedBox(width: 20),
@@ -309,19 +301,14 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (_) => const PlayPage(
-                                    music: 'manipura',
-                                    chakra: 'Manipura',
-                                  )),
+                            builder: (_) => const ChakraPage(),
+                          ),
                         );
                       },
-                      child: TilesContainerWidget(
-                        image: Image.asset(
-                          'assets/Manipura.jpeg',
-                          height: 50,
-                        ),
-                        text: 'Manipura',
-                        content: 'Stomach area',
+                      child: const TilesContainerWidget(
+                        text: 'Fear',
+                        content: 'Overcoming Fear',
+                        image: AssetImage('assets/fear.jpeg'),
                       ),
                     ),
                     const SizedBox(width: 20),
@@ -329,19 +316,14 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (_) => const PlayPage(
-                                    music: 'anahata',
-                                    chakra: 'Anahata',
-                                  )),
+                            builder: (_) => const ChakraPage(),
+                          ),
                         );
                       },
-                      child: TilesContainerWidget(
-                        image: Image.asset(
-                          'assets/Anahata.png',
-                          height: 50,
-                        ),
-                        text: 'Anahata',
-                        content: 'Near your heart',
+                      child: const TilesContainerWidget(
+                        text: 'stressed',
+                        content: 'Stress',
+                        image: AssetImage('assets/stress.jpeg'),
                       ),
                     ),
                     const SizedBox(width: 20),
@@ -349,59 +331,14 @@ class _HomePageState extends State<HomePage> {
                       onTap: () {
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (_) => const PlayPage(
-                                    music: 'visudha',
-                                    chakra: 'Vishuddha',
-                                  )),
+                            builder: (_) => const ChakraPage(),
+                          ),
                         );
                       },
-                      child: TilesContainerWidget(
-                        image: Image.asset(
-                          'assets/Visuddha.jpeg',
-                          height: 50,
-                        ),
-                        text: 'Vishuddha',
-                        content: 'In your throat',
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (_) => const PlayPage(
-                                    music: 'ajna',
-                                    chakra: 'Ajna',
-                                  )),
-                        );
-                      },
-                      child: TilesContainerWidget(
-                        image: Image.asset(
-                          'assets/ajna.jpeg',
-                          height: 50,
-                        ),
-                        text: 'Ajna',
-                        content: 'Between your eyes',
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (_) => const PlayPage(
-                                    music: 'sahasharara',
-                                    chakra: 'Sahasrara',
-                                  )),
-                        );
-                      },
-                      child: TilesContainerWidget(
-                        image: Image.asset(
-                          'assets/Sahasrara.jpeg',
-                          height: 50,
-                        ),
-                        text: 'Sahasrara',
-                        content: 'Top of your head.',
+                      child: const TilesContainerWidget(
+                        text: 'Anxious',
+                        content: 'Anxiety',
+                        image: AssetImage('assets/anxiety.jpeg'),
                       ),
                     ),
                   ],
@@ -409,7 +346,7 @@ class _HomePageState extends State<HomePage> {
               ],
             ),
           ),
-          const SizedBox(height: 10),
+          const SizedBox(height: 30),
         ],
       ),
     );

@@ -12,6 +12,14 @@ class ChakraPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Theme.of(context).backgroundColor,
+      appBar: AppBar(
+          leading: IconButton(
+        onPressed: () {
+          Navigator.of(context).pop();
+        },
+        icon: Icon(Icons.arrow_back),
+      )),
       body: ListView(
         children: [
           Padding(
@@ -50,48 +58,53 @@ class ChakraPage extends StatelessWidget {
                   controller: ModalScrollController.of(context),
                   child: Container(
                     height: 700,
-                    child: Column(
-                      children: [
-                        const SizedBox(height: 20),
-                        ClipRRect(
-                            borderRadius: BorderRadius.circular(20),
-                            child: Image.asset('assets/muladhara.jpeg')),
-                        const Text(
-                          'Muladhara',
-                          style: TextStyle(
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * .02),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 20),
-                          child: Text(
-                            'When you find yourself feeling unsettled, overwhelmed with uncertainty, or going through major life changes, try this grounding meditation to activate your root chakra.\n   - Consider doing this meditation outside, seated on the ground to more fully connect to the earth element. If you are sitting in a chair, plant your feet firmly on the ground; you might also prefer to lie down on the floor for this one.\n    - Close your eyes and bring your awareness to the base of your spine, imagining a ruby red sphere of light illuminating the floor of your pelvis. The light might radiate down your legs to your feet, or if you are lying down, it might cover the entire area that is touching the ground beneath you.\n    - Breathe deeply. With every breath, imagine fortifying the physical foundation of your body—sending your roots deep and wide.\n    - With your inhalations, draw energy up your roots into the space just in front of your tailbone glowing red, and on your exhalations, send the energy back down and wide, into the earth beneath you.',
+                    child: ListView(children: [
+                      Column(
+                        children: [
+                          const SizedBox(height: 20),
+                          ClipRRect(
+                              borderRadius: BorderRadius.circular(20),
+                              child: Image.asset('assets/muladhara.jpeg')),
+                          const Text(
+                            'Muladhara',
                             style: TextStyle(
-                              fontWeight: FontWeight.w400,
-                              fontSize: 15,
-                              fontFamily: 'Nunito',
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
                             ),
                           ),
-                        ),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * .01),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                  builder: (_) => const PlayPage(
-                                        music: 'muladhara',
-                                        chakra: 'Muladhara',
-                                      )),
-                            );
-                          },
-                          child: const ContinueWidget(text: 'Start Muladhara'),
-                        ),
-                      ],
-                    ),
+                          SizedBox(
+                              height: MediaQuery.of(context).size.height * .02),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 20),
+                            child: Text(
+                              'When you find yourself feeling unsettled, overwhelmed with uncertainty, or going through major life changes, try this grounding meditation to activate your root chakra.\n   - Consider doing this meditation outside, seated on the ground to more fully connect to the earth element. If you are sitting in a chair, plant your feet firmly on the ground; you might also prefer to lie down on the floor for this one.\n    - Close your eyes and bring your awareness to the base of your spine, imagining a ruby red sphere of light illuminating the floor of your pelvis. The light might radiate down your legs to your feet, or if you are lying down, it might cover the entire area that is touching the ground beneath you.\n    - Breathe deeply. With every breath, imagine fortifying the physical foundation of your body—sending your roots deep and wide.\n    - With your inhalations, draw energy up your roots into the space just in front of your tailbone glowing red, and on your exhalations, send the energy back down and wide, into the earth beneath you.',
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15,
+                                fontFamily: 'Nunito',
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                              height: MediaQuery.of(context).size.height * .01),
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                    builder: (_) => const PlayPage(
+                                          music: 'muladhara',
+                                          chakra: 'Muladhara',
+                                        )),
+                              );
+                            },
+                            child:
+                                const ContinueWidget(text: 'Start Muladhara'),
+                          ),
+                          SizedBox(
+                              height: MediaQuery.of(context).size.height * .02),
+                        ],
+                      ),
+                    ]),
                   ),
                 ),
               );
@@ -99,9 +112,11 @@ class ChakraPage extends StatelessWidget {
             child: ChakrasWidget(
               text: 'Muladhara',
               subtitle: ' - Spine',
-              image: Image.asset('assets/muladhara.jpeg', height: 50),
+              image: Image.asset(
+                'assets/muladhara.jpeg',
+              ),
               content:
-                  'Characterized by the emotions of survival\nstability, ambition, and self-sufficiency.',
+                  'Characterized by the emotions of survival stability, ambition, and self-sufficiency.',
               color: AppColors.grayWeb,
             ),
           ),
@@ -161,7 +176,8 @@ class ChakraPage extends StatelessWidget {
                               );
                             },
                             child: const ContinueWidget(
-                                text: 'Start Svadhisthana'),
+                              text: 'Start Svadhisthana',
+                            ),
                           ),
                         ],
                       ),
@@ -173,9 +189,11 @@ class ChakraPage extends StatelessWidget {
             child: ChakrasWidget(
               text: 'Svadhisthana',
               subtitle: ' - Belly',
-              image: Image.asset('assets/Svadisthana.jpeg', height: 50),
+              image: Image.asset(
+                'assets/Svadisthana.jpeg',
+              ),
               content:
-                  'Its attributes include the basic need for\nsexuality,as well as creativity and\nself-worth. ',
+                  'Its attributes include the basic need for sexuality,as well as creativity and self-worth. ',
               color: AppColors.silverChalice,
             ),
           ),
@@ -246,9 +264,9 @@ class ChakraPage extends StatelessWidget {
             child: ChakrasWidget(
               text: 'Manipura',
               subtitle: ' - Stomach',
-              image: Image.asset('assets/Manipura.jpeg', height: 50),
+              image: Image.asset('assets/Manipura.jpeg'),
               content:
-                  'Characterized by emotions like ego, anger,\nand aggression. ',
+                  'Characterized by emotions like ego, anger, and aggression. ',
               color: AppColors.Gainsboro,
             ),
           ),
@@ -319,9 +337,9 @@ class ChakraPage extends StatelessWidget {
             child: ChakrasWidget(
               text: 'Anahata',
               subtitle: ' - Heart',
-              image: Image.asset('assets/Anahata.png', height: 50),
+              image: Image.asset('assets/Anahata.png'),
               content:
-                  'Characterized by emotions of love,trust,\ncompassion, attachment,and passion. ',
+                  'Characterized by emotions of love,trust, compassion, attachment,and passion. ',
               color: AppColors.platinum,
             ),
           ),
@@ -393,9 +411,11 @@ class ChakraPage extends StatelessWidget {
             child: ChakrasWidget(
               text: 'Vishuddha',
               subtitle: ' - Throat',
-              image: Image.asset('assets/Visuddha.jpeg', height: 50),
+              image: Image.asset(
+                'assets/Visuddha.jpeg',
+              ),
               content:
-                  'Associated with inspiration, healthy\nexpression, faith, and the ability to\ncommunicate well. ',
+                  'Associated with inspiration, healthy expression, faith, and the ability to communicate well. ',
               color: AppColors.alibaster,
             ),
           ),
@@ -466,9 +486,9 @@ class ChakraPage extends StatelessWidget {
             child: ChakrasWidget(
               text: 'Ajna',
               subtitle: ' - Eyes',
-              image: Image.asset('assets/ajna.jpeg', height: 50),
+              image: Image.asset('assets/ajna.jpeg'),
               content:
-                  'Its attributes are intelligence, intuition,\ninsight, and self-knowledge. ',
+                  'Its attributes are intelligence, intuition,insight, and self-knowledge. ',
               color: AppColors.cultured,
             ),
           ),
@@ -539,9 +559,9 @@ class ChakraPage extends StatelessWidget {
             child: ChakrasWidget(
               text: 'Sahasrara',
               subtitle: ' - Head',
-              image: Image.asset('assets/Sahasrara.jpeg', height: 50),
+              image: Image.asset('assets/Sahasrara.jpeg'),
               content:
-                  ' It is the center of spirituality,\nenlightenment, and dynamic thought\nand energy. ',
+                  ' It is the center of spirituality,enlightenment, and dynamic thought and energy. ',
               color: AppColors.ghostWhite,
             ),
           ),
