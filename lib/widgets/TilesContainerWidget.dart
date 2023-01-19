@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 
-class TilesContainerWidget extends StatelessWidget {
+class TilesContainerWidget extends StatefulWidget {
   final String text;
-  final Image image;
+  final AssetImage image;
   final String content;
   const TilesContainerWidget({
     Key? key,
@@ -12,6 +12,11 @@ class TilesContainerWidget extends StatelessWidget {
   }) : super(key: key);
 
   @override
+  State<TilesContainerWidget> createState() => _TilesContainerWidgetState();
+}
+
+class _TilesContainerWidgetState extends State<TilesContainerWidget> {
+  @override
   Widget build(BuildContext context) {
     return Material(
       elevation: 5,
@@ -19,48 +24,37 @@ class TilesContainerWidget extends StatelessWidget {
         height: MediaQuery.of(context).size.height * 0.23,
         width: 150,
         decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
-            fit: BoxFit.cover,
-            image: AssetImage('assets/chakra.jpg'),
+            // image:image ,
+            fit: BoxFit.cover, image: widget.image,
           ),
         ),
-        child: Center(
-          child: Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: Column(
-              children: [
-                ClipRRect(
-                  borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20),
-                  ),
-                  child: image,
-                ),
-                const SizedBox(height: 15),
-                Text(
-                  text,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold, fontSize: 18),
-                ),
-                Center(
-                  child: Text(
-                    content,
-                    style: const TextStyle(
-                        fontWeight: FontWeight.w500, fontSize: 13),
-                  ),
-                ),
-                const SizedBox(height: 10),
-              ],
+        child: Column(
+          children: [
+            SizedBox(height: MediaQuery.of(context).size.height * .15),
+            Text(
+              widget.text,
+              style: TextStyle(
+                fontWeight: FontWeight.w300,
+                fontSize: 16,
+                color: Colors.white.withOpacity(.7),
+              ),
             ),
-          ),
+            Text(
+              widget.content,
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 18,
+                color: Colors.white,
+              ),
+            ),
+          ],
         ),
       ),
     );
   }
 }
-
-
-
 
 // Container(
 //             child: new Text(

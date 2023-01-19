@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/TilesContainerWidget.dart';
 import '../chakraPage.dart';
+import 'breathingPage.dart';
 
 class SeeAll extends StatelessWidget {
   const SeeAll({super.key});
@@ -52,7 +53,7 @@ class SeeAll extends StatelessWidget {
                           onTap: () {
                             Navigator.of(context).push(
                               MaterialPageRoute(
-                                builder: (_) => const ChakraPage(),
+                                builder: (_) => const BreathingPage(),
                               ),
                             );
                           },
