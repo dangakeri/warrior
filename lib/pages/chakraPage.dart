@@ -14,12 +14,14 @@ class ChakraPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       appBar: AppBar(
-          leading: IconButton(
-        onPressed: () {
-          Navigator.of(context).pop();
-        },
-        icon: Icon(Icons.arrow_back),
-      )),
+        leading: IconButton(
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+          icon: Icon(Icons.arrow_back),
+        ),
+        title: Text('Chakras'),
+      ),
       body: ListView(
         children: [
           Padding(
@@ -64,7 +66,7 @@ class ChakraPage extends StatelessWidget {
                           const SizedBox(height: 20),
                           ClipRRect(
                               borderRadius: BorderRadius.circular(20),
-                              child: Image.asset('assets/muladhara.jpeg')),
+                              child: Image.asset('assets/muladhara.jpg')),
                           const Text(
                             'Muladhara',
                             style: TextStyle(
@@ -113,7 +115,7 @@ class ChakraPage extends StatelessWidget {
               text: 'Muladhara',
               subtitle: ' - Spine',
               image: Image.asset(
-                'assets/muladhara.jpeg',
+                'assets/muladhara.jpg',
               ),
               content:
                   'Characterized by the emotions of survival stability, ambition, and self-sufficiency.',
@@ -142,7 +144,7 @@ class ChakraPage extends StatelessWidget {
                           ClipRRect(
                               borderRadius: BorderRadius.circular(20),
                               child: Image.asset(
-                                'assets/Svadisthana.jpeg',
+                                'assets/svadisthana.jpg',
                                 height: 100,
                               )),
                           const Text(
@@ -190,7 +192,7 @@ class ChakraPage extends StatelessWidget {
               text: 'Svadhisthana',
               subtitle: ' - Belly',
               image: Image.asset(
-                'assets/Svadisthana.jpeg',
+                'assets/svadisthana.jpg',
               ),
               content:
                   'Its attributes include the basic need for sexuality,as well as creativity and self-worth. ',
@@ -219,7 +221,7 @@ class ChakraPage extends StatelessWidget {
                           ClipRRect(
                               borderRadius: BorderRadius.circular(20),
                               child: Image.asset(
-                                'assets/Manipura.jpeg',
+                                'assets/manipura.jpg',
                                 height: 100,
                               )),
                           const Text(
@@ -264,7 +266,7 @@ class ChakraPage extends StatelessWidget {
             child: ChakrasWidget(
               text: 'Manipura',
               subtitle: ' - Stomach',
-              image: Image.asset('assets/Manipura.jpeg'),
+              image: Image.asset('assets/manipura.jpg'),
               content:
                   'Characterized by emotions like ego, anger, and aggression. ',
               color: AppColors.Gainsboro,
@@ -292,7 +294,7 @@ class ChakraPage extends StatelessWidget {
                           ClipRRect(
                               borderRadius: BorderRadius.circular(20),
                               child: Image.asset(
-                                'assets/Anahata.png',
+                                'assets/anahata.jpg',
                                 height: 100,
                               )),
                           const Text(
@@ -337,7 +339,7 @@ class ChakraPage extends StatelessWidget {
             child: ChakrasWidget(
               text: 'Anahata',
               subtitle: ' - Heart',
-              image: Image.asset('assets/Anahata.png'),
+              image: Image.asset('assets/anahata.jpg'),
               content:
                   'Characterized by emotions of love,trust, compassion, attachment,and passion. ',
               color: AppColors.platinum,
@@ -365,7 +367,7 @@ class ChakraPage extends StatelessWidget {
                           ClipRRect(
                               borderRadius: BorderRadius.circular(20),
                               child: Image.asset(
-                                'assets/Visuddha.jpeg',
+                                'assets/visuddha.jpg',
                                 height: 100,
                               )),
                           const Text(
@@ -412,10 +414,10 @@ class ChakraPage extends StatelessWidget {
               text: 'Vishuddha',
               subtitle: ' - Throat',
               image: Image.asset(
-                'assets/Visuddha.jpeg',
+                'assets/visuddha.jpg',
               ),
               content:
-                  'Associated with inspiration, healthy expression, faith, and the ability to communicate well. ',
+                  'Associated with inspiration,faith, healthy expression, and the ability to communicate well. ',
               color: AppColors.alibaster,
             ),
           ),
@@ -441,7 +443,7 @@ class ChakraPage extends StatelessWidget {
                           ClipRRect(
                               borderRadius: BorderRadius.circular(20),
                               child: Image.asset(
-                                'assets/ajna.jpeg',
+                                'assets/ajna.jpg',
                                 height: 100,
                               )),
                           const Text(
@@ -486,9 +488,9 @@ class ChakraPage extends StatelessWidget {
             child: ChakrasWidget(
               text: 'Ajna',
               subtitle: ' - Eyes',
-              image: Image.asset('assets/ajna.jpeg'),
+              image: Image.asset('assets/ajna.jpg'),
               content:
-                  'Its attributes are intelligence, intuition,insight, and self-knowledge. ',
+                  'Its attributes are intelligence,insight,intuition, and self-knowledge. ',
               color: AppColors.cultured,
             ),
           ),
@@ -514,7 +516,7 @@ class ChakraPage extends StatelessWidget {
                           ClipRRect(
                               borderRadius: BorderRadius.circular(20),
                               child: Image.asset(
-                                'assets/Sahasrara.jpeg',
+                                'assets/Sahasrara.jpg',
                                 height: 100,
                               )),
                           const Text(
@@ -559,12 +561,15 @@ class ChakraPage extends StatelessWidget {
             child: ChakrasWidget(
               text: 'Sahasrara',
               subtitle: ' - Head',
-              image: Image.asset('assets/Sahasrara.jpeg'),
+              image: Image.asset('assets/sahasrara.jpg'),
               content:
                   ' It is the center of spirituality,enlightenment, and dynamic thought and energy. ',
               color: AppColors.ghostWhite,
             ),
           ),
+          SizedBox(
+            height: MediaQuery.of(context).size.height * .02,
+          )
         ],
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:Warriors/consts/app_colors.dart';
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
 
@@ -24,8 +25,8 @@ class ChakrasWidget extends StatelessWidget {
         height: 150,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: color,
-          borderRadius: BorderRadius.circular(10),
+          color: AppColors.black,
+          borderRadius: BorderRadius.circular(5),
         ),
         child: Column(children: [
           ListTile(
@@ -44,6 +45,7 @@ class ChakrasWidget extends StatelessWidget {
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
                     color: Theme.of(context).buttonColor,
+                    fontFamily: "nunito",
                     fontSize: 20,
                   ),
                 ),
@@ -57,7 +59,6 @@ class ChakrasWidget extends StatelessWidget {
                 ),
               ],
             ),
-            trailing: const Icon(Icons.arrow_forward_ios),
           ),
           SizedBox(height: MediaQuery.of(context).size.height * 0.01),
           Padding(

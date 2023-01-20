@@ -1,10 +1,7 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:provider/provider.dart';
 import 'Onboarding/splash_screen.dart';
-import 'Provider/Theme.dart';
-import 'Provider/Theme_colors.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -32,7 +29,7 @@ class _MyAppState extends State<MyApp> {
       // code for changing the color of status bar color
       SystemUiOverlayStyle(
         statusBarColor: Colors.transparent,
-        systemNavigationBarColor: Theme.of(context).buttonColor,
+        systemNavigationBarColor: Colors.transparent,
       ),
     );
 
@@ -40,7 +37,6 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Warriors',
       theme: ThemeData(
-        useMaterial3: true,
         primaryColor: Colors.black,
       ),
       home: const SplashScreen(),

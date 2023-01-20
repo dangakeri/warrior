@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../Onboarding/splash_screen.dart';
-import '../Provider/Theme.dart';
+
 import '../notifications.dart';
 
 class SettingPage extends StatefulWidget {
@@ -41,7 +41,6 @@ class _SettingPageState extends State<SettingPage> {
 
   @override
   Widget build(BuildContext context) {
-    final themeChanger = Provider.of<DarkThemeProvider>(context);
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       extendBodyBehindAppBar: false,
@@ -66,21 +65,6 @@ class _SettingPageState extends State<SettingPage> {
       ),
       body: Column(
         children: [
-          GestureDetector(
-            child: ListTile(
-              leading: const Icon(Icons.brightness_3),
-              trailing: CupertinoSwitch(
-                value: themeChanger.darkTheme,
-                onChanged: (newValue) {
-                  setState(() {
-                    themeChanger.darkTheme = newValue;
-                  });
-                },
-              ),
-              title: const Text('Dark theme'),
-              subtitle: const Text('Toggle to change theme'),
-            ),
-          ),
           GestureDetector(
             onTap: (() {
               showDialog(

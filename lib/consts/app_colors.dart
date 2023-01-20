@@ -8,4 +8,5 @@ class AppColors {
   static final Color alibaster = const Color(0xFFecebe4);
   static final Color cultured = const Color(0xFFeef0f2);
   static final Color ghostWhite = const Color(0xFFfafaff);
+  static final Color black = const Color(0xFF495057);
 }
