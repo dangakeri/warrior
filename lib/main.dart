@@ -21,23 +21,6 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  final Brightness brightness =
-      WidgetsBinding.instance.platformDispatcher.platformBrightness;
-
-  DarkThemeProvider themeChangeProvider = DarkThemeProvider();
-
-  void getCurrentTheme() async {
-    themeChangeProvider.darkTheme =
-        await themeChangeProvider.darkThemePreferences.getTheme();
-  }
-
-  @override
-  void initState() {
-    getCurrentTheme();
-
-    super.initState();
-  }
-
   @override
   Widget build(BuildContext context) {
     AssetsAudioPlayer.setupNotificationsOpenAction((notification) {
@@ -52,26 +35,15 @@ class _MyAppState extends State<MyApp> {
         systemNavigationBarColor: Theme.of(context).buttonColor,
       ),
     );
-    return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) {
-          return themeChangeProvider;
-        }),
-      ],
-      child: Consumer<DarkThemeProvider>(builder: (context, themeData, child) {
-        return Consumer<DarkThemeProvider>(
-            builder: (context, themeData, child) {
-          return MaterialApp(
-            debugShowCheckedModeBanner: false,
-            title: 'Warriors',
-            theme: Styles.themeData(
-              themeChangeProvider.darkTheme,
-              context,
-            ),
-            home: const SplashScreen(),
-          );
-        });
-      }),
+
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: 'Warriors',
+      theme: ThemeData(
+        useMaterial3: true,
+        primaryColor: Colors.black,
+      ),
+      home: const SplashScreen(),
     );
   }
 }
