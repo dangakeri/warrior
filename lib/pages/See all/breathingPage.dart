@@ -11,15 +11,26 @@ class BreathingPage extends StatelessWidget {
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
-            title: Text('Breathing'),
+            leading: IconButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+                icon: Icon(
+                  Icons.arrow_back,
+                  // color: Theme.of(context).cardColor,
+                )),
+            title: Text(
+              'Breathing',
+              style: TextStyle(),
+            ),
             expandedHeight: 210,
-            // pinned: true,
+            pinned: true,
             flexibleSpace: FlexibleSpaceBar(
               background: Container(
                 decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      bottomLeft: Radius.circular(60),
-                      bottomRight: Radius.circular(60)),
+                  // borderRadius: BorderRadius.only(
+                  //     bottomLeft: Radius.circular(60),
+                  //     bottomRight: Radius.circular(60)),
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
@@ -30,13 +41,16 @@ class BreathingPage extends StatelessWidget {
                 child: Column(
                   children: [
                     SizedBox(height: MediaQuery.of(context).size.height * .1),
-                    const Padding(
+                    Padding(
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Center(
                         child: Text(
                           'Breathing Exercise is very beneficial to our good working of our body',
                           style: TextStyle(
-                              fontSize: 20, fontWeight: FontWeight.w400),
+                            fontSize: 20,
+                            fontWeight: FontWeight.w400,
+                            color: Theme.of(context).cardColor,
+                          ),
                         ),
                       ),
                     )
@@ -47,14 +61,37 @@ class BreathingPage extends StatelessWidget {
           ),
           SliverList(
               delegate: SliverChildListDelegate([
-            SizedBox(height: MediaQuery.of(context).size.height * .05),
+            SizedBox(height: MediaQuery.of(context).size.height * .01),
             const Padding(
               padding: EdgeInsets.symmetric(horizontal: 10),
               child: Text(
                 'Meditations',
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.w600,
+                ),
               ),
             ),
+            MeditationWidget(),
+            SizedBox(height: MediaQuery.of(context).size.height * .02),
+            MeditationWidget(),
+            SizedBox(height: MediaQuery.of(context).size.height * .02),
+            MeditationWidget(),
+            SizedBox(height: MediaQuery.of(context).size.height * .02),
+            MeditationWidget(),
+            SizedBox(height: MediaQuery.of(context).size.height * .02),
+            MeditationWidget(),
+            SizedBox(height: MediaQuery.of(context).size.height * .02),
+            MeditationWidget(),
+            SizedBox(height: MediaQuery.of(context).size.height * .02),
+            MeditationWidget(),
+            SizedBox(height: MediaQuery.of(context).size.height * .02),
+            MeditationWidget(),
+            SizedBox(height: MediaQuery.of(context).size.height * .02),
+            MeditationWidget(),
+            SizedBox(height: MediaQuery.of(context).size.height * .02),
+            MeditationWidget(),
+            SizedBox(height: MediaQuery.of(context).size.height * .02),
             MeditationWidget(),
           ]))
         ],
@@ -93,25 +130,29 @@ class MeditationWidget extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(width: 10),
             Column(
               children: [
                 SizedBox(height: 15),
-                const Text(
-                  'Gentle tools for sleep',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
+                Padding(
+                  padding: EdgeInsets.only(left: 40),
+                  child: Text(
+                    'Gentle tools for sleep',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w500,
+                      color: Theme.of(context).cardColor,
+                    ),
                   ),
                 ),
                 SizedBox(height: 3),
                 Row(
-                  children: const [
+                  children: [
                     Text(
                       '30 Min',
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
+                        color: Theme.of(context).cardColor,
                       ),
                       textAlign: TextAlign.left,
                     ),
@@ -121,6 +162,7 @@ class MeditationWidget extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 16,
                         fontWeight: FontWeight.w400,
+                        color: Theme.of(context).cardColor,
                       ),
                     ),
                   ],
@@ -128,7 +170,10 @@ class MeditationWidget extends StatelessWidget {
               ],
             ),
             Spacer(),
-            Icon(Icons.lock),
+            Icon(
+              Icons.lock,
+              color: Theme.of(context).cardColor,
+            ),
             SizedBox(width: 5),
           ],
         ),
