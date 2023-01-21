@@ -71,167 +71,6 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.black,
-
-      // appBar: AppBar(
-      //   elevation: 0,
-      //   backgroundColor: Theme.of(context).backgroundColor,
-      //   actions: [
-      //     IconButton(
-      //         onPressed: () {
-      //           Navigator.of(context).push(
-      //             MaterialPageRoute(builder: (_) => const SettingPage()),
-      //           );
-      //         },
-      //         icon: Icon(
-      //           BootstrapIcons.gear,
-      //           color: Theme.of(context).buttonColor,
-      //         )),
-      //     const SizedBox(width: 10),
-      //   ],
-      // ),
-      //  ClipPath(
-      //       clipper: RoundedDiagonalPathClipper(),
-      //       child: Container(
-      //         height: 320,
-      //         decoration: BoxDecoration(
-      //           borderRadius: BorderRadius.all(Radius.circular(50.0)),
-      //           color: Colors.orange,
-      //         ),
-      //         child: Center(child: Text("RoundedDiagonalPathClipper()")),
-      //       ),
-      //     ),
-      // body: ListView(
-      //   physics: const BouncingScrollPhysics(),
-      //   children: [
-
-      //     const SizedBox(height: 30),
-      //     const SizedBox(height: 200),
-      //     Padding(
-      //       padding: const EdgeInsets.symmetric(horizontal: 20),
-      //       child: Row(
-      //         children: [
-      //           Text(
-      //             'Be a Warrior, $name ',
-      //             style: const TextStyle(
-      //                 fontWeight: FontWeight.bold,
-      //                 fontSize: 16,
-      //                 color: Colors.white),
-      //           ),
-      //           const Spacer(),
-      //           TextButton(
-      //             onPressed: () {
-      //               Navigator.of(context).push(
-      //                 MaterialPageRoute(
-      //                   builder: (_) => const SeeAll(),
-      //                 ),
-      //               );
-      //             },
-      //             child: Text(
-      //               'See All',
-      //               style: TextStyle(
-      //                   fontWeight: FontWeight.bold,
-      //                   fontSize: 16,
-      //                   color: Colors.white),
-      //             ),
-      //           ),
-      //         ],
-      //       ),
-      //     ),
-      //     const SizedBox(height: 20),
-      //     Container(
-      //       height: MediaQuery.of(context).size.height * 0.24,
-      //       width: MediaQuery.of(context).size.width,
-      //       child: ListView(
-      //         scrollDirection: Axis.horizontal,
-      //         physics: const BouncingScrollPhysics(),
-      //         children: [
-      //           Row(
-      //             children: [
-      //               const SizedBox(width: 20),
-      //               GestureDetector(
-      //                 onTap: () {
-      //                   Navigator.of(context).push(
-      //                     MaterialPageRoute(
-      //                       builder: (_) => const ChakraPage(),
-      //                     ),
-      //                   );
-      //                 },
-      //                 child: const TilesContainerWidget(
-      //                   text: 'Meditation',
-      //                   content: 'Chakras',
-      //                   image: AssetImage('assets/chakra.jpeg'),
-      //                 ),
-      //               ),
-      //               const SizedBox(width: 20),
-      //               GestureDetector(
-      //                 onTap: () {
-      //                   Navigator.of(context).push(
-      //                     MaterialPageRoute(
-      //                       builder: (_) => const BreathingPage(),
-      //                     ),
-      //                   );
-      //                 },
-      //                 child: const TilesContainerWidget(
-      //                   text: 'Breathing workout',
-      //                   content: 'Breathing',
-      //                   image: AssetImage('assets/breathing.jpg'),
-      //                 ),
-      //               ),
-      //               const SizedBox(width: 20),
-      //               GestureDetector(
-      //                 onTap: () {
-      //                   Navigator.of(context).push(
-      //                     MaterialPageRoute(
-      //                       builder: (_) => const ChakraPage(),
-      //                     ),
-      //                   );
-      //                 },
-      //                 child: const TilesContainerWidget(
-      //                   text: 'Fear',
-      //                   content: 'Overcoming Fear',
-      //                   image: AssetImage('assets/fear.jpeg'),
-      //                 ),
-      //               ),
-      //               const SizedBox(width: 20),
-      //               GestureDetector(
-      //                 onTap: () {
-      //                   Navigator.of(context).push(
-      //                     MaterialPageRoute(
-      //                       builder: (_) => const ChakraPage(),
-      //                     ),
-      //                   );
-      //                 },
-      //                 child: const TilesContainerWidget(
-      //                   text: 'stressed',
-      //                   content: 'Stress',
-      //                   image: AssetImage('assets/stress.jpeg'),
-      //                 ),
-      //               ),
-      //               const SizedBox(width: 20),
-      //               GestureDetector(
-      //                 onTap: () {
-      //                   Navigator.of(context).push(
-      //                     MaterialPageRoute(
-      //                       builder: (_) => const ChakraPage(),
-      //                     ),
-      //                   );
-      //                 },
-      //                 child: const TilesContainerWidget(
-      //                   text: 'Anxious',
-      //                   content: 'Anxiety',
-      //                   image: AssetImage('assets/anxiety.jpeg'),
-      //                 ),
-      //               ),
-      //             ],
-      //           ),
-      //         ],
-      //       ),
-      //     ),
-      //     const SizedBox(height: 30),
-      //   ],
-      // ),
-
       body: ScrollConfiguration(
         behavior: NoGlow(),
         child: CustomScrollView(
@@ -252,24 +91,34 @@ class _HomePageState extends State<HomePage> {
                     ),
                     child: Center(
                         child: Column(
-                      children: const [
-                        SizedBox(height: 50),
-                        Text(
-                          'Meditate',
-                          style: TextStyle(
-                            fontSize: 25,
+                      children: [
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.07),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 40),
+                          child: Text(
+                            'Hi,$name ',
+                            style: const TextStyle(
+                              fontSize: 25,
+                              fontFamily: 'Nunito',
+                              fontWeight: FontWeight.w300,
+                            ),
                           ),
                         ),
-                        Padding(
+                        const Padding(
                           padding: EdgeInsets.symmetric(horizontal: 40),
                           child: Text(
                             'Focus even more and get the perfect the day brings along',
                             style: TextStyle(
+                              fontFamily: 'Nunito',
                               fontSize: 20,
+                              fontWeight: FontWeight.w300,
                             ),
                             textAlign: TextAlign.center,
                           ),
                         ),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.02),
                       ],
                     )),
                   ),
@@ -289,6 +138,7 @@ class _HomePageState extends State<HomePage> {
                               'For you',
                               style: TextStyle(
                                 fontSize: 20,
+                                fontFamily: 'Nunito',
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black,
                               ),
@@ -328,6 +178,7 @@ class _HomePageState extends State<HomePage> {
                             Text(
                               'Today Meditation',
                               style: TextStyle(
+                                fontFamily: 'Nunito',
                                 fontSize: 20,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black,
@@ -343,6 +194,10 @@ class _HomePageState extends State<HomePage> {
                           decoration: BoxDecoration(
                             color: Colors.green,
                             borderRadius: BorderRadius.circular(10),
+                            image: DecorationImage(
+                              fit: BoxFit.cover,
+                              image: AssetImage('assets/breathing.jpg'),
+                            ),
                           ),
                         ),
                         Row(
@@ -350,6 +205,7 @@ class _HomePageState extends State<HomePage> {
                             Text(
                               'Explore categories',
                               style: TextStyle(
+                                fontFamily: 'Nunito',
                                 fontSize: 20,
                                 fontWeight: FontWeight.w600,
                                 color: Colors.black,
@@ -402,23 +258,23 @@ class _HomePageState extends State<HomePage> {
                                   );
                                 },
                                 child: const TilesContainerWidget(
-                                  text: 'stressed',
-                                  content: 'Stress',
-                                  image: AssetImage('assets/stress.jpeg'),
+                                  text: 'Anxious',
+                                  content: 'Anxiety',
+                                  image: AssetImage('assets/anxiety.jpeg'),
                                 ),
                               ),
                               GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
-                                      builder: (_) => const ChakraPage(),
+                                      builder: (_) => const BreathingPage(),
                                     ),
                                   );
                                 },
                                 child: const TilesContainerWidget(
-                                  text: 'stressed',
-                                  content: 'Stress',
-                                  image: AssetImage('assets/stress.jpeg'),
+                                  text: 'Exercise your breathing',
+                                  content: 'Breathing',
+                                  image: AssetImage('assets/breathing.jpg'),
                                 ),
                               ),
                               GestureDetector(
