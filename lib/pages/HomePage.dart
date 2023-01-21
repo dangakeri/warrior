@@ -6,6 +6,7 @@ import 'package:Warriors/pages/settings.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:intl/intl.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -70,8 +71,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // backgroundColor: Colors.transparent,
-      backgroundColor: Theme.of(context).backgroundColor,
+      // backgroundColor: Colors.black,
 
       // appBar: AppBar(
       //   elevation: 0,
@@ -90,172 +90,276 @@ class _HomePageState extends State<HomePage> {
       //     const SizedBox(width: 10),
       //   ],
       // ),
-      body: ListView(
-        physics: const BouncingScrollPhysics(),
-        children: [
-          Center(
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: Center(
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(50),
-                  child: GestureDetector(
-                    onTap: () {
-                      NotificationsApi.showNotification(
-                        scheduleDate:
-                            DateTime.now().add(const Duration(seconds: 12)),
-                        title: 'Warrior',
-                        body:
-                            'Conveniently budget for your monthly fare with Tap & Go and travel stress-free!',
-                        payload: '',
-                      );
-                    },
-                    child: Image.asset(
-                      'assets/warrior.jpeg',
-                      height: 70,
-                      width: 70,
-                    ),
+      //  ClipPath(
+      //       clipper: RoundedDiagonalPathClipper(),
+      //       child: Container(
+      //         height: 320,
+      //         decoration: BoxDecoration(
+      //           borderRadius: BorderRadius.all(Radius.circular(50.0)),
+      //           color: Colors.orange,
+      //         ),
+      //         child: Center(child: Text("RoundedDiagonalPathClipper()")),
+      //       ),
+      //     ),
+      // body: ListView(
+      //   physics: const BouncingScrollPhysics(),
+      //   children: [
+
+      //     const SizedBox(height: 30),
+      //     const SizedBox(height: 200),
+      //     Padding(
+      //       padding: const EdgeInsets.symmetric(horizontal: 20),
+      //       child: Row(
+      //         children: [
+      //           Text(
+      //             'Be a Warrior, $name ',
+      //             style: const TextStyle(
+      //                 fontWeight: FontWeight.bold,
+      //                 fontSize: 16,
+      //                 color: Colors.white),
+      //           ),
+      //           const Spacer(),
+      //           TextButton(
+      //             onPressed: () {
+      //               Navigator.of(context).push(
+      //                 MaterialPageRoute(
+      //                   builder: (_) => const SeeAll(),
+      //                 ),
+      //               );
+      //             },
+      //             child: Text(
+      //               'See All',
+      //               style: TextStyle(
+      //                   fontWeight: FontWeight.bold,
+      //                   fontSize: 16,
+      //                   color: Colors.white),
+      //             ),
+      //           ),
+      //         ],
+      //       ),
+      //     ),
+      //     const SizedBox(height: 20),
+      //     Container(
+      //       height: MediaQuery.of(context).size.height * 0.24,
+      //       width: MediaQuery.of(context).size.width,
+      //       child: ListView(
+      //         scrollDirection: Axis.horizontal,
+      //         physics: const BouncingScrollPhysics(),
+      //         children: [
+      //           Row(
+      //             children: [
+      //               const SizedBox(width: 20),
+      //               GestureDetector(
+      //                 onTap: () {
+      //                   Navigator.of(context).push(
+      //                     MaterialPageRoute(
+      //                       builder: (_) => const ChakraPage(),
+      //                     ),
+      //                   );
+      //                 },
+      //                 child: const TilesContainerWidget(
+      //                   text: 'Meditation',
+      //                   content: 'Chakras',
+      //                   image: AssetImage('assets/chakra.jpeg'),
+      //                 ),
+      //               ),
+      //               const SizedBox(width: 20),
+      //               GestureDetector(
+      //                 onTap: () {
+      //                   Navigator.of(context).push(
+      //                     MaterialPageRoute(
+      //                       builder: (_) => const BreathingPage(),
+      //                     ),
+      //                   );
+      //                 },
+      //                 child: const TilesContainerWidget(
+      //                   text: 'Breathing workout',
+      //                   content: 'Breathing',
+      //                   image: AssetImage('assets/breathing.jpg'),
+      //                 ),
+      //               ),
+      //               const SizedBox(width: 20),
+      //               GestureDetector(
+      //                 onTap: () {
+      //                   Navigator.of(context).push(
+      //                     MaterialPageRoute(
+      //                       builder: (_) => const ChakraPage(),
+      //                     ),
+      //                   );
+      //                 },
+      //                 child: const TilesContainerWidget(
+      //                   text: 'Fear',
+      //                   content: 'Overcoming Fear',
+      //                   image: AssetImage('assets/fear.jpeg'),
+      //                 ),
+      //               ),
+      //               const SizedBox(width: 20),
+      //               GestureDetector(
+      //                 onTap: () {
+      //                   Navigator.of(context).push(
+      //                     MaterialPageRoute(
+      //                       builder: (_) => const ChakraPage(),
+      //                     ),
+      //                   );
+      //                 },
+      //                 child: const TilesContainerWidget(
+      //                   text: 'stressed',
+      //                   content: 'Stress',
+      //                   image: AssetImage('assets/stress.jpeg'),
+      //                 ),
+      //               ),
+      //               const SizedBox(width: 20),
+      //               GestureDetector(
+      //                 onTap: () {
+      //                   Navigator.of(context).push(
+      //                     MaterialPageRoute(
+      //                       builder: (_) => const ChakraPage(),
+      //                     ),
+      //                   );
+      //                 },
+      //                 child: const TilesContainerWidget(
+      //                   text: 'Anxious',
+      //                   content: 'Anxiety',
+      //                   image: AssetImage('assets/anxiety.jpeg'),
+      //                 ),
+      //               ),
+      //             ],
+      //           ),
+      //         ],
+      //       ),
+      //     ),
+      //     const SizedBox(height: 30),
+      //   ],
+      // ),
+      body: CustomScrollView(
+        slivers: [
+          SliverAppBar(
+            backgroundColor: Colors.transparent,
+            expandedHeight: 200,
+            pinned: true,
+            flexibleSpace: FlexibleSpaceBar(
+              title: const Text('Meditate'),
+              background: ClipPath(
+                clipper: OvalBottomBorderClipper(),
+                child: Container(
+                  height: 200,
+                  decoration: BoxDecoration(
+                    borderRadius: const BorderRadius.all(Radius.circular(50.0)),
+                    color: Colors.grey.withOpacity(.3),
                   ),
+                  child: Center(
+                      child: Column(
+                    children: const [
+                      SizedBox(height: 50),
+                      Text(
+                        'Meditate',
+                        style: TextStyle(
+                          fontSize: 25,
+                        ),
+                      ),
+                      Padding(
+                        padding: EdgeInsets.symmetric(horizontal: 40),
+                        child: Text(
+                          'Focus even more and get the perfect the day brings along',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ],
+                  )),
                 ),
               ),
             ),
           ),
-          const SizedBox(height: 10),
-          Center(child: Text(name)),
-          const SizedBox(height: 10),
-          Center(
-              child: Text(
-            date,
-            style: const TextStyle(
-              fontWeight: FontWeight.bold,
-            ),
-          )),
-          const SizedBox(height: 10),
-          const Center(child: Text('Will help you focus even more')),
-          const SizedBox(height: 30),
-          const SizedBox(height: 200),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 20),
-            child: Row(
-              children: [
-                Text(
-                  'Be a Warrior, $name ',
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 16,
-                      color: Colors.white),
-                ),
-                const Spacer(),
-                TextButton(
-                  onPressed: () {
-                    Navigator.of(context).push(
-                      MaterialPageRoute(
-                        builder: (_) => const SeeAll(),
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: Column(
+                    children: [
+                      Row(
+                        children: const [
+                          Text(
+                            'For you',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
                       ),
-                    );
-                  },
-                  child: Text(
-                    'See All',
-                    style: TextStyle(
-                        fontWeight: FontWeight.bold,
-                        fontSize: 16,
-                        color: Colors.white),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.01),
+                      Material(
+                        elevation: 5,
+                        child: Container(
+                          height: 80,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.01),
+                      Material(
+                        elevation: 5,
+                        child: Container(
+                          height: 80,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: Colors.green,
+                            borderRadius: BorderRadius.circular(5),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.01),
+                      Row(
+                        children: const [
+                          Text(
+                            'Today Meditation',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.01),
+                      Container(
+                        height: 200,
+                        width: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Colors.green,
+                          borderRadius: BorderRadius.circular(10),
+                        ),
+                      ),
+                      Row(
+                        children: const [
+                          Text(
+                            'Explore categories',
+                            style: TextStyle(
+                              fontSize: 20,
+                              fontWeight: FontWeight.w600,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
+                      )
+                    ],
                   ),
                 ),
               ],
             ),
-          ),
-          const SizedBox(height: 20),
-          Container(
-            height: MediaQuery.of(context).size.height * 0.24,
-            width: MediaQuery.of(context).size.width,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              physics: const BouncingScrollPhysics(),
-              children: [
-                Row(
-                  children: [
-                    const SizedBox(width: 20),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) => const ChakraPage(),
-                          ),
-                        );
-                      },
-                      child: const TilesContainerWidget(
-                        text: 'Meditation',
-                        content: 'Chakras',
-                        image: AssetImage('assets/chakra.jpeg'),
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) => const BreathingPage(),
-                          ),
-                        );
-                      },
-                      child: const TilesContainerWidget(
-                        text: 'Breathing workout',
-                        content: 'Breathing',
-                        image: AssetImage('assets/breathing.jpg'),
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) => const ChakraPage(),
-                          ),
-                        );
-                      },
-                      child: const TilesContainerWidget(
-                        text: 'Fear',
-                        content: 'Overcoming Fear',
-                        image: AssetImage('assets/fear.jpeg'),
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) => const ChakraPage(),
-                          ),
-                        );
-                      },
-                      child: const TilesContainerWidget(
-                        text: 'stressed',
-                        content: 'Stress',
-                        image: AssetImage('assets/stress.jpeg'),
-                      ),
-                    ),
-                    const SizedBox(width: 20),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) => const ChakraPage(),
-                          ),
-                        );
-                      },
-                      child: const TilesContainerWidget(
-                        text: 'Anxious',
-                        content: 'Anxiety',
-                        image: AssetImage('assets/anxiety.jpeg'),
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ),
-          ),
-          const SizedBox(height: 30),
+          )
         ],
       ),
     );
