@@ -87,7 +87,7 @@ class _HomePageState extends State<HomePage> {
                     decoration: BoxDecoration(
                       borderRadius:
                           const BorderRadius.all(Radius.circular(50.0)),
-                      color: Colors.grey.withOpacity(.3),
+                      color: AppColors.blue,
                     ),
                     child: Center(
                         child: Column(
@@ -99,7 +99,7 @@ class _HomePageState extends State<HomePage> {
                           child: Text(
                             'Hi,$name ',
                             style: const TextStyle(
-                              fontSize: 25,
+                              fontSize: 26,
                               fontFamily: 'Nunito',
                               fontWeight: FontWeight.w300,
                             ),
@@ -111,7 +111,7 @@ class _HomePageState extends State<HomePage> {
                             'Focus even more and get the perfect the day brings along',
                             style: TextStyle(
                               fontFamily: 'Nunito',
-                              fontSize: 20,
+                              fontSize: 18,
                               fontWeight: FontWeight.w300,
                             ),
                             textAlign: TextAlign.center,
@@ -119,6 +119,14 @@ class _HomePageState extends State<HomePage> {
                         ),
                         SizedBox(
                             height: MediaQuery.of(context).size.height * 0.02),
+                        Text(
+                          date,
+                          style: TextStyle(
+                            fontFamily: 'Nunito',
+                            fontSize: 18,
+                            fontWeight: FontWeight.w300,
+                          ),
+                        ),
                       ],
                     )),
                   ),
@@ -137,9 +145,9 @@ class _HomePageState extends State<HomePage> {
                             Text(
                               'For you',
                               style: TextStyle(
-                                fontSize: 20,
+                                fontSize: 18,
                                 fontFamily: 'Nunito',
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w400,
                                 color: Colors.black,
                               ),
                             ),
@@ -178,9 +186,9 @@ class _HomePageState extends State<HomePage> {
                             Text(
                               'Today Meditation',
                               style: TextStyle(
+                                fontSize: 18,
                                 fontFamily: 'Nunito',
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w400,
                                 color: Colors.black,
                               ),
                             ),
@@ -194,7 +202,7 @@ class _HomePageState extends State<HomePage> {
                           decoration: BoxDecoration(
                             color: Colors.green,
                             borderRadius: BorderRadius.circular(10),
-                            image: DecorationImage(
+                            image: const DecorationImage(
                               fit: BoxFit.cover,
                               image: AssetImage('assets/breathing.jpg'),
                             ),
@@ -205,9 +213,9 @@ class _HomePageState extends State<HomePage> {
                             Text(
                               'Explore categories',
                               style: TextStyle(
+                                fontSize: 18,
                                 fontFamily: 'Nunito',
-                                fontSize: 20,
-                                fontWeight: FontWeight.w600,
+                                fontWeight: FontWeight.w400,
                                 color: Colors.black,
                               ),
                             ),
