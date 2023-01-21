@@ -231,137 +231,300 @@ class _HomePageState extends State<HomePage> {
       //     const SizedBox(height: 30),
       //   ],
       // ),
-      body: CustomScrollView(
-        slivers: [
-          SliverAppBar(
-            backgroundColor: Colors.transparent,
-            expandedHeight: 200,
-            pinned: true,
-            flexibleSpace: FlexibleSpaceBar(
-              title: const Text('Meditate'),
-              background: ClipPath(
-                clipper: OvalBottomBorderClipper(),
-                child: Container(
-                  height: 200,
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(50.0)),
-                    color: Colors.grey.withOpacity(.3),
-                  ),
-                  child: Center(
-                      child: Column(
-                    children: const [
-                      SizedBox(height: 50),
-                      Text(
-                        'Meditate',
-                        style: TextStyle(
-                          fontSize: 25,
-                        ),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.symmetric(horizontal: 40),
-                        child: Text(
-                          'Focus even more and get the perfect the day brings along',
+
+      body: ScrollConfiguration(
+        behavior: NoGlow(),
+        child: CustomScrollView(
+          slivers: [
+            SliverAppBar(
+              backgroundColor: Colors.transparent,
+              expandedHeight: 200,
+              pinned: true,
+              flexibleSpace: FlexibleSpaceBar(
+                background: ClipPath(
+                  clipper: OvalBottomBorderClipper(),
+                  child: Container(
+                    height: 200,
+                    decoration: BoxDecoration(
+                      borderRadius:
+                          const BorderRadius.all(Radius.circular(50.0)),
+                      color: Colors.grey.withOpacity(.3),
+                    ),
+                    child: Center(
+                        child: Column(
+                      children: const [
+                        SizedBox(height: 50),
+                        Text(
+                          'Meditate',
                           style: TextStyle(
-                            fontSize: 20,
+                            fontSize: 25,
                           ),
-                          textAlign: TextAlign.center,
                         ),
-                      ),
-                    ],
-                  )),
+                        Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 40),
+                          child: Text(
+                            'Focus even more and get the perfect the day brings along',
+                            style: TextStyle(
+                              fontSize: 20,
+                            ),
+                            textAlign: TextAlign.center,
+                          ),
+                        ),
+                      ],
+                    )),
+                  ),
                 ),
               ),
             ),
-          ),
-          SliverList(
-            delegate: SliverChildListDelegate(
-              [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 10),
-                  child: Column(
-                    children: [
-                      Row(
-                        children: const [
-                          Text(
-                            'For you',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.black,
+            SliverList(
+              delegate: SliverChildListDelegate(
+                [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    child: Column(
+                      children: [
+                        Row(
+                          children: const [
+                            Text(
+                              'For you',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.01),
+                        Material(
+                          elevation: 5,
+                          child: Container(
+                            height: 80,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.green,
+                              borderRadius: BorderRadius.circular(5),
                             ),
                           ),
-                        ],
-                      ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.01),
-                      Material(
-                        elevation: 5,
-                        child: Container(
-                          height: 80,
+                        ),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.01),
+                        Material(
+                          elevation: 5,
+                          child: Container(
+                            height: 80,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              color: Colors.green,
+                              borderRadius: BorderRadius.circular(5),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.01),
+                        Row(
+                          children: const [
+                            Text(
+                              'Today Meditation',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black,
+                              ),
+                            ),
+                          ],
+                        ),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.01),
+                        Container(
+                          height: 200,
                           width: double.infinity,
                           decoration: BoxDecoration(
                             color: Colors.green,
-                            borderRadius: BorderRadius.circular(5),
+                            borderRadius: BorderRadius.circular(10),
                           ),
                         ),
-                      ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.01),
-                      Material(
-                        elevation: 5,
-                        child: Container(
-                          height: 80,
-                          width: double.infinity,
-                          decoration: BoxDecoration(
-                            color: Colors.green,
-                            borderRadius: BorderRadius.circular(5),
-                          ),
-                        ),
-                      ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.01),
-                      Row(
-                        children: const [
-                          Text(
-                            'Today Meditation',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.black,
+                        Row(
+                          children: const [
+                            Text(
+                              'Explore categories',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black,
+                              ),
                             ),
-                          ),
-                        ],
-                      ),
-                      SizedBox(
-                          height: MediaQuery.of(context).size.height * 0.01),
-                      Container(
-                        height: 200,
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Colors.green,
-                          borderRadius: BorderRadius.circular(10),
+                          ],
                         ),
-                      ),
-                      Row(
-                        children: const [
-                          Text(
-                            'Explore categories',
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w600,
-                              color: Colors.black,
-                            ),
+                        SizedBox(
+                          height: 1100,
+                          child: GridView.count(
+                            physics: NeverScrollableScrollPhysics(),
+                            crossAxisSpacing: 20,
+                            mainAxisSpacing: 20,
+                            crossAxisCount: 2,
+                            children: [
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const ChakraPage(),
+                                    ),
+                                  );
+                                },
+                                child: const TilesContainerWidget(
+                                  text: 'Meditate',
+                                  content: 'Chakra',
+                                  image: AssetImage('assets/chakra.jpeg'),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const ChakraPage(),
+                                    ),
+                                  );
+                                },
+                                child: const TilesContainerWidget(
+                                  text: 'stressed',
+                                  content: 'Stress',
+                                  image: AssetImage('assets/stress.jpeg'),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const ChakraPage(),
+                                    ),
+                                  );
+                                },
+                                child: const TilesContainerWidget(
+                                  text: 'stressed',
+                                  content: 'Stress',
+                                  image: AssetImage('assets/stress.jpeg'),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const ChakraPage(),
+                                    ),
+                                  );
+                                },
+                                child: const TilesContainerWidget(
+                                  text: 'stressed',
+                                  content: 'Stress',
+                                  image: AssetImage('assets/stress.jpeg'),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const ChakraPage(),
+                                    ),
+                                  );
+                                },
+                                child: const TilesContainerWidget(
+                                  text: 'stressed',
+                                  content: 'Stress',
+                                  image: AssetImage('assets/stress.jpeg'),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const ChakraPage(),
+                                    ),
+                                  );
+                                },
+                                child: const TilesContainerWidget(
+                                  text: 'stressed',
+                                  content: 'Stress',
+                                  image: AssetImage('assets/stress.jpeg'),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const ChakraPage(),
+                                    ),
+                                  );
+                                },
+                                child: const TilesContainerWidget(
+                                  text: 'stressed',
+                                  content: 'Stress',
+                                  image: AssetImage('assets/stress.jpeg'),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const ChakraPage(),
+                                    ),
+                                  );
+                                },
+                                child: const TilesContainerWidget(
+                                  text: 'stressed',
+                                  content: 'Stress',
+                                  image: AssetImage('assets/stress.jpeg'),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const ChakraPage(),
+                                    ),
+                                  );
+                                },
+                                child: const TilesContainerWidget(
+                                  text: 'stressed',
+                                  content: 'Stress',
+                                  image: AssetImage('assets/stress.jpeg'),
+                                ),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const ChakraPage(),
+                                    ),
+                                  );
+                                },
+                                child: const TilesContainerWidget(
+                                  text: 'stressed',
+                                  content: 'Stress',
+                                  image: AssetImage('assets/stress.jpeg'),
+                                ),
+                              ),
+                            ],
                           ),
-                        ],
-                      )
-                    ],
+                        ),
+                      ],
+                    ),
                   ),
-                ),
-              ],
-            ),
-          )
-        ],
+                ],
+              ),
+            )
+          ],
+        ),
       ),
     );
+  }
+}
+
+class NoGlow extends ScrollBehavior {
+  @override
+  Widget buildViewportChrome(
+      BuildContext context, Widget child, AxisDirection axisDirection) {
+    return child;
   }
 }
