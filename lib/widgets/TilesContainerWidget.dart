@@ -18,39 +18,38 @@ class TilesContainerWidget extends StatefulWidget {
 class _TilesContainerWidgetState extends State<TilesContainerWidget> {
   @override
   Widget build(BuildContext context) {
-    return Material(
-      elevation: 5,
-      child: Container(
-        height: MediaQuery.of(context).size.height * 0.23,
-        width: 150,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(10),
-          image: DecorationImage(
-            // image:image ,
-            fit: BoxFit.cover, image: widget.image,
+    return Container(
+      height: MediaQuery.of(context).size.height * 0.19,
+      width: 120,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(10),
+        image: DecorationImage(
+          // image:image ,
+          fit: BoxFit.cover, image: widget.image,
+        ),
+      ),
+      child: Column(
+        children: [
+          SizedBox(height: MediaQuery.of(context).size.height * .15),
+          Text(
+            widget.text,
+            style: TextStyle(
+              fontWeight: FontWeight.w300,
+              fontSize: 16,
+              fontFamily: 'Nunito',
+              color: Colors.white.withOpacity(.7),
+            ),
           ),
-        ),
-        child: Column(
-          children: [
-            SizedBox(height: MediaQuery.of(context).size.height * .15),
-            Text(
-              widget.text,
-              style: TextStyle(
-                fontWeight: FontWeight.w300,
-                fontSize: 16,
-                color: Colors.white.withOpacity(.7),
-              ),
+          Text(
+            widget.content,
+            style: const TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 18,
+              fontFamily: 'Nunito',
+              color: Colors.white,
             ),
-            Text(
-              widget.content,
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 18,
-                color: Colors.white,
-              ),
-            ),
-          ],
-        ),
+          ),
+        ],
       ),
     );
   }
