@@ -1,3 +1,4 @@
+import 'package:Warriors/consts/app_colors.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -55,6 +56,7 @@ class _FocusPageState extends State<FocusPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background1,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: ListView(
@@ -64,15 +66,17 @@ class _FocusPageState extends State<FocusPage> {
             Center(
                 child: Text(
               'Good $time $name',
-              style: const TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
+              style: const TextStyle(
+                  fontSize: 17,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.white),
             )),
             const SizedBox(height: 10),
             const Center(
                 child: Text(
               'Focus Even more',
-              style: TextStyle(
-                fontWeight: FontWeight.w100,
-              ),
+              style:
+                  TextStyle(fontWeight: FontWeight.w100, color: Colors.white),
             )),
             const SizedBox(height: 20),
             FocusContainerWidget(
