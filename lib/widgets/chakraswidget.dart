@@ -1,78 +1,87 @@
 import 'package:Warriors/consts/app_colors.dart';
-import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
 
-class ChakrasWidget extends StatelessWidget {
-  final String text;
-  final String subtitle;
-  final Image image;
+class ChakraWidget extends StatelessWidget {
+  final String title;
+  final String time;
   final String content;
-  final Color color;
-  const ChakrasWidget({
+  final AssetImage image;
+
+  const ChakraWidget({
     Key? key,
-    required this.subtitle,
-    required this.image,
+    required this.title,
+    required this.time,
     required this.content,
-    required this.color,
-    required this.text,
+    required this.image,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
-        height: 150,
+        height: MediaQuery.of(context).size.height * .09,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: AppColors.black,
-          borderRadius: BorderRadius.circular(5),
+          color: AppColors.blue,
+          borderRadius: BorderRadius.circular(10),
         ),
-        child: Column(children: [
-          ListTile(
-            title: Row(
+        child: Row(
+          children: [
+            const SizedBox(width: 10),
+            Container(
+              height: 60,
+              width: 60,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  image: DecorationImage(image: image, fit: BoxFit.cover)),
+            ),
+            SizedBox(
+              width: MediaQuery.of(context).size.width * .07,
+            ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Container(
-                  height: 50,
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(50),
-                    child: image,
+                const SizedBox(height: 15),
+                Text(
+                  title,
+                  // 'Gentle tools for sleep',
+                  style: const TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.white,
                   ),
                 ),
-                const SizedBox(width: 5),
-                Text(
-                  text,
-                  style: TextStyle(
-                    fontWeight: FontWeight.w600,
-                    color: Theme.of(context).buttonColor,
-                    fontFamily: "nunito",
-                    fontSize: 20,
-                  ),
-                ),
-                Text(
-                  subtitle,
-                  style: TextStyle(
-                      fontWeight: FontWeight.w500,
-                      fontSize: 18,
-                      fontFamily: "nunito",
-                      color: Theme.of(context).buttonColor),
-                ),
+                const SizedBox(height: 5),
+                Row(
+                  children: [
+                    Text(
+                      time,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w300,
+                        color: Colors.white,
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                    const SizedBox(width: 5),
+                    Text(
+                      content,
+                      style: const TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white,
+                      ),
+                    ),
+                  ],
+                )
               ],
             ),
-          ),
-          SizedBox(height: MediaQuery.of(context).size.height * 0.01),
-          Padding(
-            padding: EdgeInsets.symmetric(horizontal: 15),
-            child: Center(
-                child: Text(
-              content,
-              style: TextStyle(
-                fontSize: 16,
-                color: Theme.of(context).buttonColor,
-              ),
-            )),
-          )
-        ]),
+            const Spacer(),
+            const Icon(Icons.lock, color: Colors.white),
+            const SizedBox(width: 5),
+          ],
+        ),
       ),
     );
   }

@@ -1,20 +1,22 @@
 import 'package:Warriors/consts/app_colors.dart';
-import 'package:Warriors/pages/See%20all/see_allPage.dart';
-import 'package:Warriors/pages/chakraPage.dart';
-import 'package:Warriors/pages/play.dart';
+import 'package:Warriors/pages/See%20all/anxietyPage.dart';
+import 'package:Warriors/pages/See%20all/chakraPage.dart';
+import 'package:Warriors/pages/premiumPage.dart';
 import 'package:Warriors/pages/settings.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:bootstrap_icons/bootstrap_icons.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:intl/intl.dart';
-import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../notifications.dart';
 import '../widgets/TilesContainerWidget.dart';
-import '../widgets/chakraswidget.dart';
-import '../widgets/continueWidget.dart';
+import '../widgets/forYouWidget.dart';
+import 'See all/SleepPage.dart';
 import 'See all/breathingPage.dart';
+import 'See all/fearPage.dart';
+import 'See all/stressPage.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({super.key});
@@ -23,6 +25,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  bool expanded = false;
   final assetsAudioPlayer = AssetsAudioPlayer();
   String name = '';
   String date = '';
@@ -34,8 +37,7 @@ class _HomePageState extends State<HomePage> {
     NotificationsApi.showScheduleNotification(
       scheduleDate: DateTime.now().add(const Duration(seconds: 12)),
       title: 'Warrior',
-      body:
-          'Conveniently budget for your monthly fare with Tap & Go and travel stress-free!',
+      body: '',
       payload: '',
     );
 
@@ -71,11 +73,23 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background1,
       body: ScrollConfiguration(
         behavior: NoGlow(),
         child: CustomScrollView(
           slivers: [
             SliverAppBar(
+              actions: [
+                IconButton(
+                    onPressed: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (_) => const SettingPage(),
+                        ),
+                      );
+                    },
+                    icon: const Icon(BootstrapIcons.gear))
+              ],
               backgroundColor: Colors.transparent,
               expandedHeight: 200,
               pinned: true,
@@ -99,20 +113,24 @@ class _HomePageState extends State<HomePage> {
                           child: Text(
                             'Hi,$name ',
                             style: const TextStyle(
-                              fontSize: 26,
                               fontFamily: 'Nunito',
-                              fontWeight: FontWeight.w300,
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.white,
                             ),
                           ),
                         ),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.03),
                         const Padding(
                           padding: EdgeInsets.symmetric(horizontal: 40),
                           child: Text(
-                            'Focus even more and get the perfect the day brings along',
+                            'Focus even more and get the perfect\nthe day brings along',
                             style: TextStyle(
                               fontFamily: 'Nunito',
-                              fontSize: 18,
+                              fontSize: 16,
                               fontWeight: FontWeight.w300,
+                              color: Colors.white,
                             ),
                             textAlign: TextAlign.center,
                           ),
@@ -121,10 +139,11 @@ class _HomePageState extends State<HomePage> {
                             height: MediaQuery.of(context).size.height * 0.02),
                         Text(
                           date,
-                          style: TextStyle(
+                          style: const TextStyle(
                             fontFamily: 'Nunito',
-                            fontSize: 18,
-                            fontWeight: FontWeight.w300,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.white,
                           ),
                         ),
                       ],
@@ -140,67 +159,90 @@ class _HomePageState extends State<HomePage> {
                     padding: const EdgeInsets.symmetric(horizontal: 10),
                     child: Column(
                       children: [
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.04),
                         Row(
-                          children: const [
+                          children: [
                             Text(
-                              'For you',
-                              style: TextStyle(
-                                fontSize: 18,
+                              'For you $name',
+                              style: const TextStyle(
+                                fontSize: 16,
                                 fontFamily: 'Nunito',
                                 fontWeight: FontWeight.w400,
-                                color: Colors.black,
+                                color: Colors.white,
                               ),
                             ),
                           ],
                         ),
                         SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.01),
-                        Material(
-                          elevation: 5,
-                          child: Container(
-                            height: 80,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                          ),
+                            height: MediaQuery.of(context).size.height * 0.03),
+                        const ForYouWidget(
+                          title: 'Make Your day shine',
+                          content: '',
+                          text1: 'Benediction:',
+                          text2: 'Bed: ',
+                          text3: 'Body exercise:',
+                          text4: 'Bath COLD water: ',
+                          text5: 'Enrich your mind withgood wishes prayer ',
+                          text6: 'Get enough sleep to feel energized.',
+                          text7: 'Exercise your body to feel awake and alert',
+                          text8: 'Take a cold shower to boost your energy',
+                        ),
+                        const ForYouWidget(
+                          title: 'Balance your Emotions',
+                          content: '',
+                          text1: 'Take a break:',
+                          text2: 'Express yourself:',
+                          text3: 'Practice mindfulness:',
+                          text4: 'Seek out support:',
+                          text5:
+                              'Step back and take a break when your\nemotions start to become overwhelming',
+                          text6:
+                              'Give yourself permission to express\nyour emotions in healthy ways, such as\nthrough writing, art, music, or talking with\na friend',
+                          text7:
+                              'Use mindfulness techniques to become\naware of your thoughts and feelings\nwithout judging them',
+                          text8:
+                              'Talk to trusted people about how you’re\nfeeling and find comfort in a supportive\nenvironment',
                         ),
                         SizedBox(
                             height: MediaQuery.of(context).size.height * 0.01),
-                        Material(
-                          elevation: 5,
-                          child: Container(
-                            height: 80,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              color: Colors.green,
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                          ),
+                        const ForYouWidget(
+                          title: 'Relax and Calm Your Mind',
+                          content: '',
+                          text1: 'Find a comfortable and quiet space:',
+                          text2: 'Focus on your breath:',
+                          text3: 'Release any tension from your body:',
+                          text4: 'Body Scan',
+                          text5:
+                              'Having a comfortable and peaceful\nplace to practice meditation can help\nto create an atmosphere conducive to\nrelaxation.',
+                          text6:
+                              'Breathing is one of the most effective\nways to relax your mind and body. ',
+                          text7:
+                              'Before starting your meditation, take a\nfew moments to scan your body and\nnotice any areas of tension or discomfort.',
+                          text8:
+                              'Scan your body from head to toe, focusing\non each body part.',
                         ),
                         SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.01),
+                            height: MediaQuery.of(context).size.height * 0.03),
                         Row(
                           children: const [
                             Text(
                               'Today Meditation',
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontFamily: 'Nunito',
                                 fontWeight: FontWeight.w400,
-                                color: Colors.black,
+                                color: Colors.white,
                               ),
                             ),
                           ],
                         ),
                         SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.01),
+                            height: MediaQuery.of(context).size.height * 0.03),
                         Container(
                           height: 200,
                           width: double.infinity,
                           decoration: BoxDecoration(
-                            color: Colors.green,
                             borderRadius: BorderRadius.circular(10),
                             image: const DecorationImage(
                               fit: BoxFit.cover,
@@ -208,15 +250,58 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ),
                         ),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.02),
+                        const Text(
+                          'Unlock our premium content for free.',
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontFamily: 'Nunito',
+                            fontWeight: FontWeight.w500,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.02),
+                        GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (_) => const PremiumPage(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            height: 50,
+                            width: 200,
+                            decoration: BoxDecoration(
+                              color: AppColors.blue,
+                              borderRadius: BorderRadius.circular(30),
+                            ),
+                            child: const Center(
+                              child: Text(
+                                'Start your free trial.',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontFamily: 'Nunito',
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.white,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.02),
                         Row(
                           children: const [
                             Text(
                               'Explore categories',
                               style: TextStyle(
-                                fontSize: 18,
+                                fontSize: 16,
                                 fontFamily: 'Nunito',
                                 fontWeight: FontWeight.w400,
-                                color: Colors.black,
+                                color: Colors.white,
                               ),
                             ),
                           ],
@@ -224,11 +309,25 @@ class _HomePageState extends State<HomePage> {
                         SizedBox(
                           height: 1100,
                           child: GridView.count(
-                            physics: NeverScrollableScrollPhysics(),
+                            physics: const NeverScrollableScrollPhysics(),
                             crossAxisSpacing: 20,
                             mainAxisSpacing: 20,
                             crossAxisCount: 2,
                             children: [
+                              GestureDetector(
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const SleepPage(),
+                                    ),
+                                  );
+                                },
+                                child: const TilesContainerWidget(
+                                  text: 'Deep Sleep',
+                                  content: 'Sleep',
+                                  image: AssetImage('assets/sleep.jpeg'),
+                                ),
+                              ),
                               GestureDetector(
                                 onTap: () {
                                   Navigator.of(context).push(
@@ -247,7 +346,7 @@ class _HomePageState extends State<HomePage> {
                                 onTap: () {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
-                                      builder: (_) => const ChakraPage(),
+                                      builder: (_) => const StressPage(),
                                     ),
                                   );
                                 },
@@ -261,7 +360,7 @@ class _HomePageState extends State<HomePage> {
                                 onTap: () {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
-                                      builder: (_) => const ChakraPage(),
+                                      builder: (_) => const AnxietyPage(),
                                     ),
                                   );
                                 },
@@ -289,14 +388,14 @@ class _HomePageState extends State<HomePage> {
                                 onTap: () {
                                   Navigator.of(context).push(
                                     MaterialPageRoute(
-                                      builder: (_) => const ChakraPage(),
+                                      builder: (_) => const FearPage(),
                                     ),
                                   );
                                 },
                                 child: const TilesContainerWidget(
-                                  text: 'stressed',
-                                  content: 'Stress',
-                                  image: AssetImage('assets/stress.jpeg'),
+                                  text: 'Fearful',
+                                  content: 'Fear',
+                                  image: AssetImage('assets/fear.jpeg'),
                                 ),
                               ),
                               GestureDetector(
@@ -308,9 +407,9 @@ class _HomePageState extends State<HomePage> {
                                   );
                                 },
                                 child: const TilesContainerWidget(
-                                  text: 'stressed',
-                                  content: 'Stress',
-                                  image: AssetImage('assets/stress.jpeg'),
+                                  text: 'Be happy',
+                                  content: 'Happiness',
+                                  image: AssetImage('assets/happiness.jpg'),
                                 ),
                               ),
                               GestureDetector(
@@ -322,9 +421,9 @@ class _HomePageState extends State<HomePage> {
                                   );
                                 },
                                 child: const TilesContainerWidget(
-                                  text: 'stressed',
-                                  content: 'Stress',
-                                  image: AssetImage('assets/stress.jpeg'),
+                                  text: 'Recovery and healing',
+                                  content: 'Healing',
+                                  image: AssetImage('assets/healing.jpeg'),
                                 ),
                               ),
                               GestureDetector(
@@ -336,9 +435,9 @@ class _HomePageState extends State<HomePage> {
                                   );
                                 },
                                 child: const TilesContainerWidget(
-                                  text: 'stressed',
-                                  content: 'Stress',
-                                  image: AssetImage('assets/stress.jpeg'),
+                                  text: 'Be compassionate',
+                                  content: 'Compassion',
+                                  image: AssetImage('assets/compassion.jpg'),
                                 ),
                               ),
                               GestureDetector(
@@ -350,23 +449,9 @@ class _HomePageState extends State<HomePage> {
                                   );
                                 },
                                 child: const TilesContainerWidget(
-                                  text: 'stressed',
-                                  content: 'Stress',
-                                  image: AssetImage('assets/stress.jpeg'),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const ChakraPage(),
-                                    ),
-                                  );
-                                },
-                                child: const TilesContainerWidget(
-                                  text: 'stressed',
-                                  content: 'Stress',
-                                  image: AssetImage('assets/stress.jpeg'),
+                                  text: 'Deep Relaxation',
+                                  content: 'Relaxation',
+                                  image: AssetImage('assets/relaxation.jpeg'),
                                 ),
                               ),
                             ],
@@ -392,3 +477,5 @@ class NoGlow extends ScrollBehavior {
     return child;
   }
 }
+
+// 

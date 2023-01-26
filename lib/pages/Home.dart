@@ -1,6 +1,7 @@
 import 'package:Warriors/pages/Focus.dart';
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
+import '../consts/app_colors.dart';
 import 'HomePage.dart';
 import 'IkigaiPage.dart';
 import 'Focus.dart';
@@ -27,7 +28,7 @@ class _HomeState extends State<Home> {
     return Scaffold(
       body: pages[index],
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Colors.orange,
+        selectedItemColor: AppColors.blue,
         currentIndex: index,
         onTap: (value) {
           setState(() {

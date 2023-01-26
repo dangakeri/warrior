@@ -21,12 +21,12 @@ class IkigaiContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
+      padding: const EdgeInsets.symmetric(horizontal: 10),
       child: Container(
         height: 170,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: color,
+          color: AppColors.blue,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Row(
@@ -40,9 +40,10 @@ class IkigaiContainerWidget extends StatelessWidget {
                     children: [
                       Text(
                         text,
-                        style: TextStyle(
+                        style: const TextStyle(
                           fontSize: 17,
-                          color: Theme.of(context).buttonColor,
+                          color: Colors.white,
+                          fontFamily: 'Nunito',
                         ),
                       ),
                     ],
@@ -52,10 +53,11 @@ class IkigaiContainerWidget extends StatelessWidget {
                     children: [
                       Text(
                         content,
-                        style: TextStyle(
+                        style: const TextStyle(
+                          fontFamily: 'Nunito',
                           fontSize: 12,
                           fontWeight: FontWeight.w100,
-                          color: Theme.of(context).buttonColor,
+                          color: Colors.white,
                         ),
                       ),
                     ],
@@ -70,11 +72,12 @@ class IkigaiContainerWidget extends StatelessWidget {
                         color: Theme.of(context).cardColor,
                         borderRadius: BorderRadius.circular(150),
                       ),
-                      child: Center(
+                      child: const Center(
                           child: Text(
                         'Learn',
                         style: TextStyle(
-                          color: Theme.of(context).buttonColor,
+                          color: Colors.black,
+                          fontFamily: 'Nunito',
                         ),
                       )),
                     ),

@@ -1,11 +1,11 @@
-import 'package:Warriors/consts/app_colors.dart';
 import 'package:flutter/material.dart';
 
+import '../../consts/app_colors.dart';
 import '../../widgets/meditationwidget.dart';
 import '../play.dart';
 
-class BreathingPage extends StatelessWidget {
-  const BreathingPage({super.key});
+class StressPage extends StatelessWidget {
+  const StressPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class BreathingPage extends StatelessWidget {
               centerTitle: true,
               expandedTitleScale: 1,
               title: const Text(
-                'Breathing',
+                'Stress',
                 style: TextStyle(fontWeight: FontWeight.w400),
               ),
               background: Container(
@@ -39,7 +39,7 @@ class BreathingPage extends StatelessWidget {
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                      'assets/breathing.jpg',
+                      'assets/stress.jpeg',
                     ),
                   ),
                 ),
@@ -61,7 +61,7 @@ class BreathingPage extends StatelessWidget {
                   iconColor: Colors.white,
                   collapsedIconColor: Colors.white,
                   title: Text(
-                    'Breathing',
+                    'Stress',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 18,
@@ -74,7 +74,7 @@ class BreathingPage extends StatelessWidget {
                     ListTile(
                       textColor: Colors.white,
                       title: Text(
-                        'Breathing meditation is one of the most basic and effective forms of meditation. It can help to reduce stress and promote relaxation. This type of meditation involves focusing on the breath. You will be encouraged to pay attention to the sensation of your breath as it enters and exits your body. With each breath, you can use the opportunity to relax your body and become aware of your environment. With practice, you can learn to become more mindful of your breath and the sensations it brings. Over time, you can use this practice to reduce stress and increase your overall wellbeing.',
+                        'This stress-reducing meditation helps you to relax and unwind. Start by focusing on your breath and noticing how it feels to inhale and exhale. Allow yourself to let go of any worries or concerns that have been on your mind. As you continue to breathe in and out, imagine yourself in a peaceful and calming place. Allow yourself to relax and let go of any stress or tension. Visualize your mindful breathing as a way to release any negative energy. When you\'re ready, slowly open your eyes, feeling refreshed and energized.',
                         style: TextStyle(
                           fontWeight: FontWeight.w200,
                           fontSize: 16,

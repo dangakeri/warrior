@@ -1,3 +1,4 @@
+import 'package:Warriors/consts/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
@@ -41,13 +42,13 @@ class OnBoardingPage extends StatelessWidget {
     return Scaffold(
       body: IntroductionScreen(
         showNextButton: false,
-        skip: const Text(
+        skip: Text(
           'Skip',
-          style: TextStyle(color: Colors.amber),
+          style: TextStyle(color: AppColors.blue),
         ),
-        done: const Text(
+        done: Text(
           'Create Account',
-          style: TextStyle(fontSize: 14, color: Colors.amber),
+          style: TextStyle(fontSize: 14, color: AppColors.blue),
         ),
         onDone: () {
           Navigator.of(context).pushReplacement(

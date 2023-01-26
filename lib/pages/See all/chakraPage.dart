@@ -1,7 +1,9 @@
+import 'package:Warriors/widgets/chakraswidget.dart';
 import 'package:Warriors/widgets/meditationwidget.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
+import '../../consts/app_colors.dart';
 import '../../widgets/continueWidget.dart';
 import '../play.dart';
 
@@ -11,7 +13,7 @@ class ChakraPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: AppColors.background1,
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
@@ -63,41 +65,35 @@ class ChakraPage extends StatelessWidget {
             delegate: SliverChildListDelegate(
               [
                 SizedBox(height: MediaQuery.of(context).size.height * .02),
-                const Padding(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: Text(
-                    'Meditations',
-                    style: TextStyle(
-                      fontSize: 20,
-                      fontWeight: FontWeight.w600,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
                 ScrollConfiguration(
                   behavior: NoGlow(),
                   child: Column(
                     children: [
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Row(
-                          children: const [
-                            Text(
-                              'Learn Chakras',
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                                fontSize: 16,
-                              ),
-                            ),
-                            Text(
-                              '- win your body',
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 16,
-                              ),
-                            ),
-                          ],
+                      const ExpansionTile(
+                        iconColor: Colors.white,
+                        collapsedIconColor: Colors.white,
+                        title: Text(
+                          'Learn Chakras ',
+                          style: TextStyle(
+                            fontWeight: FontWeight.w400,
+                            fontSize: 16,
+                            color: Colors.white,
+                          ),
                         ),
+                        children: [
+                          ListTile(
+                            textColor: Colors.white,
+                            title: Text(
+                              'Chakra meditation is a type of meditation practice that focuses on promoting healing and balance within the body. This is done by focusing on the seven major energy centers, or chakras, located within the body. During a chakra meditation practice, the individual will focus on the different energy centers, visualizing them and imagining them being opened and balanced. This practice can help promote relaxation, mental clarity, and overall wellbeing. It can also lead to improved physical, emotional, and spiritual health.',
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontFamily: 'Nunito',
+                                fontWeight: FontWeight.w200,
+                                fontSize: 16,
+                              ),
+                            ),
+                          )
+                        ],
                       ),
                       const SizedBox(height: 20),
                       GestureDetector(
@@ -179,8 +175,8 @@ class ChakraPage extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const MeditationWidget(
-                          image: AssetImage('assets/muladhara.png'),
+                        child: ChakraWidget(
+                          image: const AssetImage('assets/muladhara.png'),
                           title: 'Muladhara',
                           time: "5-30 Min",
                           content: 'spine',
@@ -259,22 +255,12 @@ class ChakraPage extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const MeditationWidget(
-                          image: AssetImage('assets/svadisthana.png'),
+                        child: ChakraWidget(
+                          image: const AssetImage('assets/svadisthana.png'),
                           title: 'Svadhisthana',
                           time: "5-30 Min",
                           content: 'Belly',
                         ),
-                        // child: ChakrasWidget(
-                        //   text: 'Svadhisthana',
-                        //   subtitle: ' - Belly',
-                        //   image: Image.asset(
-                        //     'assets/svadisthana.png',
-                        //   ),
-                        //   content:
-                        //       'Its attributes include the basic need for sexuality,as well as creativity and self-worth. ',
-                        //   color: AppColors.silverChalice,
-                        // ),
                       ),
                       const SizedBox(height: 20),
                       GestureDetector(
@@ -348,8 +334,8 @@ class ChakraPage extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const MeditationWidget(
-                          image: AssetImage('assets/manipura.png'),
+                        child: ChakraWidget(
+                          image: const AssetImage('assets/manipura.png'),
                           title: 'Manipura',
                           time: "5-30 Min",
                           content: 'Stomach',
@@ -435,20 +421,12 @@ class ChakraPage extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const MeditationWidget(
-                          image: AssetImage('assets/anahata.png'),
+                        child: ChakraWidget(
+                          image: const AssetImage('assets/anahata.png'),
                           title: 'Anahata',
                           time: "5-30 Min",
                           content: 'Heart',
                         ),
-                        // child: ChakrasWidget(
-                        //   text: 'Anahata',
-                        //   subtitle: ' - Heart',
-                        //   image: Image.asset('assets/anahata.png'),
-                        //   content:
-                        //       'Characterized by emotions of love,trust, compassion, attachment,and passion. ',
-                        //   color: AppColors.platinum,
-                        // ),
                       ),
                       const SizedBox(height: 20),
                       GestureDetector(
@@ -522,22 +500,12 @@ class ChakraPage extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const MeditationWidget(
-                          image: AssetImage('assets/visuddha.png'),
+                        child: ChakraWidget(
+                          image: const AssetImage('assets/visuddha.png'),
                           title: 'Vishudda',
                           time: "5-30 Min",
                           content: 'Throat',
                         ),
-                        // child: ChakrasWidget(
-                        //   text: 'Vishuddha',
-                        //   subtitle: ' - Throat',
-                        //   image: Image.asset(
-                        //     'assets/visuddha.png',
-                        //   ),
-                        //   content:
-                        //       'Associated with inspiration,faith, healthy expression, and the ability to communicate well. ',
-                        //   color: AppColors.alibaster,
-                        // ),
                       ),
                       const SizedBox(height: 20),
                       GestureDetector(
@@ -611,20 +579,12 @@ class ChakraPage extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const MeditationWidget(
-                          image: AssetImage('assets/ajna.png'),
+                        child: ChakraWidget(
+                          image: const AssetImage('assets/ajna.png'),
                           title: 'Ajna',
                           time: "5-30 Min",
                           content: 'Eyes',
                         ),
-                        // child: ChakrasWidget(
-                        //   text: 'Ajna',
-                        //   subtitle: ' - Eyes',
-                        //   image: Image.asset('assets/ajna.png'),
-                        //   content:
-                        //       'Its attributes are intelligence,insight,intuition, and self-knowledge. ',
-                        //   color: AppColors.cultured,
-                        // ),
                       ),
                       const SizedBox(height: 20),
                       GestureDetector(
@@ -698,20 +658,12 @@ class ChakraPage extends StatelessWidget {
                             ),
                           );
                         },
-                        child: const MeditationWidget(
-                          image: AssetImage('assets/sahasrara.png'),
+                        child: ChakraWidget(
+                          image: const AssetImage('assets/sahasrara.png'),
                           title: 'Sahasrara',
                           time: "5-30 Min",
                           content: 'Head',
                         ),
-                        // child: ChakrasWidget(
-                        //   text: 'Sahasrara',
-                        //   subtitle: ' - Head',
-                        //   image: Image.asset('assets/sahasrara.png'),
-                        //   content:
-                        //       ' It is the center of spirituality,enlightenment, and dynamic thought and energy. ',
-                        //   color: AppColors.ghostWhite,
-                        // ),
                       ),
                       SizedBox(
                         height: MediaQuery.of(context).size.height * .02,

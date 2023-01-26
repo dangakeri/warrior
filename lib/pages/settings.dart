@@ -1,13 +1,12 @@
+import 'package:Warriors/consts/app_colors.dart';
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
+
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../Onboarding/splash_screen.dart';
-
-import '../notifications.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({super.key});
@@ -42,24 +41,25 @@ class _SettingPageState extends State<SettingPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
+      backgroundColor: AppColors.background1,
       extendBodyBehindAppBar: false,
       appBar: AppBar(
-        backgroundColor: Theme.of(context).backgroundColor,
+        backgroundColor: AppColors.blue,
         leading: IconButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            icon: Icon(
-              Icons.arrow_back_ios,
-              color: Theme.of(context).buttonColor,
+            icon: const Icon(
+              Icons.arrow_back,
+              color: Colors.white,
             )),
         elevation: 0,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Settings',
           style: TextStyle(
-            color: Theme.of(context).buttonColor,
+            color: Colors.white,
+            fontFamily: 'Nunito',
           ),
         ),
       ),
@@ -70,9 +70,15 @@ class _SettingPageState extends State<SettingPage> {
               showDialog(
                 context: context,
                 builder: (context) => CupertinoAlertDialog(
-                  title: const Padding(
-                    padding: EdgeInsets.only(bottom: 20.0),
-                    child: Text('Contact Us'),
+                  title: Padding(
+                    padding: const EdgeInsets.only(bottom: 20.0),
+                    child: Text(
+                      'Contact Us',
+                      style: TextStyle(
+                        color: AppColors.blue,
+                        fontFamily: 'Nunito',
+                      ),
+                    ),
                   ),
                   content: Row(
                     children: [
@@ -80,13 +86,20 @@ class _SettingPageState extends State<SettingPage> {
                         onTap: _launchEmail,
                         child: Container(
                           child: Column(
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.email,
+                                color: AppColors.blue,
                                 size: 40,
                               ),
-                              SizedBox(height: 10),
-                              Text('Email'),
+                              const SizedBox(height: 10),
+                              Text(
+                                'Email',
+                                style: TextStyle(
+                                  color: AppColors.blue,
+                                  fontFamily: 'Nunito',
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -96,13 +109,20 @@ class _SettingPageState extends State<SettingPage> {
                         onTap: _launchPhone,
                         child: Container(
                           child: Column(
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.call,
+                                color: AppColors.blue,
                                 size: 40,
                               ),
-                              SizedBox(height: 10),
-                              Text('Phone'),
+                              const SizedBox(height: 10),
+                              Text(
+                                'Phone',
+                                style: TextStyle(
+                                  color: AppColors.blue,
+                                  fontFamily: 'Nunito',
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -112,13 +132,20 @@ class _SettingPageState extends State<SettingPage> {
                         onTap: _launchWhatsapp,
                         child: Container(
                           child: Column(
-                            children: const [
+                            children: [
                               Icon(
                                 Icons.message,
+                                color: AppColors.blue,
                                 size: 40,
                               ),
-                              SizedBox(height: 10),
-                              Text('Message'),
+                              const SizedBox(height: 10),
+                              Text(
+                                'Message',
+                                style: TextStyle(
+                                  color: AppColors.blue,
+                                  fontFamily: 'Nunito',
+                                ),
+                              ),
                             ],
                           ),
                         ),
@@ -132,17 +159,34 @@ class _SettingPageState extends State<SettingPage> {
                         },
                         child: Text(
                           'Close',
-                          style:
-                              TextStyle(color: Theme.of(context).buttonColor),
+                          style: TextStyle(
+                            color: AppColors.blue,
+                            fontFamily: 'Nunito',
+                          ),
                         ))
                   ],
                 ),
               );
             }),
             child: const ListTile(
-              leading: Icon(Icons.contact_mail),
-              title: Text('Contact us'),
-              subtitle: Text('Talk to us'),
+              leading: Icon(
+                Icons.contact_mail,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Contact us',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Nunito',
+                ),
+              ),
+              subtitle: Text(
+                'Talk to us',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Nunito',
+                ),
+              ),
             ),
           ),
           GestureDetector(
@@ -160,23 +204,38 @@ class _SettingPageState extends State<SettingPage> {
                       const SizedBox(width: 30),
                       Column(
                         children: const [
-                          Text('Warriors'),
+                          Text(
+                            'Warriors',
+                            style: TextStyle(
+                              fontFamily: 'Nunito',
+                            ),
+                          ),
                           SizedBox(height: 5),
-                          Text('V1.0.0 Dolphin'),
+                          Text(
+                            'V1.0.0 Dolphin',
+                            style: TextStyle(
+                              fontFamily: 'Nunito',
+                            ),
+                          ),
                         ],
                       ),
                     ],
                   ),
                   content: const Text(
                     'Warrior is an application built to make you feel appreciated and have time to meditate for your mental wellbeing ',
-                    style: TextStyle(fontSize: 15),
+                    style: TextStyle(
+                      fontSize: 15,
+                      fontFamily: 'Nunito',
+                    ),
                   ),
                   actions: [
                     CupertinoButton(
                         child: Text(
                           "Close",
-                          style:
-                              TextStyle(color: Theme.of(context).buttonColor),
+                          style: TextStyle(
+                            color: AppColors.blue,
+                            fontFamily: 'Nunito',
+                          ),
                         ),
                         onPressed: () {
                           Navigator.of(context).pop();
@@ -186,15 +245,45 @@ class _SettingPageState extends State<SettingPage> {
               );
             }),
             child: const ListTile(
-              leading: Icon(BootstrapIcons.info),
-              title: Text('About'),
-              subtitle: Text('V1.0.0 Dolphin'),
+              leading: Icon(
+                BootstrapIcons.info,
+                color: Colors.white,
+              ),
+              title: Text(
+                'About',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Nunito',
+                ),
+              ),
+              subtitle: Text(
+                'V1.0.0 Dolphin',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Nunito',
+                ),
+              ),
             ),
           ),
           const ListTile(
-            leading: Icon(BootstrapIcons.star),
-            title: Text('Rate us'),
-            subtitle: Text('Rate us'),
+            leading: Icon(
+              BootstrapIcons.star,
+              color: Colors.white,
+            ),
+            title: Text(
+              'Rate us',
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Nunito',
+              ),
+            ),
+            subtitle: Text(
+              'Rate us',
+              style: TextStyle(
+                color: Colors.white,
+                fontFamily: 'Nunito',
+              ),
+            ),
           ),
           GestureDetector(
             onTap: () {
@@ -218,7 +307,9 @@ class _SettingPageState extends State<SettingPage> {
                             child: Text(
                               'Ok',
                               style: TextStyle(
-                                  color: Theme.of(context).buttonColor),
+                                color: AppColors.blue,
+                                fontFamily: 'Nunito',
+                              ),
                             ),
                             onPressed: () async {
                               SharedPreferences prefs =
@@ -231,8 +322,11 @@ class _SettingPageState extends State<SettingPage> {
                               }));
                             }),
                         CupertinoButton(
-                            child: const Text('Cancel',
-                                style: TextStyle(color: Colors.orange)),
+                            child: Text('Cancel',
+                                style: TextStyle(
+                                  color: AppColors.blue,
+                                  fontFamily: 'Nunito',
+                                )),
                             onPressed: () {
                               Navigator.of(context).pop();
                             })
@@ -241,9 +335,24 @@ class _SettingPageState extends State<SettingPage> {
                   });
             },
             child: const ListTile(
-              leading: Icon(BootstrapIcons.box_arrow_left),
-              title: Text('Log out'),
-              subtitle: Text('log out '),
+              leading: Icon(
+                BootstrapIcons.box_arrow_left,
+                color: Colors.white,
+              ),
+              title: Text(
+                'Log out',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Nunito',
+                ),
+              ),
+              subtitle: Text(
+                'log out ',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontFamily: 'Nunito',
+                ),
+              ),
             ),
           ),
         ],

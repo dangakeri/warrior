@@ -1,7 +1,9 @@
 // ignore_for_file: use_build_context_synchronously
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../consts/app_colors.dart';
 import '../widgets/TextFieldWidget.dart';
 import '../widgets/continueWidget.dart';
 import 'DOB.dart';
@@ -19,10 +21,10 @@ class _CreateAccountState extends State<CreateAccount> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      backgroundColor: Colors.white,
+      backgroundColor: AppColors.background1,
       appBar: AppBar(
         elevation: 0,
-        backgroundColor: Colors.white,
+        backgroundColor: AppColors.blue,
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -32,13 +34,23 @@ class _CreateAccountState extends State<CreateAccount> {
               children: const [
                 Text(
                   'Lets know your name',
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.w800),
+                  style: TextStyle(
+                    fontSize: 18,
+                    fontWeight: FontWeight.w800,
+                    color: Colors.white,
+                    fontFamily: 'Nunito',
+                  ),
                 ),
               ],
             ),
             const Text(
               'Help us with your name we help in meditating and have good mental growth',
-              style: TextStyle(fontSize: 16, fontWeight: FontWeight.w100),
+              style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.w100,
+                color: Colors.white,
+                fontFamily: 'Nunito',
+              ),
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.3),
             Container(
@@ -51,6 +63,8 @@ class _CreateAccountState extends State<CreateAccount> {
               child: Padding(
                 padding: const EdgeInsets.only(left: 10.0),
                 child: TextFormField(
+                  keyboardType: TextInputType.text,
+                  textCapitalization: TextCapitalization.words,
                   onChanged: (val) {
                     setState(() {
                       userName = val;
@@ -59,8 +73,12 @@ class _CreateAccountState extends State<CreateAccount> {
                   decoration: const InputDecoration(
                       hintText: 'Enter your name buddy',
                       border: InputBorder.none,
-                      hintStyle:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.w400)),
+                      hintStyle: TextStyle(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w400,
+                        color: Colors.white,
+                        fontFamily: 'Nunito',
+                      )),
                 ),
               ),
             ),

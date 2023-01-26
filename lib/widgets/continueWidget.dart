@@ -1,3 +1,4 @@
+import 'package:Warriors/consts/app_colors.dart';
 import 'package:flutter/material.dart';
 
 class ContinueWidget extends StatelessWidget {
@@ -13,7 +14,7 @@ class ContinueWidget extends StatelessWidget {
       height: 55,
       width: MediaQuery.of(context).size.width * 0.85,
       decoration: BoxDecoration(
-        color: Colors.orange,
+        color: AppColors.blue,
         borderRadius: BorderRadius.circular(30),
       ),
       child: Center(

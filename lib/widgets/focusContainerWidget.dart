@@ -1,3 +1,4 @@
+import 'package:Warriors/consts/app_colors.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 
 import 'package:flutter/material.dart';
@@ -41,7 +42,7 @@ class _FocusContainerWidgetState extends State<FocusContainerWidget> {
       height: 170,
       width: double.infinity,
       decoration: BoxDecoration(
-        color: widget.color,
+        color: AppColors.blue,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -56,19 +57,25 @@ class _FocusContainerWidgetState extends State<FocusContainerWidget> {
                   children: [
                     Text(
                       widget.text,
-                      style: const TextStyle(fontSize: 17, color: Colors.white),
+                      style: const TextStyle(
+                        fontSize: 17,
+                        color: Colors.white,
+                        fontFamily: 'Nunito',
+                      ),
                     ),
                   ],
                 ),
                 const SizedBox(height: 10),
                 Row(
-                  children: [
+                  children: const [
                     Text(
                       'Focus even more',
                       style: TextStyle(
-                          fontSize: 12,
-                          fontWeight: FontWeight.w100,
-                          color: Theme.of(context).buttonColor),
+                        fontSize: 12,
+                        fontFamily: 'Nunito',
+                        fontWeight: FontWeight.w100,
+                        color: Colors.white,
+                      ),
                     ),
                   ],
                 ),
@@ -82,10 +89,13 @@ class _FocusContainerWidgetState extends State<FocusContainerWidget> {
                         width: 60,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10),
-                            color: Colors.orange),
+                            color: Colors.white),
                         child: const Center(
                             child: Text('Start',
-                                style: TextStyle(color: Colors.white))),
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'Nunito',
+                                ))),
                       ),
                     ),
                     // IconButton(
