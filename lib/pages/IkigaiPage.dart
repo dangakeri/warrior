@@ -59,6 +59,7 @@ class IkigaiPage extends StatelessWidget {
                       builder: (context) => SingleChildScrollView(
                         controller: ModalScrollController.of(context),
                         child: Container(
+                          color: AppColors.background1,
                           height: 750,
                           child: ListView(
                               physics: const BouncingScrollPhysics(),
@@ -70,6 +71,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         initiallyExpanded: true,
                                         title: Text(
                                           'Diet',
@@ -78,6 +81,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -89,6 +93,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -125,6 +130,7 @@ class IkigaiPage extends StatelessWidget {
                       builder: (context) => SingleChildScrollView(
                         controller: ModalScrollController.of(context),
                         child: Container(
+                          color: AppColors.background1,
                           height: 750,
                           child: ListView(
                               physics: const BouncingScrollPhysics(),
@@ -136,6 +142,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         initiallyExpanded: true,
                                         title: Text(
                                           'What is Sleep ?',
@@ -144,6 +152,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -155,6 +164,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           )
@@ -165,6 +175,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           'What happens in the brain during sleep?',
                                           style: TextStyle(
@@ -172,6 +184,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -183,6 +196,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           )
@@ -193,6 +207,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           'Why do we need sleep?',
                                           style: TextStyle(
@@ -200,6 +216,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -211,6 +228,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           )
@@ -221,6 +239,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           'What are the stages of sleep?',
                                           style: TextStyle(
@@ -228,6 +248,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -239,6 +260,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           )
@@ -249,6 +271,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           'What is REM sleep?',
                                           style: TextStyle(
@@ -256,6 +280,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -267,6 +292,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           )
@@ -277,6 +303,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           'What affects sleep quality?',
                                           style: TextStyle(
@@ -284,6 +312,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -295,6 +324,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           )
@@ -305,6 +335,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           'How much sleep do I need?',
                                           style: TextStyle(
@@ -312,6 +344,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -323,6 +356,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -333,6 +367,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           'What is a sleep debt?',
                                           style: TextStyle(
@@ -340,6 +376,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -351,6 +388,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -361,6 +399,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           'Can we adapt to needing less sleep?',
                                           style: TextStyle(
@@ -368,6 +408,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -379,6 +420,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -389,6 +431,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           'What is sleep deprivation?',
                                           style: TextStyle(
@@ -396,6 +440,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -407,6 +452,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -417,6 +463,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           'What are sleep disorders?',
                                           style: TextStyle(
@@ -424,6 +472,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -435,6 +484,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -445,6 +495,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           'What are good sleep habits?',
                                           style: TextStyle(
@@ -452,6 +504,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -463,6 +516,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -496,6 +550,7 @@ class IkigaiPage extends StatelessWidget {
                       builder: (context) => SingleChildScrollView(
                         controller: ModalScrollController.of(context),
                         child: Container(
+                          color: AppColors.background1,
                           height: 750,
                           child: ListView(
                               physics: const BouncingScrollPhysics(),
@@ -516,6 +571,7 @@ class IkigaiPage extends StatelessWidget {
                                               fontSize: 20,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
+                                              color: Colors.white,
                                             ),
                                           ),
                                         ],
@@ -525,6 +581,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         initiallyExpanded: true,
                                         title: Text(
                                           '1. Exercise controls weight',
@@ -533,6 +591,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -544,6 +603,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -554,6 +614,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '2. Exercise combats health conditions and diseases',
                                           style: TextStyle(
@@ -561,6 +623,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -572,6 +635,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -582,6 +646,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '3. Exercise improves mood',
                                           style: TextStyle(
@@ -589,6 +655,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -600,6 +667,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -610,6 +678,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '4. Exercise boosts energy',
                                           style: TextStyle(
@@ -617,6 +687,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -628,6 +699,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -638,6 +710,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '5. Exercise promotes better sleep',
                                           style: TextStyle(
@@ -645,6 +719,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -656,6 +731,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -666,6 +742,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '6. Exercise puts the spark back into your sex life',
                                           style: TextStyle(
@@ -673,6 +751,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -684,6 +763,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -717,6 +797,7 @@ class IkigaiPage extends StatelessWidget {
                       builder: (context) => SingleChildScrollView(
                         controller: ModalScrollController.of(context),
                         child: Container(
+                          color: AppColors.background1,
                           height: 750,
                           child: ListView(
                               physics: const BouncingScrollPhysics(),
@@ -746,6 +827,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         initiallyExpanded: true,
                                         title: Text(
                                           '1. Connect with other people',
@@ -754,6 +837,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -765,6 +849,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -775,6 +860,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '2. Be physically active',
                                           style: TextStyle(
@@ -782,6 +869,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -793,6 +881,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -803,6 +892,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '3. Learn new skills',
                                           style: TextStyle(
@@ -810,6 +901,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -821,6 +913,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -831,6 +924,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '4. Give to others',
                                           style: TextStyle(
@@ -838,6 +933,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -849,6 +945,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -885,6 +982,7 @@ class IkigaiPage extends StatelessWidget {
                       builder: (context) => SingleChildScrollView(
                         controller: ModalScrollController.of(context),
                         child: Container(
+                          color: AppColors.background1,
                           height: 750,
                           child: ListView(
                               physics: const BouncingScrollPhysics(),
@@ -905,6 +1003,7 @@ class IkigaiPage extends StatelessWidget {
                                               fontSize: 20,
                                               fontFamily: 'Nunito',
                                               height: 1.5,
+                                              color: Colors.white,
                                             ),
                                           ),
                                         ],
@@ -914,6 +1013,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         initiallyExpanded: true,
                                         title: Text(
                                           '1. Live in the moment ',
@@ -922,6 +1023,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -933,6 +1035,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -943,6 +1046,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '2. Tune in to all your senses ',
                                           style: TextStyle(
@@ -950,6 +1055,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -961,6 +1067,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -971,6 +1078,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '3. Combine your creativity with nature',
                                           style: TextStyle(
@@ -978,6 +1087,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -989,6 +1099,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -999,6 +1110,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '4. Read nature books & quotes',
                                           style: TextStyle(
@@ -1006,6 +1119,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -1017,6 +1131,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -1027,6 +1142,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '5. Connect with plants ',
                                           style: TextStyle(
@@ -1034,6 +1151,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -1045,6 +1163,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
@@ -1055,6 +1174,8 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
+                                        iconColor: Colors.white,
+                                        collapsedIconColor: Colors.white,
                                         title: Text(
                                           '6. Sit under the night sky ',
                                           style: TextStyle(
@@ -1062,6 +1183,7 @@ class IkigaiPage extends StatelessWidget {
                                             fontSize: 18,
                                             fontFamily: 'Nunito',
                                             height: 1.5,
+                                            color: Colors.white,
                                           ),
                                         ),
                                         children: [
@@ -1073,6 +1195,7 @@ class IkigaiPage extends StatelessWidget {
                                                 fontSize: 16,
                                                 fontFamily: 'Nunito',
                                                 height: 1.5,
+                                                color: Colors.white,
                                               ),
                                             ),
                                           ),
