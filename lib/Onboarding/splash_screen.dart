@@ -1,7 +1,9 @@
 import 'dart:async';
 import 'package:Warriors/pages/HomePage.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_animate/flutter_animate.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import '../consts/app_colors.dart';
 import '../pages/Home.dart';
 import 'onboarding.dart';
 
@@ -42,6 +44,7 @@ class _SplashScreenState extends State<SplashScreen> {
       },
     );
     return Scaffold(
+      backgroundColor: AppColors.background1,
       body: Column(
         children: [
           SizedBox(
@@ -61,9 +64,21 @@ class _SplashScreenState extends State<SplashScreen> {
             ),
           ),
           SizedBox(height: 20),
-          const Text(
-            'Warriors',
-            style: TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+          Animate(
+            onPlay: (controller) => controller.repeat(),
+            delay: 1000.ms,
+            effects: [
+              FlipEffect(),
+              ScaleEffect(),
+              FadeEffect(duration: 2.seconds),
+            ],
+            child: Text(
+              'Warriors',
+              style: TextStyle(
+                  fontWeight: FontWeight.w500,
+                  fontSize: 28,
+                  color: AppColors.blue),
+            ),
           )
         ],
       ),
