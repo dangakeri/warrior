@@ -40,43 +40,49 @@ class OnBoardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.background1,
       body: IntroductionScreen(
         showNextButton: false,
-        skip: Text(
+        skip: const Text(
           'Skip',
-          style: TextStyle(color: AppColors.blue),
+          style: TextStyle(color: Colors.white),
         ),
-        done: Text(
+        done: const Text(
           'Create Account',
-          style: TextStyle(fontSize: 14, color: AppColors.blue),
+          style: TextStyle(fontSize: 14, color: Colors.white),
         ),
         onDone: () {
           Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (_) => CreateAccount()),
+            MaterialPageRoute(builder: (_) => const CreateAccount()),
           );
         },
         onSkip: () {
           Navigator.of(context).pushReplacement(
-            MaterialPageRoute(builder: (_) => CreateAccount()),
+            MaterialPageRoute(builder: (_) => const CreateAccount()),
           );
         },
         pages: getPages(),
-        globalBackgroundColor: Colors.white,
+        globalBackgroundColor: AppColors.blue,
         showBackButton: false,
         showSkipButton: true,
       ),
     );
   }
 
-  PageDecoration getPageDecoration() => const PageDecoration(
-        titleTextStyle: TextStyle(
+  PageDecoration getPageDecoration() => PageDecoration(
+        titleTextStyle: const TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.bold,
           height: 1.3,
+          color: Colors.white,
         ),
-        bodyTextStyle: TextStyle(fontSize: 15, height: 1.4),
+        bodyTextStyle: const TextStyle(
+          fontSize: 15,
+          height: 1.4,
+          color: Colors.white,
+        ),
         // descriptionPadding: const EdgeInsets.all(16).copyWith(bottom: 0),
-        imagePadding: EdgeInsets.all(24),
-        pageColor: Colors.white,
+        imagePadding: const EdgeInsets.all(24),
+        pageColor: AppColors.background1,
       );
 }
