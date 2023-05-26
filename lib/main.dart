@@ -38,6 +38,7 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Warriors',
       theme: ThemeData(
+        useMaterial3: true,
         primaryColor: AppColors.background,
       ),
       home: const SplashScreen(),
