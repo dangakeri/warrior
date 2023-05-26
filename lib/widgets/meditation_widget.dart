@@ -1,5 +1,7 @@
-import 'package:Warriors/consts/app_colors.dart';
+
 import 'package:flutter/material.dart';
+
+import '../consts/app_colors.dart';
 
 class MeditationWidget extends StatelessWidget {
   final String title;

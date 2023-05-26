@@ -23,7 +23,7 @@ class PremiumOfferWidget extends StatelessWidget {
           SizedBox(width: MediaQuery.of(context).size.width * 0.01),
           Text(
             title,
-            style: TextStyle(
+            style: const TextStyle(
               fontFamily: 'Nunito',
               fontSize: 16,
               fontWeight: FontWeight.w300,

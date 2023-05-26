@@ -1,7 +1,10 @@
-import 'package:Warriors/consts/app_colors.dart';
+// ignore_for_file: unrelated_type_equality_checks
+
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/material.dart';
+
+import '../consts/app_colors.dart';
 
 class PlayPage extends StatefulWidget {
   final String music;
@@ -39,7 +42,7 @@ class _PlayPageState extends State<PlayPage> {
         ),
       ),
       body: Container(
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
             gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
@@ -59,7 +62,7 @@ class _PlayPageState extends State<PlayPage> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.09,
             ),
-            AvatarGlow(
+            const AvatarGlow(
               endRadius: 200,
               repeat: true,
               showTwoGlows: true,
@@ -67,7 +70,7 @@ class _PlayPageState extends State<PlayPage> {
               child: CircleAvatar(
                 radius: 90,
                 backgroundColor: AppColors.blue,
-                child: const CircleAvatar(
+                child: CircleAvatar(
                   radius: 80,
                   backgroundImage: AssetImage(
                     'assets/chakra.jpeg',

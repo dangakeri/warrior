@@ -1,10 +1,10 @@
-import 'package:Warriors/consts/app_colors.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../widgets/focusContainerWidget.dart';
+import '../consts/app_colors.dart';
+import '../widgets/focus_container_widget.dart';
 import 'play.dart';
 
 class FocusPage extends StatefulWidget {
@@ -258,7 +258,6 @@ class _FocusPageState extends State<FocusPage> {
 }
 
 class NoGlow extends ScrollBehavior {
-  @override
   Widget buildViewportChrome(
       BuildContext context, Widget child, AxisDirection axisDirection) {
     return child;

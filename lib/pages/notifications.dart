@@ -6,7 +6,7 @@ import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:rxdart/rxdart.dart';
 import 'package:flutter_native_timezone/flutter_native_timezone.dart';
 
-import 'utility/get_image.dart';
+import '../utility/get_image.dart';
 
 class NotificationsApi {
   static final _notifications = FlutterLocalNotificationsPlugin();
@@ -55,8 +55,9 @@ class NotificationsApi {
 
     if (initSchedule!) {
       tz.initializeTimeZones();
-      final locationName = await FlutterNativeTimezone.getLocalTimezone();
-      tz.setLocalLocation(tz.getLocation(locationName));
+      // ignore: non_constant_identifier_names
+      final LocationName = await FlutterNativeTimezone.getLocalTimezone();
+      tz.setLocalLocation(tz.getLocation(LocationName));
     }
   }
 

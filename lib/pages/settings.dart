@@ -1,4 +1,5 @@
-import 'package:Warriors/consts/app_colors.dart';
+// ignore_for_file: avoid_unnecessary_containers, use_build_context_synchronously
+
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 import '../Onboarding/splash_screen.dart';
+import '../consts/app_colors.dart';
 
 class SettingPage extends StatefulWidget {
   const SettingPage({super.key});
@@ -70,8 +72,8 @@ class _SettingPageState extends State<SettingPage> {
               showDialog(
                 context: context,
                 builder: (context) => CupertinoAlertDialog(
-                  title: Padding(
-                    padding: const EdgeInsets.only(bottom: 20.0),
+                  title: const Padding(
+                    padding: EdgeInsets.only(bottom: 20.0),
                     child: Text(
                       'Contact Us',
                       style: TextStyle(
@@ -85,14 +87,14 @@ class _SettingPageState extends State<SettingPage> {
                       GestureDetector(
                         onTap: _launchEmail,
                         child: Container(
-                          child: Column(
+                          child: const Column(
                             children: [
                               Icon(
                                 Icons.email,
                                 color: AppColors.blue,
                                 size: 40,
                               ),
-                              const SizedBox(height: 10),
+                              SizedBox(height: 10),
                               Text(
                                 'Email',
                                 style: TextStyle(
@@ -108,14 +110,14 @@ class _SettingPageState extends State<SettingPage> {
                       GestureDetector(
                         onTap: _launchPhone,
                         child: Container(
-                          child: Column(
+                          child: const Column(
                             children: [
                               Icon(
                                 Icons.call,
                                 color: AppColors.blue,
                                 size: 40,
                               ),
-                              const SizedBox(height: 10),
+                              SizedBox(height: 10),
                               Text(
                                 'Phone',
                                 style: TextStyle(
@@ -131,14 +133,14 @@ class _SettingPageState extends State<SettingPage> {
                       GestureDetector(
                         onTap: _launchWhatsapp,
                         child: Container(
-                          child: Column(
+                          child: const Column(
                             children: [
                               Icon(
                                 Icons.message,
                                 color: AppColors.blue,
                                 size: 40,
                               ),
-                              const SizedBox(height: 10),
+                              SizedBox(height: 10),
                               Text(
                                 'Message',
                                 style: TextStyle(
@@ -157,7 +159,7 @@ class _SettingPageState extends State<SettingPage> {
                         onPressed: () {
                           Navigator.pop(context);
                         },
-                        child: Text(
+                        child: const Text(
                           'Close',
                           style: TextStyle(
                             color: AppColors.blue,
@@ -202,8 +204,8 @@ class _SettingPageState extends State<SettingPage> {
                         width: 50,
                       ),
                       const SizedBox(width: 30),
-                      Column(
-                        children: const [
+                      const Column(
+                        children: [
                           Text(
                             'Warriors',
                             style: TextStyle(
@@ -230,7 +232,7 @@ class _SettingPageState extends State<SettingPage> {
                   ),
                   actions: [
                     CupertinoButton(
-                        child: Text(
+                        child: const Text(
                           "Close",
                           style: TextStyle(
                             color: AppColors.blue,
@@ -304,7 +306,7 @@ class _SettingPageState extends State<SettingPage> {
                       ),
                       actions: [
                         CupertinoButton(
-                            child: Text(
+                            child: const Text(
                               'Ok',
                               style: TextStyle(
                                 color: AppColors.blue,
@@ -322,7 +324,7 @@ class _SettingPageState extends State<SettingPage> {
                               }));
                             }),
                         CupertinoButton(
-                            child: Text('Cancel',
+                            child: const Text('Cancel',
                                 style: TextStyle(
                                   color: AppColors.blue,
                                   fontFamily: 'Nunito',

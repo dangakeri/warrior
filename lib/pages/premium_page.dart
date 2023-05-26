@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 
 import '../consts/app_colors.dart';
-import '../widgets/premiumOffers.dart';
+import '../widgets/premium_offers_widget.dart';
 
 class PremiumPage extends StatelessWidget {
   const PremiumPage({super.key});
@@ -36,8 +36,8 @@ class PremiumPage extends StatelessWidget {
                 clipper: OvalBottomBorderClipper(),
                 child: Container(
                   height: 300,
-                  decoration: BoxDecoration(
-                    borderRadius: const BorderRadius.all(Radius.circular(50.0)),
+                  decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(50.0)),
                     color: AppColors.blue,
                   ),
                   child: Center(

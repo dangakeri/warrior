@@ -1,8 +1,8 @@
-import 'package:Warriors/consts/app_colors.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../consts/app_colors.dart';
 
 class FocusContainerWidget extends StatefulWidget {
   final Color color;
@@ -36,7 +36,9 @@ class _FocusContainerWidgetState extends State<FocusContainerWidget> {
 
   @override
   Widget build(BuildContext context) {
+    // ignore: unused_local_variable
     final assetsAudioPlayer = AssetsAudioPlayer();
+    // ignore: unused_local_variable
     bool isPlaying = false;
     return Container(
       height: 170,
@@ -66,8 +68,8 @@ class _FocusContainerWidgetState extends State<FocusContainerWidget> {
                   ],
                 ),
                 const SizedBox(height: 10),
-                Row(
-                  children: const [
+                const Row(
+                  children: [
                     Text(
                       'Focus even more',
                       style: TextStyle(

@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
@@ -5,20 +7,22 @@ import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../consts/app_colors.dart';
+import '../widgets/for_you_widget.dart';
+import '../widgets/tiles_container_widget.dart';
 import 'See all/anxiety_page.dart';
-import 'See all/chakraPage.dart';
+
+import 'See all/breathing_page.dart';
+import 'See all/chakra_page.dart';
+import 'See all/fear_page.dart';
+import 'See all/sleep_page.dart';
+import 'See all/stress_page.dart';
 import 'notifications.dart';
-import '../widgets/TilesContainerWidget.dart';
-import '../widgets/forYouWidget.dart';
-import 'See all/SleepPage.dart';
-import 'See all/breathingPage.dart';
-import 'See all/fearPage.dart';
-import 'See all/stressPage.dart';
-import 'premiumPage.dart';
+
+import 'premium_page.dart';
 import 'settings.dart';
 
 class HomePage extends StatefulWidget {
-  HomePage({super.key});
+  const HomePage({super.key});
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -97,9 +101,8 @@ class _HomePageState extends State<HomePage> {
                   clipper: OvalBottomBorderClipper(),
                   child: Container(
                     height: 200,
-                    decoration: BoxDecoration(
-                      borderRadius:
-                          const BorderRadius.all(Radius.circular(50.0)),
+                    decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(50.0)),
                       color: AppColors.blue,
                     ),
                     child: Center(
@@ -528,11 +531,8 @@ class _HomePageState extends State<HomePage> {
 }
 
 class NoGlow extends ScrollBehavior {
-  @override
   Widget buildViewportChrome(
       BuildContext context, Widget child, AxisDirection axisDirection) {
     return child;
   }
 }
-
-// 

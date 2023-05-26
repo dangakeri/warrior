@@ -20,7 +20,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
   DateTime selectedDate = DateTime.now();
   @override
   Widget build(BuildContext context) {
-    Future<void> _selectDate(BuildContext context) async {
+    Future<void> selectDate(BuildContext context) async {
       final DateTime? picked = await showDatePicker(
           context: context,
           initialDate: selectedDate,
@@ -50,7 +50,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
                 suffixIcon: widget.icon == true
                     ? GestureDetector(
                         onTap: () {
-                          _selectDate(context);
+                          selectDate(context);
                         },
                         child: const Icon(Icons.date_range))
                     : const SizedBox(),

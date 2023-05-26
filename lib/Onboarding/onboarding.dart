@@ -1,9 +1,9 @@
-import 'package:Warriors/consts/app_colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
-import 'createAccount.dart';
+import '../consts/app_colors.dart';
+import 'create_account_page.dart';
 
 class OnBoardingPage extends StatelessWidget {
   List<PageViewModel> getPages() {
@@ -69,20 +69,20 @@ class OnBoardingPage extends StatelessWidget {
     );
   }
 
-  PageDecoration getPageDecoration() => PageDecoration(
-        titleTextStyle: const TextStyle(
+  PageDecoration getPageDecoration() => const PageDecoration(
+        titleTextStyle: TextStyle(
           fontSize: 16,
           fontWeight: FontWeight.bold,
           height: 1.3,
           color: Colors.white,
         ),
-        bodyTextStyle: const TextStyle(
+        bodyTextStyle: TextStyle(
           fontSize: 15,
           height: 1.4,
           color: Colors.white,
         ),
         // descriptionPadding: const EdgeInsets.all(16).copyWith(bottom: 0),
-        imagePadding: const EdgeInsets.all(24),
+        imagePadding: EdgeInsets.all(24),
         pageColor: AppColors.background1,
       );
 }

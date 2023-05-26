@@ -1,10 +1,11 @@
 import 'dart:async';
-import 'package:Warriors/pages/HomePage.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../consts/app_colors.dart';
-import '../pages/Home.dart';
+
+import '../pages/home.dart';
 import 'onboarding.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -40,7 +41,7 @@ class _SplashScreenState extends State<SplashScreen> {
             context,
             MaterialPageRoute(
                 builder: (BuildContext context) =>
-                    name == '' ? const OnBoardingPage() : Home()));
+                    name == '' ? const OnBoardingPage() : const Home()));
       },
     );
     return Scaffold(
@@ -63,16 +64,16 @@ class _SplashScreenState extends State<SplashScreen> {
               ),
             ),
           ),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
           Animate(
             onPlay: (controller) => controller.repeat(),
             delay: 1000.ms,
             effects: [
-              FlipEffect(),
-              ScaleEffect(),
+              const FlipEffect(),
+              const ScaleEffect(),
               FadeEffect(duration: 2.seconds),
             ],
-            child: Text(
+            child: const Text(
               'Warriors',
               style: TextStyle(
                   fontWeight: FontWeight.w500,

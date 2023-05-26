@@ -1,15 +1,12 @@
-import 'package:Warriors/pages/Focus.dart';
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
 import '../consts/app_colors.dart';
-import 'HomePage.dart';
-import 'IkigaiPage.dart';
-import 'Focus.dart';
-
-import 'QuotePage.dart';
+import 'focus_page.dart';
+import 'home_page.dart';
+import 'ikigai_page.dart';
 
 class Home extends StatefulWidget {
-  Home({super.key});
+  const Home({super.key});
 
   @override
   State<Home> createState() => _HomeState();
@@ -18,10 +15,10 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   int index = 0;
   List pages = [
-    HomePage(),
+    const HomePage(),
     // QuotePage(),
     const IkigaiPage(),
-    FocusPage(),
+    const FocusPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -32,7 +29,7 @@ class _HomeState extends State<Home> {
         currentIndex: index,
         onTap: (value) {
           setState(() {
-            this.index = value;
+            index = value;
           });
         },
         type: BottomNavigationBarType.fixed,

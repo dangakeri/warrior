@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 
-import '../Api model/APiservice.dart';
+import '../Api model/api_service.dart';
 import '../Api model/quotemodel.dart';
-import '../widgets/Pageview_container_widget.dart';
-import 'package:http/http.dart' as http;
+import '../widgets/page_view_container_widget.dart';
 
 class QuotePage extends StatefulWidget {
   const QuotePage({super.key});
@@ -18,13 +17,14 @@ class _QuotePageState extends State<QuotePage> {
   void initState() {
     super.initState();
     quoteData = ApiService.getData();
-    print(quoteData);
+    // print(quoteData);
   }
 
   @override
   Widget build(BuildContext context) {
     PageController pageController = PageController(initialPage: 0);
 
+    // ignore: unused_local_variable
     int pageChanged = 0;
     return Scaffold(
       backgroundColor: Colors.black,
@@ -32,6 +32,7 @@ class _QuotePageState extends State<QuotePage> {
         scrollDirection: Axis.vertical,
         controller: pageController,
         onPageChanged: (index) {
+          // ignore: unused_element
           setState() {
             pageChanged = index;
           }
@@ -45,7 +46,7 @@ class _QuotePageState extends State<QuotePage> {
           Expanded(
             flex: 4,
             child: Padding(
-              padding: EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 20),
               child: SizedBox(
                 width: MediaQuery.of(context).size.width,
                 child: FutureBuilder<List<QuoteModel>>(

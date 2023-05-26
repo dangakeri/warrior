@@ -1,7 +1,8 @@
-import 'package:Warriors/consts/app_colors.dart';
-import 'package:bootstrap_icons/bootstrap_icons.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
+import '../consts/app_colors.dart';
 
 class IkigaiContainerWidget extends StatelessWidget {
   final Color color;

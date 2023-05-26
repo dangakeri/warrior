@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
 import '../../consts/app_colors.dart';
-import '../../widgets/meditationwidget.dart';
+import '../../widgets/meditation_widget.dart';
 import '../play.dart';
 
-class FearPage extends StatelessWidget {
-  const FearPage({super.key});
+class StressPage extends StatelessWidget {
+  const StressPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +31,7 @@ class FearPage extends StatelessWidget {
               centerTitle: true,
               expandedTitleScale: 1,
               title: const Text(
-                'Fear',
+                'Stress',
                 style: TextStyle(fontWeight: FontWeight.w400),
               ),
               background: Container(
@@ -39,7 +39,7 @@ class FearPage extends StatelessWidget {
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                      'assets/fear.jpeg',
+                      'assets/stress.jpeg',
                     ),
                   ),
                 ),
@@ -61,7 +61,7 @@ class FearPage extends StatelessWidget {
                   iconColor: Colors.white,
                   collapsedIconColor: Colors.white,
                   title: Text(
-                    'Fear',
+                    'Stress',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 18,
@@ -74,7 +74,7 @@ class FearPage extends StatelessWidget {
                     ListTile(
                       textColor: Colors.white,
                       title: Text(
-                        'This Fear Meditation helps to bring awareness to any fear-based thoughts or feelings that might be lingering in the background. Through this meditation, you\'ll be guided to observe and accept your fear, and to open up to the possibility of finding peace and equanimity amidst it. You\'ll be encouraged to take a few moments to sit still with your fear, and to use your breath to bring gentle attention to the body. You\'ll also be invited to explore a few simple visualizations to help foster a calm and compassionate attitude towards your fear. Finally, you\'ll be guided to open up to the possibility of finding a deeper strength and courage within yourself to move forward.',
+                        'This stress-reducing meditation helps you to relax and unwind. Start by focusing on your breath and noticing how it feels to inhale and exhale. Allow yourself to let go of any worries or concerns that have been on your mind. As you continue to breathe in and out, imagine yourself in a peaceful and calming place. Allow yourself to relax and let go of any stress or tension. Visualize your mindful breathing as a way to release any negative energy. When you\'re ready, slowly open your eyes, feeling refreshed and energized.',
                         style: TextStyle(
                           fontWeight: FontWeight.w200,
                           fontSize: 16,
@@ -87,7 +87,7 @@ class FearPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/breathing.jpg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -102,7 +102,7 @@ class FearPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/breathing.jpg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -117,7 +117,7 @@ class FearPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/breathing.jpg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -132,7 +132,7 @@ class FearPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/breathing.jpg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -147,7 +147,7 @@ class FearPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/breathing.jpg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -162,7 +162,7 @@ class FearPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/breathing.jpg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -177,7 +177,7 @@ class FearPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/breathing.jpg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -192,7 +192,7 @@ class FearPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/breathing.jpg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',

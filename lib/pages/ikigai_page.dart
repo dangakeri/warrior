@@ -1,9 +1,9 @@
-import 'package:Warriors/widgets/IkigaiContainerWidget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:modal_bottom_sheet/modal_bottom_sheet.dart';
 
 import '../consts/app_colors.dart';
+import '../widgets/ikigai_container_widget.dart';
 
 class IkigaiPage extends StatelessWidget {
   const IkigaiPage({super.key});
@@ -63,9 +63,9 @@ class IkigaiPage extends StatelessWidget {
                           height: 750,
                           child: ListView(
                               physics: const BouncingScrollPhysics(),
-                              children: [
+                              children: const [
                                 Column(
-                                  children: const [
+                                  children: [
                                     SizedBox(height: 20),
                                     Padding(
                                       padding:
@@ -134,9 +134,9 @@ class IkigaiPage extends StatelessWidget {
                           height: 750,
                           child: ListView(
                               physics: const BouncingScrollPhysics(),
-                              children: [
+                              children: const [
                                 Column(
-                                  children: const [
+                                  children: [
                                     SizedBox(height: 20),
                                     Padding(
                                       padding:
@@ -554,7 +554,7 @@ class IkigaiPage extends StatelessWidget {
                           height: 750,
                           child: ListView(
                               physics: const BouncingScrollPhysics(),
-                              children: [
+                              children: const [
                                 Column(
                                   children: [
                                     SizedBox(height: 20),
@@ -562,7 +562,7 @@ class IkigaiPage extends StatelessWidget {
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: Row(
-                                        children: const [
+                                        children: [
                                           SizedBox(width: 20),
                                           Text(
                                             'Exercise',
@@ -577,7 +577,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -597,7 +597,7 @@ class IkigaiPage extends StatelessWidget {
                                         children: [
                                           ListTile(
                                             title: Text(
-                                              "Exercise can help prevent excess weight gain or help maintain weight loss. When you engage in physical activity, you burn calories. The more intense the activity, the more calories you burn.\nRegular trips to the gym are great, but don\'t worry if you can\'t find a large chunk of time to exercise every day. Any amount of activity is better than none at all. To reap the benefits of exercise, just get more active throughout your day — take the stairs instead of the elevator or rev up your household chores. Consistency is key.",
+                                              "Exercise can help prevent excess weight gain or help maintain weight loss. When you engage in physical activity, you burn calories. The more intense the activity, the more calories you burn.\nRegular trips to the gym are great, but don't worry if you can't find a large chunk of time to exercise every day. Any amount of activity is better than none at all. To reap the benefits of exercise, just get more active throughout your day — take the stairs instead of the elevator or rev up your household chores. Consistency is key.",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.w400,
                                                 fontSize: 16,
@@ -610,7 +610,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -642,7 +642,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -674,7 +674,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -706,7 +706,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -725,7 +725,7 @@ class IkigaiPage extends StatelessWidget {
                                         children: [
                                           ListTile(
                                             title: Text(
-                                              "Struggling to snooze? Regular physical activity can help you fall asleep faster, get better sleep and deepen your sleep. Just don\'t exercise too close to bedtime, or you may be too energized to go to sleep.",
+                                              "Struggling to snooze? Regular physical activity can help you fall asleep faster, get better sleep and deepen your sleep. Just don't exercise too close to bedtime, or you may be too energized to go to sleep.",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.w400,
                                                 fontSize: 16,
@@ -738,7 +738,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -757,7 +757,7 @@ class IkigaiPage extends StatelessWidget {
                                         children: [
                                           ListTile(
                                             title: Text(
-                                              "Do you feel too tired or too out of shape to enjoy physical intimacy? Regular physical activity can improve energy levels and increase your confidence about your physical appearance, which may boost your sex life.\nBut there\'s even more to it than that. Regular physical activity may enhance arousal for women. And men who exercise regularly are less likely to have problems with erectile dysfunction than are men who don\'t exercise.",
+                                              "Do you feel too tired or too out of shape to enjoy physical intimacy? Regular physical activity can improve energy levels and increase your confidence about your physical appearance, which may boost your sex life.\nBut there's even more to it than that. Regular physical activity may enhance arousal for women. And men who exercise regularly are less likely to have problems with erectile dysfunction than are men who don't exercise.",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.w400,
                                                 fontSize: 16,
@@ -801,15 +801,15 @@ class IkigaiPage extends StatelessWidget {
                           height: 750,
                           child: ListView(
                               physics: const BouncingScrollPhysics(),
-                              children: [
+                              children: const [
                                 Column(
                                   children: [
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 20),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 20),
                                       child: Row(
-                                        children: const [
+                                        children: [
                                           SizedBox(width: 20),
                                           Text(
                                             'Mental',
@@ -823,7 +823,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -856,7 +856,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -888,7 +888,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -920,7 +920,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -952,7 +952,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                   ],
                                 ),
                               ]),
@@ -986,15 +986,15 @@ class IkigaiPage extends StatelessWidget {
                           height: 750,
                           child: ListView(
                               physics: const BouncingScrollPhysics(),
-                              children: [
+                              children: const [
                                 Column(
                                   children: [
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                     Padding(
-                                      padding: const EdgeInsets.symmetric(
-                                          horizontal: 20),
+                                      padding:
+                                          EdgeInsets.symmetric(horizontal: 20),
                                       child: Row(
-                                        children: const [
+                                        children: [
                                           SizedBox(width: 20),
                                           Text(
                                             'Connecting with nature',
@@ -1009,7 +1009,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -1042,7 +1042,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -1074,7 +1074,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -1106,7 +1106,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -1138,7 +1138,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -1170,7 +1170,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const Padding(
+                                    Padding(
                                       padding:
                                           EdgeInsets.symmetric(horizontal: 20),
                                       child: ExpansionTile(
@@ -1189,7 +1189,7 @@ class IkigaiPage extends StatelessWidget {
                                         children: [
                                           ListTile(
                                             title: Text(
-                                              "If you\'ve always been curious to learn about the stars, sitting under the night sky is an excellent opportunity to do so. You can gather some friends and family to sit with you and explore the night sky. Doing this is a great way to strengthen relationships, connect with nature and find some sense of identity and contemplate our place in the universe.",
+                                              "If you've always been curious to learn about the stars, sitting under the night sky is an excellent opportunity to do so. You can gather some friends and family to sit with you and explore the night sky. Doing this is a great way to strengthen relationships, connect with nature and find some sense of identity and contemplate our place in the universe.",
                                               style: TextStyle(
                                                 fontWeight: FontWeight.w400,
                                                 fontSize: 16,
@@ -1202,7 +1202,7 @@ class IkigaiPage extends StatelessWidget {
                                         ],
                                       ),
                                     ),
-                                    const SizedBox(height: 20),
+                                    SizedBox(height: 20),
                                   ],
                                 ),
                               ]),
@@ -1223,7 +1223,6 @@ class IkigaiPage extends StatelessWidget {
 }
 
 class NoGlow extends ScrollBehavior {
-  @override
   Widget buildViewportChrome(
       BuildContext context, Widget child, AxisDirection axisDirection) {
     return child;

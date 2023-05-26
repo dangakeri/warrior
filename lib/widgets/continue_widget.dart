@@ -1,5 +1,5 @@
-import 'package:Warriors/consts/app_colors.dart';
 import 'package:flutter/material.dart';
+import '../consts/app_colors.dart';
 
 class ContinueWidget extends StatelessWidget {
   final String text;
@@ -20,8 +20,8 @@ class ContinueWidget extends StatelessWidget {
       child: Center(
         child: Text(
           text,
-          style: TextStyle(
-            color: Theme.of(context).buttonColor,
+          style: const TextStyle(
+            color: Colors.white,
             fontSize: 16,
             fontWeight: FontWeight.bold,
           ),

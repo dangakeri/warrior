@@ -1,8 +1,8 @@
-import 'package:Warriors/consts/app_colors.dart';
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'Onboarding/splash_screen.dart';
+import 'consts/app_colors.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -28,7 +28,7 @@ class _MyAppState extends State<MyApp> {
     });
     SystemChrome.setSystemUIOverlayStyle(
       // code for changing the color of status bar color
-      SystemUiOverlayStyle(
+      const SystemUiOverlayStyle(
         statusBarColor: AppColors.blue,
         systemNavigationBarColor: Colors.white,
       ),
