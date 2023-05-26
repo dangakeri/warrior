@@ -4,6 +4,7 @@ import '../consts/app_colors.dart';
 import 'focus_page.dart';
 import 'home_page.dart';
 import 'ikigai_page.dart';
+import 'quote_page.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -16,8 +17,8 @@ class _HomeState extends State<Home> {
   int index = 0;
   List pages = [
     const HomePage(),
-    // QuotePage(),
-    const IkigaiPage(),
+    const QuotePage(),
+    // const IkigaiPage(),
     const FocusPage(),
   ];
   @override

@@ -39,7 +39,8 @@ class _MyAppState extends State<MyApp> {
       title: 'Warriors',
       theme: ThemeData(
         useMaterial3: true,
-        primaryColor: AppColors.background,
+        // primaryColor: AppColors.background,
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.background),
       ),
       home: const SplashScreen(),
     );

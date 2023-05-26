@@ -91,7 +91,10 @@ class _HomePageState extends State<HomePage> {
                         ),
                       );
                     },
-                    icon: const Icon(BootstrapIcons.gear))
+                    icon: const Icon(
+                      BootstrapIcons.gear,
+                      color: Colors.white,
+                    ))
               ],
               backgroundColor: Colors.transparent,
               expandedHeight: 200,
@@ -390,11 +393,11 @@ class _HomePageState extends State<HomePage> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const ChakraPage(),
-                                    ),
-                                  );
+                                  // Navigator.of(context).push(
+                                  //   MaterialPageRoute(
+                                  //     builder: (_) => const ChakraPage(),
+                                  //   ),
+                                  // );
                                 },
                                 child: const TilesContainerWidget(
                                   text: 'Meditate',
@@ -459,13 +462,13 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                               GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const ChakraPage(),
-                                    ),
-                                  );
-                                },
+                                // onTap: () {
+                                //   Navigator.of(context).push(
+                                //     MaterialPageRoute(
+                                //       builder: (_) => const ChakraPage(),
+                                //     ),
+                                //   );
+                                // },
                                 child: const TilesContainerWidget(
                                   text: 'Be happy',
                                   content: 'Happiness',
@@ -474,11 +477,11 @@ class _HomePageState extends State<HomePage> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const ChakraPage(),
-                                    ),
-                                  );
+                                  // Navigator.of(context).push(
+                                  //   MaterialPageRoute(
+                                  //     builder: (_) => const ChakraPage(),
+                                  //   ),
+                                  // );
                                 },
                                 child: const TilesContainerWidget(
                                   text: 'Recovery and healing',
@@ -488,11 +491,11 @@ class _HomePageState extends State<HomePage> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const ChakraPage(),
-                                    ),
-                                  );
+                                  // Navigator.of(context).push(
+                                  //   MaterialPageRoute(
+                                  //     builder: (_) => const ChakraPage(),
+                                  //   ),
+                                  // );
                                 },
                                 child: const TilesContainerWidget(
                                   text: 'Be compassionate',
@@ -502,11 +505,11 @@ class _HomePageState extends State<HomePage> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const ChakraPage(),
-                                    ),
-                                  );
+                                  // Navigator.of(context).push(
+                                  //   MaterialPageRoute(
+                                  //     builder: (_) => const ChakraPage(),
+                                  //   ),
+                                  // );
                                 },
                                 child: const TilesContainerWidget(
                                   text: 'Deep Relaxation',
