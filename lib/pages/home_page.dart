@@ -393,11 +393,11 @@ class _HomePageState extends State<HomePage> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  // Navigator.of(context).push(
-                                  //   MaterialPageRoute(
-                                  //     builder: (_) => const ChakraPage(),
-                                  //   ),
-                                  // );
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const ChakraPage(),
+                                    ),
+                                  );
                                 },
                                 child: const TilesContainerWidget(
                                   text: 'Meditate',

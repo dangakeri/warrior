@@ -15,7 +15,7 @@ class SleepPage extends StatelessWidget {
         slivers: [
           SliverAppBar(
             backgroundColor: Colors.black,
-            // floating: true,
+
             leading: IconButton(
                 onPressed: () {
                   Navigator.of(context).pop();
@@ -28,11 +28,14 @@ class SleepPage extends StatelessWidget {
             pinned: true,
             // snap: true,
             flexibleSpace: FlexibleSpaceBar(
-              centerTitle: true,
+              // centerTitle: true,
               expandedTitleScale: 1,
               title: const Text(
                 'Sleep',
-                style: TextStyle(fontWeight: FontWeight.w400),
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 15,
+                ),
               ),
               background: Container(
                 decoration: const BoxDecoration(

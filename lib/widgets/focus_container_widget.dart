@@ -18,8 +18,6 @@ class FocusContainerWidget extends StatefulWidget {
     required this.text,
     required this.focusMusic,
     required this.callback,
-
-    // required this.callback,
   }) : super(key: key);
 
   @override
@@ -40,18 +38,13 @@ class _FocusContainerWidgetState extends State<FocusContainerWidget> {
     final assetsAudioPlayer = AssetsAudioPlayer();
     // ignore: unused_local_variable
     bool isPlaying = false;
-    return Container(
-      height: 170,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        color: AppColors.blue,
-        borderRadius: BorderRadius.circular(10),
-      ),
+    return Card(
+      color: AppColors.blue,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Padding(
-            padding: const EdgeInsets.only(left: 20, top: 40),
+            padding: const EdgeInsets.only(left: 20, top: 25, bottom: 25),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -82,33 +75,15 @@ class _FocusContainerWidgetState extends State<FocusContainerWidget> {
                   ],
                 ),
                 const SizedBox(height: 10),
-                Row(
-                  children: [
-                    GestureDetector(
-                      onTap: widget.callback,
-                      child: Container(
-                        height: 40,
-                        width: 60,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            color: Colors.white),
-                        child: const Center(
-                            child: Text('Start',
-                                style: TextStyle(
-                                  color: Colors.black,
-                                  fontFamily: 'Nunito',
-                                ))),
-                      ),
+                ElevatedButton(
+                  onPressed: widget.callback,
+                  child: const Text(
+                    'Start',
+                    style: TextStyle(
+                      color: AppColors.blue,
+                      fontFamily: 'Nunito',
                     ),
-                    // IconButton(
-                    //     onPressed: widget.callback,
-                    //     icon: const Icon(Icons.play_arrow)),
-                    const SizedBox(width: 35),
-                    const Text(
-                      '',
-                      style: TextStyle(fontSize: 16),
-                    ),
-                  ],
+                  ),
                 ),
               ],
             ),
@@ -118,7 +93,6 @@ class _FocusContainerWidgetState extends State<FocusContainerWidget> {
             padding: const EdgeInsets.only(right: 20),
             child: widget.image,
           ),
-          // SvgPicture.asset('assets/healthy.svg')
         ],
       ),
     );

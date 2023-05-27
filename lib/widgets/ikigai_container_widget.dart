@@ -1,7 +1,5 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
 import '../consts/app_colors.dart';
 
 class IkigaiContainerWidget extends StatelessWidget {
@@ -23,17 +21,13 @@ class IkigaiContainerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: Container(
-        height: 170,
-        width: double.infinity,
-        decoration: BoxDecoration(
-          color: AppColors.blue,
-          borderRadius: BorderRadius.circular(10),
-        ),
+      child: Card(
+        elevation: 0,
+        color: AppColors.blue,
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.only(left: 20, top: 40),
+              padding: const EdgeInsets.only(left: 20, top: 20, bottom: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -64,25 +58,15 @@ class IkigaiContainerWidget extends StatelessWidget {
                     ],
                   ),
                   const SizedBox(height: 20),
-                  GestureDetector(
-                    onTap: callback,
-                    child: Container(
-                      height: 35,
-                      width: 80,
-                      decoration: BoxDecoration(
-                        color: Theme.of(context).cardColor,
-                        borderRadius: BorderRadius.circular(150),
-                      ),
-                      child: const Center(
-                          child: Text(
+                  ElevatedButton(
+                      onPressed: callback,
+                      child: const Text(
                         'Learn',
                         style: TextStyle(
-                          color: Colors.black,
+                          color: AppColors.blue,
                           fontFamily: 'Nunito',
                         ),
-                      )),
-                    ),
-                  ),
+                      ))
                 ],
               ),
             ),

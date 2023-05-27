@@ -86,7 +86,6 @@ class _SettingPageState extends State<SettingPage> {
                     children: [
                       GestureDetector(
                         onTap: _launchEmail,
-                        // ignore: avoid_unnecessary_containers
                         child: Container(
                           child: const Column(
                             children: [
@@ -110,7 +109,6 @@ class _SettingPageState extends State<SettingPage> {
                       const Spacer(),
                       GestureDetector(
                         onTap: _launchPhone,
-                        // ignore: avoid_unnecessary_containers
                         child: Container(
                           child: const Column(
                             children: [
@@ -134,7 +132,6 @@ class _SettingPageState extends State<SettingPage> {
                       const Spacer(),
                       GestureDetector(
                         onTap: _launchWhatsapp,
-                        // ignore: avoid_unnecessary_containers
                         child: Container(
                           child: const Column(
                             children: [
@@ -321,7 +318,6 @@ class _SettingPageState extends State<SettingPage> {
                                   await SharedPreferences.getInstance();
                               await prefs.clear();
 
-                              // ignore: use_build_context_synchronously
                               Navigator.of(context).pushReplacement(
                                   MaterialPageRoute(builder: (context) {
                                 return const SplashScreen();
