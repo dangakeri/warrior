@@ -3,7 +3,10 @@ import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class PageviewContainerWidget extends StatelessWidget {
+import '../Api model/api_service.dart';
+import '../Api model/quotemodel.dart';
+
+class PageviewContainerWidget extends StatefulWidget {
   final String image;
   final String text;
   const PageviewContainerWidget({
@@ -11,6 +14,20 @@ class PageviewContainerWidget extends StatelessWidget {
     required this.image,
     required this.text,
   }) : super(key: key);
+
+  @override
+  State<PageviewContainerWidget> createState() =>
+      _PageviewContainerWidgetState();
+}
+
+class _PageviewContainerWidgetState extends State<PageviewContainerWidget> {
+  late Future<List<QuoteModel>> quoteData;
+  @override
+  void initState() {
+    super.initState();
+    quoteData = ApiService.getData();
+    // print(quoteData);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +40,7 @@ class PageviewContainerWidget extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.green,
             image: DecorationImage(
-              image: AssetImage(image),
+              image: AssetImage(widget.image),
               fit: BoxFit.cover,
             ),
           ),
@@ -52,17 +69,24 @@ class PageviewContainerWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Center(
-                  // child: Text(text),
-                  child: Text(
-                    text
-                    // 'Our beliefs about what we are and what\nwe can be precisely determine what\nwe can'
-                    ,
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontSize: 18,
-                    ),
-                  ),
+                  child: FutureBuilder<List<QuoteModel>>(
+                      future: ApiService.getData(),
+                      builder: ((context, snapshot) {
+                        if (!snapshot.hasData) {
+                          return const Center(
+                              child: CircularProgressIndicator());
+                        }
+                        return Text(
+                          widget.text,
+                          // 'Our beliefs about what we are and what\nwe can be precisely determine what\nwe can'
+
+                          textAlign: TextAlign.center,
+                          style: const TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                          ),
+                        );
+                      })),
                 ),
                 const SizedBox(height: 20),
                 const Center(

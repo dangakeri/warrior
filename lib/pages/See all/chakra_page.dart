@@ -501,6 +501,7 @@ class ChakraPage extends StatelessWidget {
                       GestureDetector(
                         onTap: () {
                           showModalBottomSheet(
+                            isScrollControlled: true,
                             shape: const RoundedRectangleBorder(
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(40),
@@ -589,7 +590,7 @@ class NoGlow extends ScrollBehavior {
 
 class TextStyle1 {
   static const TextStyle heading = TextStyle(
-    color: Colors.white,
+    color: AppColors.background,
     fontFamily: 'Nunito',
     fontWeight: FontWeight.w400,
     fontSize: 15,
