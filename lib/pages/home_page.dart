@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_print
-
 import 'package:assets_audio_player/assets_audio_player.dart';
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/material.dart';
@@ -16,6 +14,7 @@ import 'See all/chakra_page.dart';
 import 'See all/fear_page.dart';
 import 'See all/sleep_page.dart';
 import 'See all/stress_page.dart';
+
 import 'notifications.dart';
 
 import 'premium_page.dart';
@@ -55,6 +54,7 @@ class _HomePageState extends State<HomePage> {
     NotificationsApi.onNotifications.stream.listen(onClickedNotification);
   }
 
+  // ignore: avoid_print
   void onClickedNotification(String? payload) => print("Warrior");
 
   getCurrentDate() {

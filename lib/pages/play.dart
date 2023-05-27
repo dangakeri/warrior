@@ -101,6 +101,7 @@ class _PlayPageState extends State<PlayPage> {
                             });
                             assetsAudioPlayer.pause();
                           } else {
+                            // ignore: unrelated_type_equality_checks
                             if (isPlaying == 'true') {
                               assetsAudioPlayer.play();
                             } else {

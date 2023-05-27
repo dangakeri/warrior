@@ -1,10 +1,8 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_animate/flutter_animate.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../consts/app_colors.dart';
-
 import '../pages/home.dart';
 import 'onboarding.dart';
 
