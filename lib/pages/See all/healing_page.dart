@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
-
 import '../../consts/app_colors.dart';
 import '../../widgets/meditation_widget.dart';
 import '../play.dart';
 
-class StressPage extends StatelessWidget {
-  const StressPage({super.key});
+class HealingPage extends StatelessWidget {
+  const HealingPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -31,7 +30,7 @@ class StressPage extends StatelessWidget {
               centerTitle: true,
               expandedTitleScale: 1,
               title: const Text(
-                'Stress',
+                'Healing',
                 style: TextStyle(fontWeight: FontWeight.w400),
               ),
               background: Container(
@@ -39,7 +38,7 @@ class StressPage extends StatelessWidget {
                   image: DecorationImage(
                     fit: BoxFit.cover,
                     image: AssetImage(
-                      'assets/stress.jpeg',
+                      'assets/healing.jpeg',
                     ),
                   ),
                 ),
@@ -61,7 +60,7 @@ class StressPage extends StatelessWidget {
                   iconColor: Colors.white,
                   collapsedIconColor: Colors.white,
                   title: Text(
-                    'Stress',
+                    'Healing',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
                       fontSize: 15,
@@ -74,7 +73,7 @@ class StressPage extends StatelessWidget {
                     ListTile(
                       textColor: Colors.white,
                       title: Text(
-                        'This stress-reducing meditation helps you to relax and unwind. Start by focusing on your breath and noticing how it feels to inhale and exhale. Allow yourself to let go of any worries or concerns that have been on your mind. As you continue to breathe in and out, imagine yourself in a peaceful and calming place. Allow yourself to relax and let go of any stress or tension. Visualize your mindful breathing as a way to release any negative energy. When you\'re ready, slowly open your eyes, feeling refreshed and energized.',
+                        'Healing meditation is a type of meditation that uses focus, visualization, and affirmations to promote physical and emotional healing. It can be used to help with a variety of conditions, including pain, anxiety, depression, and stress.\nTo practice healing meditation, find a quiet place where you will not be disturbed. Sit or lie down in a comfortable position and close your eyes. Take a few deep breaths and focus on your breath. Once you are relaxed, begin to visualize a healing image or scene. You may also want to repeat an affirmation to yourself. Continue to focus on your breath and your visualization for as long as you like.\nWhen you are finished, take a few deep breaths and open your eyes. You may feel relaxed and refreshed. Healing meditation can be done on a regular basis to promote physical and emotional healing',
                         style: TextStyle(
                           fontWeight: FontWeight.w200,
                           fontSize: 14,
@@ -87,7 +86,7 @@ class StressPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: const AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/healing.jpeg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -102,7 +101,7 @@ class StressPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: const AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/healing.jpeg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -117,7 +116,7 @@ class StressPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: const AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/healing.jpeg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -132,7 +131,7 @@ class StressPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: const AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/healing.jpeg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -147,7 +146,7 @@ class StressPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: const AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/healing.jpeg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -162,7 +161,7 @@ class StressPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: const AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/healing.jpeg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -177,7 +176,7 @@ class StressPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: const AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/healing.jpeg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -192,7 +191,7 @@ class StressPage extends StatelessWidget {
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
                 MeditationWidget(
-                  image: const AssetImage('assets/breathing.jpg'),
+                  image: const AssetImage('assets/healing.jpeg'),
                   title: 'Gentle tools for sleep',
                   time: "5-30 Min",
                   content: 'Daniel Gakeri',
@@ -205,8 +204,6 @@ class StressPage extends StatelessWidget {
                     ));
                   },
                 ),
-                SizedBox(height: MediaQuery.of(context).size.height * .01),
-                SizedBox(height: MediaQuery.of(context).size.height * .02),
               ],
             ),
           )

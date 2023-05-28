@@ -64,7 +64,7 @@ class FearPage extends StatelessWidget {
                     'Fear',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
-                      fontSize: 18,
+                      fontSize: 15,
                       fontFamily: 'Nunito',
                       height: 1.5,
                       color: Colors.white,
@@ -77,7 +77,7 @@ class FearPage extends StatelessWidget {
                         'This Fear Meditation helps to bring awareness to any fear-based thoughts or feelings that might be lingering in the background. Through this meditation, you\'ll be guided to observe and accept your fear, and to open up to the possibility of finding peace and equanimity amidst it. You\'ll be encouraged to take a few moments to sit still with your fear, and to use your breath to bring gentle attention to the body. You\'ll also be invited to explore a few simple visualizations to help foster a calm and compassionate attitude towards your fear. Finally, you\'ll be guided to open up to the possibility of finding a deeper strength and courage within yourself to move forward.',
                         style: TextStyle(
                           fontWeight: FontWeight.w200,
-                          fontSize: 16,
+                          fontSize: 14,
                           fontFamily: 'Nunito',
                           color: Colors.white,
                         ),

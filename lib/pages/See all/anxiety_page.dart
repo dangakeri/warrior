@@ -66,7 +66,7 @@ class AnxietyPage extends StatelessWidget {
                     'Anxiety',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
-                      fontSize: 18,
+                      fontSize: 15,
                       fontFamily: 'Nunito',
                       height: 1.5,
                       color: Colors.white,
@@ -79,7 +79,7 @@ class AnxietyPage extends StatelessWidget {
                         'This anxiety meditation focuses on finding a sense of calm and peace in the present moment. It begins with a few moments of deep relaxation, followed by a mindful scan of the body to become aware of any areas of tension. The meditation then guides you through a process of breathing deeply and focusing on the sensations of the breath to help release any tension in the body. Finally, you are encouraged to bring your awareness to the present moment and to appreciate the peace and calm that can be found here.',
                         style: TextStyle(
                           fontWeight: FontWeight.w200,
-                          fontSize: 16,
+                          fontSize: 14,
                           fontFamily: 'Nunito',
                           color: Colors.white,
                         ),

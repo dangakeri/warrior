@@ -63,7 +63,7 @@ class BreathingPage extends StatelessWidget {
                     'Breathing',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
-                      fontSize: 18,
+                      fontSize: 15,
                       fontFamily: 'Nunito',
                       height: 1.5,
                       color: Colors.white,
@@ -76,7 +76,7 @@ class BreathingPage extends StatelessWidget {
                         'Breathing meditation is one of the most basic and effective forms of meditation. It can help to reduce stress and promote relaxation. This type of meditation involves focusing on the breath. You will be encouraged to pay attention to the sensation of your breath as it enters and exits your body. With each breath, you can use the opportunity to relax your body and become aware of your environment. With practice, you can learn to become more mindful of your breath and the sensations it brings. Over time, you can use this practice to reduce stress and increase your overall wellbeing.',
                         style: TextStyle(
                           fontWeight: FontWeight.w200,
-                          fontSize: 16,
+                          fontSize: 14,
                           fontFamily: 'Nunito',
                           color: Colors.white,
                         ),

@@ -67,7 +67,7 @@ class SleepPage extends StatelessWidget {
                     'Sleeping',
                     style: TextStyle(
                       fontWeight: FontWeight.w400,
-                      fontSize: 18,
+                      fontSize: 15,
                       fontFamily: 'Nunito',
                       height: 1.5,
                       color: Colors.white,
@@ -80,7 +80,7 @@ class SleepPage extends StatelessWidget {
                         'This Sleep meditation will help you relax your mind and body and prepare for a restful night\'s sleep. Start by finding a comfortable position to sit or lie down in. Focus your attention on your breath. Notice the sensation of the air entering and leaving your lungs. As you breathe, relax your body a little more with each breath. Let go of any worries or concerns that may be on your mind. Visualize a peaceful scene that helps you relax and drift off to sleep. When your mind wanders, simply bring your focus back to your breath. Stay in this relaxed state until you drift off to sleep.',
                         style: TextStyle(
                           fontWeight: FontWeight.w200,
-                          fontSize: 16,
+                          fontSize: 14,
                           fontFamily: 'Nunito',
                           color: Colors.white,
                         ),
