@@ -15,6 +15,7 @@ import 'See all/anxiety_page.dart';
 import 'See all/breathing_page.dart';
 import 'See all/chakra_page.dart';
 import 'See all/fear_page.dart';
+import 'See all/relaxation_page.dart';
 import 'See all/sleep_page.dart';
 import 'See all/stress_page.dart';
 
@@ -509,11 +510,11 @@ class _HomePageState extends State<HomePage> {
                               ),
                               GestureDetector(
                                 onTap: () {
-                                  // Navigator.of(context).push(
-                                  //   MaterialPageRoute(
-                                  //     builder: (_) => const ChakraPage(),
-                                  //   ),
-                                  // );
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const RelaxationPage(),
+                                    ),
+                                  );
                                 },
                                 child: const TilesContainerWidget(
                                   text: 'Deep Relaxation',
