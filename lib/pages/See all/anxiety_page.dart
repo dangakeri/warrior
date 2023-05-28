@@ -8,14 +8,16 @@ class AnxietyPage extends StatelessWidget {
   const AnxietyPage({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(
+    BuildContext context,
+  ) {
     return Scaffold(
       backgroundColor: AppColors.background1,
       body: CustomScrollView(
         slivers: [
           SliverAppBar(
             backgroundColor: Colors.black,
-            // floating: true,
+
             leading: IconButton(
                 onPressed: () {
                   Navigator.of(context).pop();
@@ -251,7 +253,6 @@ class AnxietyPage extends StatelessWidget {
                   },
                 ),
                 SizedBox(height: MediaQuery.of(context).size.height * .01),
-                SizedBox(height: MediaQuery.of(context).size.height * .02),
               ],
             ),
           )
@@ -259,4 +260,47 @@ class AnxietyPage extends StatelessWidget {
       ),
     );
   }
+}
+
+class MySliverAppBar extends SliverPersistentHeaderDelegate {
+  final double expandedHeight;
+
+  MySliverAppBar({required this.expandedHeight});
+
+  @override
+  Widget build(
+      BuildContext context, double shrinkOffset, bool overlapsContent) {
+    return Stack(
+      clipBehavior: Clip.none,
+      fit: StackFit.expand,
+      children: [
+        Image.asset(
+          'assets/anxiety.jpeg',
+          fit: BoxFit.cover,
+        ),
+        Center(
+          child: Opacity(
+            opacity: shrinkOffset / expandedHeight,
+            child: const Text(
+              "Anxiety",
+              style: TextStyle(
+                color: Colors.white,
+                fontWeight: FontWeight.w700,
+                fontSize: 23,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+
+  @override
+  double get maxExtent => expandedHeight;
+
+  @override
+  double get minExtent => kToolbarHeight;
+
+  @override
+  bool shouldRebuild(SliverPersistentHeaderDelegate oldDelegate) => true;
 }

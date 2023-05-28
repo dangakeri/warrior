@@ -31,14 +31,14 @@ class ApiService {
       if (response.statusCode == 200) {
         // parse data
         List jsonResponse = jsonDecode(response.body);
-        print(jsonResponse);
+        // print(jsonResponse);
         return jsonResponse.map((data) => QuoteModel.fromJson(data)).toList();
       } else {
         throw Exception('Something Went Wrong');
       }
     } catch (e) {
       // catch the exception
-      print(e);
+      // print(e);
       throw Exception('Something Went Wrong');
     }
   }

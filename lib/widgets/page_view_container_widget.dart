@@ -76,15 +76,18 @@ class _PageviewContainerWidgetState extends State<PageviewContainerWidget> {
                           return const Center(
                               child: CircularProgressIndicator());
                         }
-                        return Text(
-                          widget.text,
-                          // 'Our beliefs about what we are and what\nwe can be precisely determine what\nwe can'
-
-                          textAlign: TextAlign.center,
-                          style: const TextStyle(
-                            color: Colors.white,
-                            fontSize: 18,
-                          ),
+                        return ListView.builder(
+                          itemCount: snapshot.data!.length,
+                          itemBuilder: (context, int index) {
+                            return Text(
+                              snapshot.data![index].text,
+                              textAlign: TextAlign.center,
+                              style: const TextStyle(
+                                color: Colors.white,
+                                fontSize: 18,
+                              ),
+                            );
+                          },
                         );
                       })),
                 ),

@@ -49,6 +49,8 @@ dependencies:
   flutter_native_timezone: ^2.0.0
   flutter_custom_clippers: ^2.1.0
   flutter_animate: ^4.1.1+1
+  firebase_core: ^2.13.0
+  firebase_storage: ^11.2.1
 
  
 

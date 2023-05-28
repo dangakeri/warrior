@@ -318,7 +318,7 @@ class _HomePageState extends State<HomePage> {
                         const Text(
                           'Unlock our premium content for free.',
                           style: TextStyle(
-                            fontSize: 18,
+                            fontSize: 16,
                             fontFamily: 'Nunito',
                             fontWeight: FontWeight.w500,
                             color: Colors.white,
@@ -370,7 +370,8 @@ class _HomePageState extends State<HomePage> {
                           ],
                         ),
                         SizedBox(
-                          height: 1100,
+                          // height: 1050,
+                          height: MediaQuery.of(context).size.height * 1.2,
                           child: GridView.count(
                             physics: const NeverScrollableScrollPhysics(),
                             crossAxisSpacing: 20,
