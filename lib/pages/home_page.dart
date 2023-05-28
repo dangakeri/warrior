@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:warriors/pages/See%20all/happiness_page.dart';
 import 'package:warriors/pages/See%20all/healing_page.dart';
 import '../consts/app_colors.dart';
 import '../widgets/for_you_widget.dart';
@@ -464,13 +465,13 @@ class _HomePageState extends State<HomePage> {
                                 ),
                               ),
                               GestureDetector(
-                                // onTap: () {
-                                //   Navigator.of(context).push(
-                                //     MaterialPageRoute(
-                                //       builder: (_) => const ChakraPage(),
-                                //     ),
-                                //   );
-                                // },
+                                onTap: () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (_) => const HappinessPage(),
+                                    ),
+                                  );
+                                },
                                 child: const TilesContainerWidget(
                                   text: 'Be happy',
                                   content: 'Happiness',
