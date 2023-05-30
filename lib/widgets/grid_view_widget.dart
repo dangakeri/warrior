@@ -20,27 +20,13 @@ class GridViewWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 1.42,
+      height: MediaQuery.of(context).size.height * 1.23,
       child: GridView.count(
         physics: const NeverScrollableScrollPhysics(),
         crossAxisSpacing: 20,
         mainAxisSpacing: 20,
         crossAxisCount: 2,
         children: [
-          GestureDetector(
-            onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (_) => const SleepPage(),
-                ),
-              );
-            },
-            child: const TilesContainerWidget(
-              text: 'Deep Sleep',
-              content: 'Sleep',
-              image: AssetImage('assets/sleep.jpeg'),
-            ),
-          ),
           GestureDetector(
             onTap: () {
               Navigator.of(context).push(
@@ -53,6 +39,20 @@ class GridViewWidget extends StatelessWidget {
               text: 'Meditate',
               content: 'Chakra',
               image: AssetImage('assets/chakra.jpeg'),
+            ),
+          ),
+          GestureDetector(
+            onTap: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (_) => const SleepPage(),
+                ),
+              );
+            },
+            child: const TilesContainerWidget(
+              text: 'Deep Sleep',
+              content: 'Sleep',
+              image: AssetImage('assets/sleep.jpeg'),
             ),
           ),
           GestureDetector(

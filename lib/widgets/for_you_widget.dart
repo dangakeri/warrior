@@ -39,7 +39,7 @@ class ForYouWidget extends StatelessWidget {
         title: Text(
           title,
           style: const TextStyle(
-            fontSize: 16,
+            fontSize: 15,
             fontFamily: 'Nunito',
             fontWeight: FontWeight.w400,
             color: Colors.white,
@@ -51,7 +51,7 @@ class ForYouWidget extends StatelessWidget {
               Text(
                 content,
                 style: const TextStyle(
-                  fontSize: 16,
+                  fontSize: 14,
                   fontFamily: 'Nunito',
                   fontWeight: FontWeight.w400,
                   color: Colors.white,
@@ -71,7 +71,7 @@ class ForYouWidget extends StatelessWidget {
                         Text(
                           text1,
                           style: const TextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                             fontFamily: 'Nunito',
                             fontWeight: FontWeight.w400,
                             color: Colors.white,
@@ -82,7 +82,7 @@ class ForYouWidget extends StatelessWidget {
                         Text(
                           text5,
                           style: const TextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                             fontFamily: 'Nunito',
                             fontWeight: FontWeight.w400,
                             color: Colors.white,
@@ -108,7 +108,7 @@ class ForYouWidget extends StatelessWidget {
                         Text(
                           text2,
                           style: const TextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                             fontFamily: 'Nunito',
                             fontWeight: FontWeight.w400,
                             color: Colors.white,
@@ -119,44 +119,7 @@ class ForYouWidget extends StatelessWidget {
                         Text(
                           text6,
                           style: const TextStyle(
-                            fontSize: 16,
-                            fontFamily: 'Nunito',
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-              Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Icon(CupertinoIcons.check_mark_circled,
-                        color: Colors.white),
-                    SizedBox(width: MediaQuery.of(context).size.width * .02),
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          text3,
-                          style: const TextStyle(
-                            fontSize: 16,
-                            fontFamily: 'Nunito',
-                            fontWeight: FontWeight.w400,
-                            color: Colors.white,
-                          ),
-                        ),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.01),
-                        Text(
-                          text7,
-                          style: const TextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                             fontFamily: 'Nunito',
                             fontWeight: FontWeight.w400,
                             color: Colors.white,
@@ -191,9 +154,46 @@ class ForYouWidget extends StatelessWidget {
                         SizedBox(
                             height: MediaQuery.of(context).size.height * 0.01),
                         Text(
+                          text7,
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontFamily: 'Nunito',
+                            fontWeight: FontWeight.w400,
+                            color: Colors.white,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 5),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Icon(CupertinoIcons.check_mark_circled,
+                        color: Colors.white),
+                    SizedBox(width: MediaQuery.of(context).size.width * .02),
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          text4,
+                          style: const TextStyle(
+                            fontSize: 14,
+                            fontFamily: 'Nunito',
+                            fontWeight: FontWeight.w400,
+                            color: Colors.white,
+                          ),
+                        ),
+                        SizedBox(
+                            height: MediaQuery.of(context).size.height * 0.01),
+                        Text(
                           text8,
                           style: const TextStyle(
-                            fontSize: 16,
+                            fontSize: 14,
                             fontFamily: 'Nunito',
                             fontWeight: FontWeight.w400,
                             color: Colors.white,

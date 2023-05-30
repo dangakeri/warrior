@@ -42,7 +42,11 @@ class ChakraPage extends StatelessWidget {
                       padding: EdgeInsets.symmetric(horizontal: 20),
                       child: Text(
                         'Chakras',
-                        style: TextStyle1.heading,
+                        style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.normal,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ],

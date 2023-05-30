@@ -38,62 +38,65 @@ class _FocusContainerWidgetState extends State<FocusContainerWidget> {
     final assetsAudioPlayer = AssetsAudioPlayer();
     // ignore: unused_local_variable
     bool isPlaying = false;
-    return Card(
-      color: AppColors.blue,
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Padding(
-            padding: const EdgeInsets.only(left: 20, top: 25, bottom: 25),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Row(
-                  children: [
-                    Text(
-                      widget.text,
-                      style: const TextStyle(
-                        fontSize: 17,
-                        color: Colors.white,
-                        fontFamily: 'Nunito',
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+      child: Card(
+        color: AppColors.blue,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 20, top: 25, bottom: 25),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        widget.text,
+                        style: const TextStyle(
+                          fontSize: 17,
+                          color: Colors.white,
+                          fontFamily: 'Nunito',
+                        ),
                       ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                const Row(
-                  children: [
-                    Text(
-                      'Focus even more',
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  const Row(
+                    children: [
+                      Text(
+                        'Focus even more',
+                        style: TextStyle(
+                          fontSize: 12,
+                          fontFamily: 'Nunito',
+                          fontWeight: FontWeight.w100,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  ElevatedButton(
+                    onPressed: widget.callback,
+                    child: const Text(
+                      'Start',
                       style: TextStyle(
-                        fontSize: 12,
+                        color: AppColors.blue,
                         fontFamily: 'Nunito',
-                        fontWeight: FontWeight.w100,
-                        color: Colors.white,
                       ),
-                    ),
-                  ],
-                ),
-                const SizedBox(height: 10),
-                ElevatedButton(
-                  onPressed: widget.callback,
-                  child: const Text(
-                    'Start',
-                    style: TextStyle(
-                      color: AppColors.blue,
-                      fontFamily: 'Nunito',
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
-          const Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(right: 20),
-            child: widget.image,
-          ),
-        ],
+            const Spacer(),
+            Padding(
+              padding: const EdgeInsets.only(right: 20),
+              child: widget.image,
+            ),
+          ],
+        ),
       ),
     );
   }

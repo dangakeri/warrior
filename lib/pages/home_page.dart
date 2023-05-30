@@ -167,12 +167,7 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Text(
                               'For you $name',
-                              style: const TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Nunito',
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white,
-                              ),
+                              style: Style.heading,
                             ),
                           ],
                         ),
@@ -230,12 +225,7 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Text(
                               'Today Meditation',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Nunito',
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white,
-                              ),
+                              style: Style.heading,
                             ),
                           ],
                         ),
@@ -246,12 +236,7 @@ class _HomePageState extends State<HomePage> {
                             height: MediaQuery.of(context).size.height * 0.02),
                         const Text(
                           'Unlock our premium content for free.',
-                          style: TextStyle(
-                            fontSize: 16,
-                            fontFamily: 'Nunito',
-                            fontWeight: FontWeight.w500,
-                            color: Colors.white,
-                          ),
+                          style: Style.heading,
                         ),
                         SizedBox(
                             height: MediaQuery.of(context).size.height * 0.02),
@@ -273,12 +258,7 @@ class _HomePageState extends State<HomePage> {
                             child: const Center(
                               child: Text(
                                 'Start your free trial.',
-                                style: TextStyle(
-                                  fontSize: 16,
-                                  fontFamily: 'Nunito',
-                                  fontWeight: FontWeight.w400,
-                                  color: Colors.white,
-                                ),
+                                style: Style.heading,
                               ),
                             ),
                           ),
@@ -289,12 +269,7 @@ class _HomePageState extends State<HomePage> {
                           children: [
                             Text(
                               'Explore categories',
-                              style: TextStyle(
-                                fontSize: 16,
-                                fontFamily: 'Nunito',
-                                fontWeight: FontWeight.w400,
-                                color: Colors.white,
-                              ),
+                              style: Style.heading,
                             ),
                           ],
                         ),
@@ -317,4 +292,13 @@ class NoGlow extends ScrollBehavior {
       BuildContext context, Widget child, AxisDirection axisDirection) {
     return child;
   }
+}
+
+class Style {
+  static const TextStyle heading = TextStyle(
+    color: Colors.white,
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w500,
+    fontSize: 15,
+  );
 }

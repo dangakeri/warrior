@@ -60,9 +60,8 @@ class _FocusPageState extends State<FocusPage> {
       body: ScrollConfiguration(
         behavior: NoGlow(),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20),
+          padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
           child: ListView(
-            // physics: const BouncingScrollPhysics(),
             children: [
               const SizedBox(height: 90),
               Center(
@@ -90,7 +89,7 @@ class _FocusPageState extends State<FocusPage> {
                 color: Colors.grey.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/rain.svg',
-                  height: 150,
+                  height: MediaQuery.of(context).size.height * 0.15,
                 ),
                 focusMusic: 'rain',
                 callback: () {
@@ -101,13 +100,12 @@ class _FocusPageState extends State<FocusPage> {
                   }));
                 },
               ),
-              const SizedBox(height: 20),
               FocusContainerWidget(
                 text: 'Mystic Temple',
                 color: Colors.orange.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/temple.svg',
-                  height: 100,
+                  height: MediaQuery.of(context).size.height * 0.15,
                 ),
                 focusMusic: 'temple',
                 callback: () {
@@ -117,13 +115,12 @@ class _FocusPageState extends State<FocusPage> {
                   }));
                 },
               ),
-              const SizedBox(height: 20),
               FocusContainerWidget(
                 text: 'Crackling',
                 color: Colors.pink.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/cracking.svg',
-                  height: 150,
+                  height: MediaQuery.of(context).size.height * 0.15,
                 ),
                 focusMusic: 'cracking',
                 callback: () {
@@ -134,13 +131,12 @@ class _FocusPageState extends State<FocusPage> {
                   }));
                 },
               ),
-              const SizedBox(height: 20),
               FocusContainerWidget(
                 text: 'Chewing',
                 color: Colors.purple.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/chewing.svg',
-                  height: 150,
+                  height: MediaQuery.of(context).size.height * 0.15,
                 ),
                 focusMusic: 'chewing',
                 callback: () {
@@ -150,13 +146,12 @@ class _FocusPageState extends State<FocusPage> {
                   }));
                 },
               ),
-              const SizedBox(height: 20),
               FocusContainerWidget(
                 text: 'Cat Purring',
                 color: Colors.green.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/cat.svg',
-                  height: 50,
+                  height: MediaQuery.of(context).size.height * 0.09,
                 ),
                 focusMusic: 'purring',
                 callback: () {
@@ -166,13 +161,12 @@ class _FocusPageState extends State<FocusPage> {
                   }));
                 },
               ),
-              const SizedBox(height: 20),
               FocusContainerWidget(
                 text: 'Breathing',
                 color: Colors.yellow.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/breathing.svg',
-                  height: 150,
+                  height: MediaQuery.of(context).size.height * 0.15,
                 ),
                 focusMusic: 'breathing',
                 callback: () {
@@ -183,13 +177,12 @@ class _FocusPageState extends State<FocusPage> {
                   }));
                 },
               ),
-              const SizedBox(height: 20),
               FocusContainerWidget(
                 text: 'Nature',
                 color: Colors.teal.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/nature1.svg',
-                  height: 150,
+                  height: MediaQuery.of(context).size.height * 0.15,
                 ),
                 focusMusic: 'nature',
                 callback: () {
@@ -199,13 +192,12 @@ class _FocusPageState extends State<FocusPage> {
                   }));
                 },
               ),
-              const SizedBox(height: 20),
               FocusContainerWidget(
                 text: 'Music',
                 color: Colors.amber.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/music.svg',
-                  height: 100,
+                  height: MediaQuery.of(context).size.height * 0.15,
                 ),
                 focusMusic: 'music',
                 callback: () {
@@ -216,13 +208,12 @@ class _FocusPageState extends State<FocusPage> {
                   }));
                 },
               ),
-              const SizedBox(height: 20),
               FocusContainerWidget(
                 text: 'Fire',
                 color: Colors.red.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/fire.svg',
-                  height: 150,
+                  height: MediaQuery.of(context).size.height * 0.15,
                 ),
                 focusMusic: 'fire',
                 callback: () {
@@ -232,13 +223,12 @@ class _FocusPageState extends State<FocusPage> {
                   }));
                 },
               ),
-              const SizedBox(height: 20),
               FocusContainerWidget(
                 text: 'Storm',
                 color: Colors.black26.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/storm.svg',
-                  height: 100,
+                  height: MediaQuery.of(context).size.height * 0.15,
                 ),
                 focusMusic: 'storm',
                 callback: () {
@@ -248,7 +238,6 @@ class _FocusPageState extends State<FocusPage> {
                   }));
                 },
               ),
-              SizedBox(height: MediaQuery.of(context).size.height * .03),
             ],
           ),
         ),
