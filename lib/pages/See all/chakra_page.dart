@@ -590,7 +590,7 @@ class NoGlow extends ScrollBehavior {
 
 class TextStyle1 {
   static const TextStyle heading = TextStyle(
-    color: AppColors.background,
+    color: Colors.white,
     fontFamily: 'Nunito',
     fontWeight: FontWeight.w400,
     fontSize: 15,

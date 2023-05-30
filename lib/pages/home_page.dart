@@ -4,23 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:warriors/pages/See%20all/compassion_page.dart';
-import 'package:warriors/pages/See%20all/happiness_page.dart';
-import 'package:warriors/pages/See%20all/healing_page.dart';
 import '../consts/app_colors.dart';
 import '../widgets/for_you_widget.dart';
-import '../widgets/tiles_container_widget.dart';
-import 'See all/anxiety_page.dart';
-
-import 'See all/breathing_page.dart';
-import 'See all/chakra_page.dart';
-import 'See all/fear_page.dart';
-import 'See all/relaxation_page.dart';
-import 'See all/sleep_page.dart';
-import 'See all/stress_page.dart';
-
+import '../widgets/grid_view_widget.dart';
 import 'notifications.dart';
-
 import 'premium_page.dart';
 import 'settings.dart';
 
@@ -101,7 +88,8 @@ class _HomePageState extends State<HomePage> {
                     ))
               ],
               backgroundColor: Colors.transparent,
-              expandedHeight: 200,
+              // expandedHeight: 200,
+              expandedHeight: MediaQuery.of(context).size.height * 0.22,
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
                 background: ClipPath(
@@ -109,54 +97,58 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     height: 200,
                     decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.all(Radius.circular(50.0)),
+                      // borderRadius: BorderRadius.all(Radius.circular(50.0)),
                       color: AppColors.blue,
                     ),
                     child: Center(
-                        child: Column(
-                      children: [
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.07),
-                        Padding(
-                          padding: const EdgeInsets.symmetric(horizontal: 40),
-                          child: Text(
-                            'Hi,$name ',
+                      child: Column(
+                        children: [
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.07),
+                          Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 40),
+                            child: Text(
+                              'Hi,$name ',
+                              style: const TextStyle(
+                                fontFamily: 'Nunito',
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.02),
+                          const Padding(
+                            padding: EdgeInsets.symmetric(horizontal: 40),
+                            child: Text(
+                              'Focus even more and get the perfect\nthe day brings along',
+                              style: TextStyle(
+                                fontFamily: 'Nunito',
+                                fontSize: 14,
+                                fontWeight: FontWeight.w300,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                          SizedBox(
+                              height:
+                                  MediaQuery.of(context).size.height * 0.02),
+                          Text(
+                            date,
                             style: const TextStyle(
                               fontFamily: 'Nunito',
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
+                              fontSize: 13,
+                              fontWeight: FontWeight.w600,
                               color: Colors.white,
                             ),
                           ),
-                        ),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.03),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 40),
-                          child: Text(
-                            'Focus even more and get the perfect\nthe day brings along',
-                            style: TextStyle(
-                              fontFamily: 'Nunito',
-                              fontSize: 16,
-                              fontWeight: FontWeight.w300,
-                              color: Colors.white,
-                            ),
-                            textAlign: TextAlign.center,
-                          ),
-                        ),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.02),
-                        Text(
-                          date,
-                          style: const TextStyle(
-                            fontFamily: 'Nunito',
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: Colors.white,
-                          ),
-                        ),
-                      ],
-                    )),
+                        ],
+                      ),
+                    ),
                   ),
                 ),
               ),
@@ -373,158 +365,7 @@ class _HomePageState extends State<HomePage> {
                             ),
                           ],
                         ),
-                        SizedBox(
-                          // height: 1050,
-                          height: MediaQuery.of(context).size.height * 1.2,
-                          child: GridView.count(
-                            physics: const NeverScrollableScrollPhysics(),
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20,
-                            crossAxisCount: 2,
-                            children: [
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const SleepPage(),
-                                    ),
-                                  );
-                                },
-                                child: const TilesContainerWidget(
-                                  text: 'Deep Sleep',
-                                  content: 'Sleep',
-                                  image: AssetImage('assets/sleep.jpeg'),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const ChakraPage(),
-                                    ),
-                                  );
-                                },
-                                child: const TilesContainerWidget(
-                                  text: 'Meditate',
-                                  content: 'Chakra',
-                                  image: AssetImage('assets/chakra.jpeg'),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const StressPage(),
-                                    ),
-                                  );
-                                },
-                                child: const TilesContainerWidget(
-                                  text: 'stressed',
-                                  content: 'Stress',
-                                  image: AssetImage('assets/stress.jpeg'),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const AnxietyPage(),
-                                    ),
-                                  );
-                                },
-                                child: const TilesContainerWidget(
-                                  text: 'Anxious',
-                                  content: 'Anxiety',
-                                  image: AssetImage('assets/anxiety.jpeg'),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const BreathingPage(),
-                                    ),
-                                  );
-                                },
-                                child: const TilesContainerWidget(
-                                  text: 'Exercise your breathing',
-                                  content: 'Breathing',
-                                  image: AssetImage('assets/breathing.jpg'),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const FearPage(),
-                                    ),
-                                  );
-                                },
-                                child: const TilesContainerWidget(
-                                  text: 'Fearful',
-                                  content: 'Fear',
-                                  image: AssetImage('assets/fear.jpeg'),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const HappinessPage(),
-                                    ),
-                                  );
-                                },
-                                child: const TilesContainerWidget(
-                                  text: 'Be happy',
-                                  content: 'Happiness',
-                                  image: AssetImage('assets/happiness.jpg'),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const HealingPage(),
-                                    ),
-                                  );
-                                },
-                                child: const TilesContainerWidget(
-                                  text: 'Recovery and healing',
-                                  content: 'Healing',
-                                  image: AssetImage('assets/healing.jpeg'),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const CompassionPage(),
-                                    ),
-                                  );
-                                },
-                                child: const TilesContainerWidget(
-                                  text: 'Be compassionate',
-                                  content: 'Compassion',
-                                  image: AssetImage('assets/compassion.jpg'),
-                                ),
-                              ),
-                              GestureDetector(
-                                onTap: () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (_) => const RelaxationPage(),
-                                    ),
-                                  );
-                                },
-                                child: const TilesContainerWidget(
-                                  text: 'Deep Relaxation',
-                                  content: 'Relaxation',
-                                  image: AssetImage('assets/relaxation.jpeg'),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
+                        const GridViewWidget(),
                       ],
                     ),
                   ),
