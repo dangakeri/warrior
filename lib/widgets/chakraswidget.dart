@@ -1,8 +1,7 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
 
 import '../consts/app_colors.dart';
-import '../pages/See all/chakra_page.dart';
+
 import '../pages/play.dart';
 import 'continue_widget.dart';
 
@@ -47,46 +46,51 @@ class ChakraWidget extends StatelessWidget {
             context: context,
             builder: (context) => SizedBox(
               height: MediaQuery.of(context).size.height * 0.7,
-              child: ListView(children: [
-                Column(
-                  children: [
-                    const SizedBox(height: 20),
-                    Container(
-                      height: 60,
-                      width: 60,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
-                        image:
-                            DecorationImage(image: image2, fit: BoxFit.cover),
+              child: ListView(
+                children: [
+                  Column(
+                    children: [
+                      const SizedBox(height: 20),
+                      Container(
+                        height: 60,
+                        width: 60,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(10),
+                          image:
+                              DecorationImage(image: image2, fit: BoxFit.cover),
+                        ),
                       ),
-                    ),
-                    Text(
-                      heading,
-                      style: TextStyle1.heading,
-                    ),
-                    SizedBox(height: MediaQuery.of(context).size.height * .02),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 20),
-                      child: Text(description, style: TextStyle1.heading),
-                    ),
-                    SizedBox(height: MediaQuery.of(context).size.height * .01),
-                    GestureDetector(
-                      onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (_) => PlayPage(
-                              music: music,
-                              chakra: chakra,
+                      Text(
+                        heading,
+                        style: TextStyle1.heading,
+                      ),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * .02),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: Text(description, style: TextStyle1.heading),
+                      ),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * .01),
+                      GestureDetector(
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (_) => PlayPage(
+                                music: music,
+                                chakra: chakra,
+                              ),
                             ),
-                          ),
-                        );
-                      },
-                      child: ContinueWidget(text: 'Start $chakra'),
-                    ),
-                    SizedBox(height: MediaQuery.of(context).size.height * .02),
-                  ],
-                ),
-              ]),
+                          );
+                        },
+                        child: ContinueWidget(text: 'Start $chakra'),
+                      ),
+                      SizedBox(
+                          height: MediaQuery.of(context).size.height * .02),
+                    ],
+                  ),
+                ],
+              ),
             ),
           );
         },
@@ -149,6 +153,40 @@ class ChakraWidget extends StatelessWidget {
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class TextStyle1 {
+  static const TextStyle heading = TextStyle(
+    color: AppColors.background,
+    fontFamily: 'Nunito',
+    fontWeight: FontWeight.w400,
+    fontSize: 15,
+  );
+}
+
+class CustomListTile extends StatelessWidget {
+  final String title;
+  const CustomListTile({
+    Key? key,
+    required this.title,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return ListTile(
+      textColor: Colors.white,
+      title: Text(
+        title,
+        style: const TextStyle(
+          fontWeight: FontWeight.w300,
+          fontSize: 13,
+          fontFamily: 'Nunito',
+          height: 1.5,
+          color: Colors.white,
         ),
       ),
     );
