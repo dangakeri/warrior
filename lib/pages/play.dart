@@ -51,14 +51,15 @@ class _PlayPageState extends State<PlayPage> {
         )),
         child: Column(
           children: [
-            SizedBox(height: MediaQuery.of(context).size.height * .15),
+            SizedBox(height: MediaQuery.of(context).size.height * .1),
             Center(
-                child: Text(
-              'Focus with ${widget.chakra}',
-              style: const TextStyle(fontSize: 17, color: Colors.white),
-            )),
+              child: Text(
+                'Focus with ${widget.chakra}',
+                style: const TextStyle(fontSize: 17, color: Colors.white),
+              ),
+            ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.09,
+              height: MediaQuery.of(context).size.height * 0.05,
             ),
             const AvatarGlow(
               endRadius: 200,
@@ -77,7 +78,7 @@ class _PlayPageState extends State<PlayPage> {
               ),
             ),
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.08,
+              height: MediaQuery.of(context).size.height * 0.05,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20),
