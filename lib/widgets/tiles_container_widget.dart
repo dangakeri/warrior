@@ -24,29 +24,32 @@ class _TilesContainerWidgetState extends State<TilesContainerWidget> {
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(10),
         image: DecorationImage(
-          // image:image ,
-          fit: BoxFit.cover, image: widget.image,
+          fit: BoxFit.cover,
+          image: widget.image,
         ),
       ),
       child: Column(
         children: [
-          SizedBox(height: MediaQuery.of(context).size.height * .15),
+          SizedBox(height: MediaQuery.of(context).size.height * .16),
           Text(
             widget.text,
             style: TextStyle(
               fontWeight: FontWeight.w300,
-              fontSize: 16,
+              fontSize: 14,
               fontFamily: 'Nunito',
               color: Colors.white.withOpacity(.7),
             ),
           ),
-          Text(
-            widget.content,
-            style: const TextStyle(
-              fontWeight: FontWeight.w400,
-              fontSize: 18,
-              fontFamily: 'Nunito',
-              color: Colors.white,
+          Flexible(
+            child: Text(
+              widget.content,
+              style: const TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 15,
+                fontFamily: 'Nunito',
+                color: Colors.white,
+              ),
+              overflow: TextOverflow.ellipsis,
             ),
           ),
         ],
