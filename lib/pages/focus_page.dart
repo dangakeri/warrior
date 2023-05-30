@@ -105,14 +105,15 @@ class _FocusPageState extends State<FocusPage> {
                 color: Colors.orange.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/temple.svg',
-                  height: MediaQuery.of(context).size.height * 0.15,
+                  height: MediaQuery.of(context).size.height * 0.1,
                 ),
                 focusMusic: 'temple',
                 callback: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (context) {
-                    return const PlayPage(music: 'temple', chakra: 'Temple');
-                  }));
+                  Navigator.of(context).push(
+                    MaterialPageRoute(builder: (context) {
+                      return const PlayPage(music: 'temple', chakra: 'Temple');
+                    }),
+                  );
                 },
               ),
               FocusContainerWidget(
@@ -151,7 +152,7 @@ class _FocusPageState extends State<FocusPage> {
                 color: Colors.green.withOpacity(.4),
                 image: SvgPicture.asset(
                   'assets/cat.svg',
-                  height: MediaQuery.of(context).size.height * 0.09,
+                  height: MediaQuery.of(context).size.height * 0.07,
                 ),
                 focusMusic: 'purring',
                 callback: () {

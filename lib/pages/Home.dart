@@ -4,7 +4,6 @@ import '../consts/app_colors.dart';
 import 'focus_page.dart';
 import 'home_page.dart';
 import 'ikigai_page.dart';
-import 'quote_page.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -17,7 +16,7 @@ class _HomeState extends State<Home> {
   int index = 0;
   List pages = [
     const HomePage(),
-    const QuotePage(),
+    // const QuotePage(),
     const IkigaiPage(),
     const FocusPage(),
   ];
@@ -39,10 +38,10 @@ class _HomeState extends State<Home> {
             icon: Icon(Icons.flourescent),
             label: 'Meditate',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(BootstrapIcons.quote),
-            label: 'Quote',
-          ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(BootstrapIcons.quote),
+          //   label: 'Quote',
+          // ),
           BottomNavigationBarItem(
             icon: Icon(Icons.all_inclusive),
             label: 'Ikigai',

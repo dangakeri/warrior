@@ -9,7 +9,6 @@ import '../widgets/for_you_widget.dart';
 import '../widgets/grid_view_widget.dart';
 import '../widgets/todays_mediatation_widget.dart';
 import 'notifications.dart';
-import 'premium_page.dart';
 import 'settings.dart';
 
 class HomePage extends StatefulWidget {
@@ -76,20 +75,20 @@ class _HomePageState extends State<HomePage> {
             SliverAppBar(
               actions: [
                 IconButton(
-                    onPressed: () {
-                      Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (_) => const SettingPage(),
-                        ),
-                      );
-                    },
-                    icon: const Icon(
-                      BootstrapIcons.gear,
-                      color: Colors.white,
-                    ))
+                  onPressed: () {
+                    Navigator.of(context).push(
+                      MaterialPageRoute(
+                        builder: (BuildContext context) => const SettingPage(),
+                      ),
+                    );
+                  },
+                  icon: const Icon(
+                    BootstrapIcons.gear,
+                    color: Colors.white,
+                  ),
+                )
               ],
               backgroundColor: Colors.transparent,
-              // expandedHeight: 200,
               expandedHeight: MediaQuery.of(context).size.height * 0.22,
               pinned: true,
               flexibleSpace: FlexibleSpaceBar(
@@ -98,7 +97,6 @@ class _HomePageState extends State<HomePage> {
                   child: Container(
                     height: 200,
                     decoration: const BoxDecoration(
-                      // borderRadius: BorderRadius.all(Radius.circular(50.0)),
                       color: AppColors.blue,
                     ),
                     child: Center(
@@ -234,32 +232,39 @@ class _HomePageState extends State<HomePage> {
                         const TodaysMeditationWidget(),
                         SizedBox(
                             height: MediaQuery.of(context).size.height * 0.02),
-                        const Text(
-                          'Unlock our premium content for free.',
-                          style: Style.heading,
-                        ),
-                        SizedBox(
-                            height: MediaQuery.of(context).size.height * 0.02),
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (_) => const PremiumPage(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            height: 50,
-                            width: 200,
-                            decoration: BoxDecoration(
-                              color: AppColors.blue,
-                              borderRadius: BorderRadius.circular(30),
-                            ),
-                            child: const Center(
-                              child: Text(
-                                'Start your free trial.',
-                                style: Style.heading,
-                              ),
+                        const Card(
+                          elevation: 0,
+                          color: AppColors.blue,
+                          child: Padding(
+                            padding: EdgeInsets.all(8.0),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Text(
+                                  'Quote of the Day:',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Text(
+                                  'Paradise is not a place; it\'s a state of consciousness.',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                                Text(
+                                  '-Sri Chinmoy',
+                                  style: TextStyle(
+                                    fontSize: 14,
+                                    fontWeight: FontWeight.normal,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
                             ),
                           ),
                         ),

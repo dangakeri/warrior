@@ -1,13 +1,16 @@
 import 'package:assets_audio_player/assets_audio_player.dart';
+// import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'Onboarding/splash_screen.dart';
 import 'consts/app_colors.dart';
 
 Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
   //Sets the morning Notifications
+  WidgetsFlutterBinding.ensureInitialized();
 
+  // Initialize a new Firebase App instance
+  // await Firebase.initializeApp();
   runApp(const MyApp());
 }
 
@@ -30,7 +33,7 @@ class _MyAppState extends State<MyApp> {
       // code for changing the color of status bar color
       const SystemUiOverlayStyle(
         statusBarColor: AppColors.blue,
-        systemNavigationBarColor: Colors.white,
+        systemNavigationBarColor: Colors.transparent,
       ),
     );
 
@@ -39,8 +42,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Warriors',
       theme: ThemeData(
         useMaterial3: true,
-        // primaryColor: AppColors.background,
-        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.background),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.blue),
       ),
       home: const SplashScreen(),
     );
