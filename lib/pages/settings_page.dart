@@ -3,7 +3,7 @@
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -332,11 +332,11 @@ class _SettingPageState extends State<SettingPage> {
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-            const Card(
+            Card(
               color: AppColors.blue,
               child: Column(
                 children: [
-                  ListTile(
+                  const ListTile(
                     leading: Icon(
                       BootstrapIcons.grid,
                       color: Colors.white,
@@ -360,13 +360,16 @@ class _SettingPageState extends State<SettingPage> {
                       ),
                     ),
                   ),
-                  Divider(),
+                  const Divider(),
                   ListTile(
-                    leading: Icon(
+                    onTap: () {
+                      Share.share('Be a warior ');
+                    },
+                    leading: const Icon(
                       BootstrapIcons.share,
                       color: Colors.white,
                     ),
-                    title: Text(
+                    title: const Text(
                       'Share',
                       style: TextStyle(
                         color: Colors.white,
@@ -375,7 +378,7 @@ class _SettingPageState extends State<SettingPage> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    subtitle: Text(
+                    subtitle: const Text(
                       'Share with friends',
                       style: TextStyle(
                         color: Colors.white,
@@ -385,8 +388,8 @@ class _SettingPageState extends State<SettingPage> {
                       ),
                     ),
                   ),
-                  Divider(),
-                  ListTile(
+                  const Divider(),
+                  const ListTile(
                     leading: Icon(
                       BootstrapIcons.lock,
                       color: Colors.white,
@@ -410,8 +413,8 @@ class _SettingPageState extends State<SettingPage> {
                       ),
                     ),
                   ),
-                  Divider(),
-                  ListTile(
+                  const Divider(),
+                  const ListTile(
                     leading: Icon(
                       BootstrapIcons.shield,
                       color: Colors.white,

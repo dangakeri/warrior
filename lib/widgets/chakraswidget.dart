@@ -148,9 +148,6 @@ class ChakraWidget extends StatelessWidget {
                     )
                   ],
                 ),
-                const Spacer(),
-                const Icon(Icons.lock, color: Colors.white),
-                const SizedBox(width: 5),
               ],
             ),
           ),

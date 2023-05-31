@@ -51,8 +51,9 @@ dependencies:
   flutter_animate: ^4.1.1+1
   firebase_core: ^2.13.0
   firebase_storage: ^11.2.1
-  file_picker: ^5.3.1
+  # file_picker: ^5.3.1
   path_provider: ^2.0.15
+  share_plus: ^5.0.0
 
  
 
