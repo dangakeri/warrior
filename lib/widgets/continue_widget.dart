@@ -14,7 +14,7 @@ class ContinueWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         height: 55,
-        width: MediaQuery.of(context).size.width * 0.85,
+        width: double.infinity,
         decoration: BoxDecoration(
           color: AppColors.blue,
           borderRadius: BorderRadius.circular(30),
@@ -24,8 +24,8 @@ class ContinueWidget extends StatelessWidget {
             text,
             style: const TextStyle(
               color: Colors.white,
-              fontSize: 16,
-              fontWeight: FontWeight.bold,
+              fontSize: 15,
+              fontWeight: FontWeight.w500,
             ),
           ),
         ));

@@ -64,28 +64,21 @@ class _DOBState extends State<DOB> {
               ),
             ),
             SizedBox(height: MediaQuery.of(context).size.height * 0.3),
-            Container(
-              height: 55,
-              width: MediaQuery.of(context).size.width * 0.85,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
-                border: Border.all(color: Colors.black.withOpacity(.4)),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.only(left: 10.0),
-                child: Center(
-                  child: TextFormField(
-                    decoration: InputDecoration(
-                        border: InputBorder.none,
-                        suffixIcon: GestureDetector(
-                            onTap: () {
-                              _selectDate(context);
-                            },
-                            child: const Icon(Icons.date_range)),
-                        hintText: selectedDate.toString().split(' ')[0],
-                        hintStyle: const TextStyle(
-                            fontSize: 15, fontWeight: FontWeight.w400)),
-                  ),
+            Padding(
+              padding: const EdgeInsets.only(left: 10.0),
+              child: Center(
+                child: TextFormField(
+                  decoration: InputDecoration(
+                      border: const OutlineInputBorder(),
+                      labelText: 'Date of birth',
+                      suffixIcon: GestureDetector(
+                          onTap: () {
+                            _selectDate(context);
+                          },
+                          child: const Icon(Icons.date_range)),
+                      hintText: selectedDate.toString().split(' ')[0],
+                      hintStyle: const TextStyle(
+                          fontSize: 15, fontWeight: FontWeight.w400)),
                 ),
               ),
             ),
