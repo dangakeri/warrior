@@ -44,6 +44,7 @@ class _PlayPageState extends State<PlayPage> {
             gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
+          // colors: Chakras.returnColors('')
           colors: [
             AppColors.blue,
             Colors.pink,
@@ -137,5 +138,103 @@ class _PlayPageState extends State<PlayPage> {
         ),
       ),
     );
+  }
+}
+
+class Chakras {
+  // List of chakras gradients
+  static List gradient1 = [0xFFFF0000, 0xFFd00000, 0xFFdc2f02];
+  static List gradient2 = [0xFFff7b00, 0xFFff8800, 0xFFff9500];
+  static List gradient3 = [0xFFfff200, 0xFFffd900, 0xFFffbf00];
+  static List gradient4 = [0xFF38b000, 0xFF9ef01a, 0xFFccff33];
+  static List gradient5 = [0xFF00b4d8, 0xFF90e0ef, 0xFF80ffdb];
+  static List gradient6 = [0xFF99aaff, 0xFF4B0082, 0xFF99bbff];
+  static List gradient7 = [0xFF7b2cbf, 0xFF9d4edd, 0xFFe0c3fc];
+  static List gradient8 = [0xFF027c90, 0xFFFFC0CB];
+
+// String names of the chakras images
+  static String image1 = 'assets/muladhara.png';
+  static String image2 = 'assets/svadisthana.png';
+  static String image3 = 'assets/manipura.png';
+  static String image4 = 'assets/anahata.png';
+  static String image5 = 'assets/visuddha.png';
+  static String image6 = 'assets/ajna.png';
+  static String image7 = 'assets/sahasrara.png';
+  static String image8 = 'assets/chakra.jpeg';
+
+  // statement to return the colors
+  static returnColors(String chakraType) {
+    switch (chakraType) {
+      case ('Muladhara'):
+        return gradient1;
+        // ignore: dead_code
+        break;
+      case ('Svadhisthana'):
+        return gradient2;
+        // ignore: dead_code
+        break;
+      case ('Manipura'):
+        return gradient3;
+        // ignore: dead_code
+        break;
+      case ('Anahata'):
+        return gradient4;
+        // ignore: dead_code
+        break;
+      case ('Vishuddha'):
+        return gradient5;
+        // ignore: dead_code
+        break;
+      case ('Ajna'):
+        return gradient6;
+        // ignore: dead_code
+        break;
+
+      case ('Sahasrara'):
+        return gradient7;
+        // ignore: dead_code
+        break;
+
+      default:
+        return gradient8;
+    }
+  }
+
+// code to return the images
+  static changeImage(String chakraType) {
+    switch (chakraType) {
+      case ('Muladhara'):
+        return image1;
+        // ignore: dead_code
+        break;
+      case ('Svadhisthana'):
+        return image2;
+        // ignore: dead_code
+        break;
+      case ('Manipura'):
+        return image3;
+        // ignore: dead_code
+        break;
+      case ('Anahata'):
+        return image4;
+        // ignore: dead_code
+        break;
+      case ('Vishuddha'):
+        return image5;
+        // ignore: dead_code
+        break;
+      case ('Ajna'):
+        return image6;
+        // ignore: dead_code
+        break;
+
+      case ('Sahasrara'):
+        return image7;
+        // ignore: dead_code
+        break;
+
+      default:
+        return image8;
+    }
   }
 }

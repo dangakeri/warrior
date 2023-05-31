@@ -157,7 +157,7 @@ class ChakraPage extends StatelessWidget {
                         content: 'Head',
                         image: AssetImage('assets/sahasrara.png'),
                         image2: AssetImage('assets/sahasrara.png'),
-                        heading: 'Vishuddha',
+                        heading: 'Sahasrara',
                         description:
                             'This practice can help you connect to your spiritual center or the God of your understanding. Crown chakra meditations can draw you closer to the oneness of all beings, providing an antidote to feelings of isolation, heaviness, and hopelessness. Try this practice when you are having trouble connecting to the peace, love, and meaning you desire.\n   - Sit comfortably in a position where your spine is tall and regal. Imagine your head floating like a water lily at the top of your spine. Soften your neck, jaw, eyes, and brow. You might even tap on the crown of your head a few times to stimulate and awaken the crown chakra point.\n    - At the top of your head, imagine an invisible lotus flower with a thousand petals. Invite it to open up, so that you might know yourself and the Truth more fully.\n    - Imagine a column of purple light extending from the center of the on your head up into the sky. As you inhale, the purple light moves down and into your body, and as you exhale, it moves up into the sky. See the light moving in as Divine consciousness filling you up with every breath. Each exhale becomes an offering back to Source.\n   - When it feels natural, let your awareness settle on the point at the center of the imaginary lotus, offering thanks to your higher self for revealing itself to you.',
                         music: 'sahasharara',
