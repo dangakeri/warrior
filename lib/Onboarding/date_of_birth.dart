@@ -1,5 +1,3 @@
-// ignore_for_file: use_build_context_synchronously
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -68,23 +66,30 @@ class _DOBState extends State<DOB> {
               padding: const EdgeInsets.only(left: 10.0),
               child: Center(
                 child: TextFormField(
+                  style: const TextStyle(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                    color: Colors.white,
+                    fontFamily: 'Nunito',
+                  ),
                   decoration: InputDecoration(
-                      border: const OutlineInputBorder(),
-                      labelText: 'Date of birth',
-                      suffixIcon: GestureDetector(
-                          onTap: () {
-                            _selectDate(context);
-                          },
-                          child: const Icon(Icons.date_range)),
-                      hintText: selectedDate.toString().split(' ')[0],
-                      hintStyle: const TextStyle(
-                          fontSize: 15, fontWeight: FontWeight.w400)),
+                    border: const OutlineInputBorder(),
+                    labelText: 'Date of birth',
+                    suffixIcon: GestureDetector(
+                        onTap: () {
+                          _selectDate(context);
+                        },
+                        child: const Icon(Icons.date_range)),
+                    hintText: selectedDate.toString().split(' ')[0],
+                    hintStyle: const TextStyle(
+                        fontSize: 15, fontWeight: FontWeight.w400),
+                  ),
                 ),
               ),
             ),
             const SizedBox(height: 30),
-            GestureDetector(
-              onTap: () {
+            ContinueWidget(
+              callback: () {
                 showDialog(
                     context: context,
                     builder: (context) {
@@ -125,6 +130,7 @@ class _DOBState extends State<DOB> {
                                 Navigator.of(context)
                                     .popUntil((route) => route.isFirst);
 
+                                // ignore: use_build_context_synchronously
                                 Navigator.pushReplacement(
                                     context,
                                     MaterialPageRoute(
@@ -135,9 +141,7 @@ class _DOBState extends State<DOB> {
                       );
                     });
               },
-              child: const ContinueWidget(
-                text: 'Sign up',
-              ),
+              text: 'Sign up',
             ),
           ],
         ),

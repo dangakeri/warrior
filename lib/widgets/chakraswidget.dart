@@ -72,8 +72,8 @@ class ChakraWidget extends StatelessWidget {
                       ),
                       SizedBox(
                           height: MediaQuery.of(context).size.height * .01),
-                      GestureDetector(
-                        onTap: () {
+                      ContinueWidget(
+                        callback: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (_) => PlayPage(
@@ -83,7 +83,7 @@ class ChakraWidget extends StatelessWidget {
                             ),
                           );
                         },
-                        child: ContinueWidget(text: 'Start $chakra'),
+                        text: 'Start $chakra',
                       ),
                       SizedBox(
                           height: MediaQuery.of(context).size.height * .02),

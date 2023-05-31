@@ -9,7 +9,7 @@ import '../widgets/for_you_widget.dart';
 import '../widgets/grid_view_widget.dart';
 import '../widgets/todays_mediatation_widget.dart';
 import 'notifications.dart';
-import 'settings.dart';
+import 'settings_page.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});

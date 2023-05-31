@@ -18,7 +18,7 @@ class _CreateAccountState extends State<CreateAccount> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: true,
       backgroundColor: AppColors.background1,
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
@@ -44,12 +44,20 @@ class _CreateAccountState extends State<CreateAccount> {
                 fontFamily: 'Nunito',
               ),
             ),
-            SizedBox(height: MediaQuery.of(context).size.height * 0.3),
+            const SizedBox(
+              height: 20,
+            ),
             Padding(
               padding: const EdgeInsets.only(left: 10.0),
               child: TextFormField(
                 keyboardType: TextInputType.text,
                 textCapitalization: TextCapitalization.words,
+                style: const TextStyle(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                  color: Colors.white,
+                  fontFamily: 'Nunito',
+                ),
                 onChanged: (val) {
                   setState(() {
                     userName = val;
@@ -65,13 +73,12 @@ class _CreateAccountState extends State<CreateAccount> {
                     fontFamily: 'Nunito',
                   ),
                   labelText: 'Name',
-                  focusColor: Colors.white,
                 ),
               ),
             ),
             const SizedBox(height: 30),
-            GestureDetector(
-              onTap: () async {
+            ContinueWidget(
+              callback: () async {
                 if (userName == '') {
                   return;
                 } else {
@@ -85,9 +92,7 @@ class _CreateAccountState extends State<CreateAccount> {
                           builder: (BuildContext context) => const DOB()));
                 }
               },
-              child: const ContinueWidget(
-                text: 'Continue',
-              ),
+              text: 'Continue',
             ),
           ],
         ),
