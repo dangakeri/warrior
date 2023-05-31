@@ -74,6 +74,7 @@ class ChakraWidget extends StatelessWidget {
                           height: MediaQuery.of(context).size.height * .01),
                       ContinueWidget(
                         callback: () {
+                          Navigator.of(context).pop();
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (_) => PlayPage(

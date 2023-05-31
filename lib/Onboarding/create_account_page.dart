@@ -23,7 +23,7 @@ class _CreateAccountState extends State<CreateAccount> {
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(height: MediaQuery.of(context).size.height * 0.19),
             const Text(
@@ -43,6 +43,7 @@ class _CreateAccountState extends State<CreateAccount> {
                 color: Colors.white,
                 fontFamily: 'Nunito',
               ),
+              textAlign: TextAlign.center,
             ),
             const SizedBox(
               height: 20,

@@ -13,6 +13,7 @@ class DOB extends StatefulWidget {
 }
 
 class _DOBState extends State<DOB> {
+  TextEditingController editingController = TextEditingController();
   String date = '';
   DateTime selectedDate = DateTime.now();
   Future<void> _selectDate(BuildContext context) async {
@@ -23,7 +24,7 @@ class _DOBState extends State<DOB> {
         lastDate: DateTime(2101));
     if (picked != null && picked != selectedDate) {
       setState(() {
-        selectedDate = picked;
+        editingController.text = picked.toString().split(' ')[0];
       });
     }
   }
@@ -66,23 +67,23 @@ class _DOBState extends State<DOB> {
               padding: const EdgeInsets.only(left: 10.0),
               child: Center(
                 child: TextFormField(
+                  controller: editingController,
+                  readOnly: true,
+                  onTap: () {
+                    _selectDate(context);
+                  },
                   style: const TextStyle(
                     fontSize: 15,
                     fontWeight: FontWeight.w400,
                     color: Colors.white,
                     fontFamily: 'Nunito',
                   ),
-                  decoration: InputDecoration(
-                    border: const OutlineInputBorder(),
+                  decoration: const InputDecoration(
+                    border: OutlineInputBorder(),
                     labelText: 'Date of birth',
-                    suffixIcon: GestureDetector(
-                        onTap: () {
-                          _selectDate(context);
-                        },
-                        child: const Icon(Icons.date_range)),
-                    hintText: selectedDate.toString().split(' ')[0],
-                    hintStyle: const TextStyle(
-                        fontSize: 15, fontWeight: FontWeight.w400),
+                    suffixIcon: Icon(Icons.date_range),
+                    hintStyle:
+                        TextStyle(fontSize: 15, fontWeight: FontWeight.w400),
                   ),
                 ),
               ),

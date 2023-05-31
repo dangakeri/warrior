@@ -63,6 +63,7 @@ class ChakraPage extends StatelessWidget {
                   child: const Column(
                     children: [
                       ExpansionTile(
+                        initiallyExpanded: true,
                         iconColor: Colors.white,
                         collapsedIconColor: Colors.white,
                         title: Text('Learn Chakras ',
@@ -145,7 +146,7 @@ class ChakraPage extends StatelessWidget {
                         content: 'Eyes',
                         image: AssetImage('assets/ajna.png'),
                         image2: AssetImage('assets/ajna.png'),
-                        heading: 'Vishuddha',
+                        heading: 'Ajna',
                         description:
                             'This meditation helps with clarity of thought, expanding your vision for the future, and trusting your intuition. By regularly meditating on your third eye, you can more easily break through your limiting thought patterns, and cultivate greater wisdom and imagination.\n   - Close your eyes while sitting or lying comfortably. Turn your gaze up toward the space between your brows, bringing energy to the third eye point. While the physical eyes look outward, the third eye is said to look inward. As you bring your attention to this energetic point, envision the color indigo or deep, royal blue.\n    - Try to keep the skin around your eyes soft and relaxed. Begin to draw your awareness back from the forehead toward the mid-brain. Consider the consciousness that sees through your eyes, and see if you can catch glimpses of this inner light between your ears. As thoughts come and go, let them pass like clouds, and return the awareness to the midpoint of your brain. If it helps, press the tip of your tongue to the upper palate to stimulate the Ajna chakra from underneath it.\n   - Keep your breath smooth and steady as you breathe in and out through your nose.',
                         music: 'ajna',

@@ -17,7 +17,7 @@ class ContinueWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
+      width: MediaQuery.of(context).size.width * .8,
       height: 55,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(backgroundColor: AppColors.blue),

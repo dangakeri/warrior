@@ -471,7 +471,8 @@ class _SettingPageState extends State<SettingPage> {
                                   SharedPreferences prefs =
                                       await SharedPreferences.getInstance();
                                   await prefs.clear();
-
+                                  Navigator.of(context)
+                                      .popUntil((route) => route.isFirst);
                                   Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(builder: (context) {
                                     return const SplashScreen();

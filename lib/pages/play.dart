@@ -15,6 +15,7 @@ class PlayPage extends StatefulWidget {
 class _PlayPageState extends State<PlayPage> {
   final assetsAudioPlayer = AssetsAudioPlayer();
   @override
+  @override
   void dispose() {
     assetsAudioPlayer.dispose();
     super.dispose();
@@ -40,14 +41,14 @@ class _PlayPageState extends State<PlayPage> {
         ),
       ),
       body: Container(
-        decoration: const BoxDecoration(
+        decoration: BoxDecoration(
             gradient: LinearGradient(
           begin: Alignment.topLeft,
           end: Alignment.bottomRight,
-          // colors: Chakras.returnColors('')
           colors: [
-            AppColors.blue,
-            Colors.pink,
+            Chakras.returnColors(widget.chakra)[0],
+            Chakras.returnColors(widget.chakra)[1],
+            Chakras.returnColors(widget.chakra)[2],
           ],
         )),
         child: Column(
@@ -62,7 +63,7 @@ class _PlayPageState extends State<PlayPage> {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.05,
             ),
-            const AvatarGlow(
+            AvatarGlow(
               endRadius: 200,
               repeat: true,
               showTwoGlows: true,
@@ -73,7 +74,7 @@ class _PlayPageState extends State<PlayPage> {
                 child: CircleAvatar(
                   radius: 80,
                   backgroundImage: AssetImage(
-                    'assets/chakra.jpeg',
+                    '${Chakras.changeImage(widget.chakra)}',
                   ),
                 ),
               ),
@@ -143,14 +144,41 @@ class _PlayPageState extends State<PlayPage> {
 
 class Chakras {
   // List of chakras gradients
-  static List gradient1 = [0xFFFF0000, 0xFFd00000, 0xFFdc2f02];
-  static List gradient2 = [0xFFff7b00, 0xFFff8800, 0xFFff9500];
-  static List gradient3 = [0xFFfff200, 0xFFffd900, 0xFFffbf00];
-  static List gradient4 = [0xFF38b000, 0xFF9ef01a, 0xFFccff33];
-  static List gradient5 = [0xFF00b4d8, 0xFF90e0ef, 0xFF80ffdb];
-  static List gradient6 = [0xFF99aaff, 0xFF4B0082, 0xFF99bbff];
-  static List gradient7 = [0xFF7b2cbf, 0xFF9d4edd, 0xFFe0c3fc];
-  static List gradient8 = [0xFF027c90, 0xFFFFC0CB];
+  static List<Color> gradient1 = [
+    const Color(0xFFFF0000),
+    const Color(0xFFd00000),
+    const Color(0xFFdc2f02)
+  ];
+  static List<Color> gradient2 = [
+    const Color(0xFFff7b00),
+    const Color(0xFFff8800),
+    const Color(0xFFff9500)
+  ];
+  static List<Color> gradient3 = [
+    const Color(0xFFfff200),
+    const Color(0xFFffd900),
+    const Color(0xFFffbf00)
+  ];
+  static List<Color> gradient4 = [
+    const Color(0xFF38b000),
+    const Color(0xFF9ef01a),
+    const Color(0xFFccff33)
+  ];
+  static List<Color> gradient5 = [
+    const Color(0xFF00b4d8),
+    const Color(0xFF90e0ef),
+    const Color(0xFF80ffdb)
+  ];
+  static List<Color> gradient6 = [
+    const Color(0xFF4B0082),
+    const Color(0xFF99aaff),
+    const Color(0xFF99bbff)
+  ];
+  static List<Color> gradient7 = [
+    const Color(0xFF7b2cbf),
+    const Color(0xFF9d4edd),
+    const Color(0xFFe0c3fc)
+  ];
 
 // String names of the chakras images
   static String image1 = 'assets/muladhara.png';
@@ -167,36 +195,26 @@ class Chakras {
     switch (chakraType) {
       case ('Muladhara'):
         return gradient1;
-        // ignore: dead_code
-        break;
+
       case ('Svadhisthana'):
         return gradient2;
-        // ignore: dead_code
-        break;
+
       case ('Manipura'):
         return gradient3;
-        // ignore: dead_code
-        break;
       case ('Anahata'):
         return gradient4;
-        // ignore: dead_code
-        break;
+
       case ('Vishuddha'):
         return gradient5;
-        // ignore: dead_code
-        break;
+
       case ('Ajna'):
         return gradient6;
-        // ignore: dead_code
-        break;
 
       case ('Sahasrara'):
         return gradient7;
-        // ignore: dead_code
-        break;
 
       default:
-        return gradient8;
+        return gradient1;
     }
   }
 
@@ -205,33 +223,24 @@ class Chakras {
     switch (chakraType) {
       case ('Muladhara'):
         return image1;
-        // ignore: dead_code
-        break;
+
       case ('Svadhisthana'):
         return image2;
-        // ignore: dead_code
-        break;
+
       case ('Manipura'):
         return image3;
-        // ignore: dead_code
-        break;
+
       case ('Anahata'):
         return image4;
-        // ignore: dead_code
-        break;
+
       case ('Vishuddha'):
         return image5;
-        // ignore: dead_code
-        break;
+
       case ('Ajna'):
         return image6;
-        // ignore: dead_code
-        break;
 
       case ('Sahasrara'):
         return image7;
-        // ignore: dead_code
-        break;
 
       default:
         return image8;
