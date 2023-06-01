@@ -210,12 +210,13 @@ class _SettingPageState extends State<SettingPage> {
                           title: Row(
                             children: [
                               Image.asset(
-                                'assets/warrior.jpeg',
+                                'assets/warrior.png',
                                 height: 50,
                                 width: 50,
                               ),
                               const SizedBox(width: 30),
                               const Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
                                   Text(
                                     'Warriors',
@@ -225,9 +226,10 @@ class _SettingPageState extends State<SettingPage> {
                                   ),
                                   SizedBox(height: 5),
                                   Text(
-                                    'V1.0.0 Dolphin',
+                                    'V1.0.0 Jelly Fish',
                                     style: TextStyle(
                                       fontFamily: 'Nunito',
+                                      fontWeight: FontWeight.w500,
                                     ),
                                   ),
                                 ],
