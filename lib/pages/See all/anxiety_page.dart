@@ -17,7 +17,6 @@ class AnxietyPage extends StatelessWidget {
         slivers: [
           SliverAppBar(
             backgroundColor: Colors.black,
-
             leading: IconButton(
                 onPressed: () {
                   Navigator.of(context).pop();
@@ -28,7 +27,6 @@ class AnxietyPage extends StatelessWidget {
                 )),
             expandedHeight: 210,
             pinned: true,
-            // snap: true,
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
               expandedTitleScale: 1,
@@ -60,6 +58,7 @@ class AnxietyPage extends StatelessWidget {
             delegate: SliverChildListDelegate(
               [
                 const ExpansionTile(
+                  initiallyExpanded: true,
                   iconColor: Colors.white,
                   collapsedIconColor: Colors.white,
                   title: Text(

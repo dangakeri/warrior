@@ -14,7 +14,6 @@ class BreathingPage extends StatelessWidget {
         slivers: [
           SliverAppBar(
             backgroundColor: Colors.black,
-            // floating: true,
             leading: IconButton(
                 onPressed: () {
                   Navigator.of(context).pop();
@@ -25,7 +24,6 @@ class BreathingPage extends StatelessWidget {
                 )),
             expandedHeight: 210,
             pinned: true,
-            // snap: true,
             flexibleSpace: FlexibleSpaceBar(
               centerTitle: true,
               expandedTitleScale: 1,
@@ -57,6 +55,7 @@ class BreathingPage extends StatelessWidget {
             delegate: SliverChildListDelegate(
               [
                 const ExpansionTile(
+                  initiallyExpanded: true,
                   iconColor: Colors.white,
                   collapsedIconColor: Colors.white,
                   title: Text(

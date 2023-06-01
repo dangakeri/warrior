@@ -57,6 +57,7 @@ class HealingPage extends StatelessWidget {
             delegate: SliverChildListDelegate(
               [
                 const ExpansionTile(
+                  initiallyExpanded: true,
                   iconColor: Colors.white,
                   collapsedIconColor: Colors.white,
                   title: Text(
