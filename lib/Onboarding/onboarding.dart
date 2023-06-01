@@ -11,15 +11,15 @@ class OnBoardingPage extends StatelessWidget {
       PageViewModel(
           decoration: getPageDecoration(),
           image: SvgPicture.asset(
-            'assets/healthy.svg',
+            'assets/meditation.svg',
             height: 150,
           ),
-          title: 'Healthy',
-          body: 'Live a healthy life by following just \na few steps...'),
+          title: 'Meditation',
+          body: 'Unlock and unleash your potential by meditating regularly'),
       PageViewModel(
           decoration: getPageDecoration(),
-          image: Image.asset(
-            'assets/ikigai.jpeg',
+          image: SvgPicture.asset(
+            'assets/purpose.svg',
             height: 150,
           ),
           title: 'Find an ikigai',
