@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:warriors/pages/disclaimer_page.dart';
 import 'package:warriors/pages/privacy_policy_page.dart';
 
 import '../Onboarding/splash_screen.dart';
@@ -424,12 +425,21 @@ class _SettingPageState extends State<SettingPage> {
                     ),
                   ),
                   const Divider(),
-                  const ListTile(
-                    leading: Icon(
+                  ListTile(
+                    onTap: () {
+                      Navigator.push<void>(
+                        context,
+                        MaterialPageRoute<void>(
+                          builder: (BuildContext context) =>
+                              const DisclaimerPage(),
+                        ),
+                      );
+                    },
+                    leading: const Icon(
                       BootstrapIcons.shield,
                       color: Colors.white,
                     ),
-                    title: Text(
+                    title: const Text(
                       'Disclaimer',
                       style: TextStyle(
                         color: Colors.white,
@@ -438,7 +448,7 @@ class _SettingPageState extends State<SettingPage> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    subtitle: Text(
+                    subtitle: const Text(
                       'The Disclaimer',
                       style: TextStyle(
                         color: Colors.white,
