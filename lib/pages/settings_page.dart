@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:warriors/pages/privacy_policy_page.dart';
 
 import '../Onboarding/splash_screen.dart';
 import '../consts/app_colors.dart';
@@ -389,12 +390,21 @@ class _SettingPageState extends State<SettingPage> {
                     ),
                   ),
                   const Divider(),
-                  const ListTile(
-                    leading: Icon(
+                  ListTile(
+                    onTap: () {
+                      Navigator.push<void>(
+                        context,
+                        MaterialPageRoute<void>(
+                          builder: (BuildContext context) =>
+                              const PrivacyPolicyPage(),
+                        ),
+                      );
+                    },
+                    leading: const Icon(
                       BootstrapIcons.lock,
                       color: Colors.white,
                     ),
-                    title: Text(
+                    title: const Text(
                       'Privacy Policy',
                       style: TextStyle(
                         color: Colors.white,
@@ -403,7 +413,7 @@ class _SettingPageState extends State<SettingPage> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    subtitle: Text(
+                    subtitle: const Text(
                       'Our privacy policy',
                       style: TextStyle(
                         color: Colors.white,
