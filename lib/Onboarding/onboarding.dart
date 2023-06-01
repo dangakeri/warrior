@@ -81,7 +81,6 @@ class OnBoardingPage extends StatelessWidget {
           height: 1.4,
           color: Colors.white,
         ),
-        // descriptionPadding: const EdgeInsets.all(16).copyWith(bottom: 0),
         imagePadding: EdgeInsets.all(24),
         pageColor: AppColors.background1,
       );

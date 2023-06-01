@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import '../consts/app_colors.dart';
-
 import '../pages/play.dart';
 import 'continue_widget.dart';
 
@@ -50,7 +48,7 @@ class ChakraWidget extends StatelessWidget {
                 children: [
                   Column(
                     children: [
-                      const SizedBox(height: 20),
+                      const SizedBox(height: 10),
                       Container(
                         height: 60,
                         width: 60,
@@ -65,10 +63,19 @@ class ChakraWidget extends StatelessWidget {
                         style: TextStyle1.heading,
                       ),
                       SizedBox(
-                          height: MediaQuery.of(context).size.height * .02),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(horizontal: 20),
-                        child: Text(description, style: TextStyle1.heading),
+                          height: MediaQuery.of(context).size.height * .01),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * .5,
+                        child: ListView(
+                          children: [
+                            Padding(
+                              padding:
+                                  const EdgeInsets.symmetric(horizontal: 20),
+                              child:
+                                  Text(description, style: TextStyle1.heading),
+                            ),
+                          ],
+                        ),
                       ),
                       SizedBox(
                           height: MediaQuery.of(context).size.height * .01),
