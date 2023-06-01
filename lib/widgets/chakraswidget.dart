@@ -113,8 +113,9 @@ class ChakraWidget extends StatelessWidget {
                   height: 60,
                   width: 60,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      image: DecorationImage(image: image, fit: BoxFit.cover)),
+                    borderRadius: BorderRadius.circular(10),
+                    image: DecorationImage(image: image, fit: BoxFit.cover),
+                  ),
                 ),
                 SizedBox(
                   width: MediaQuery.of(context).size.width * .07,
