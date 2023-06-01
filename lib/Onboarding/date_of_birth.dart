@@ -128,6 +128,7 @@ class _DOBState extends State<DOB> {
                                 SharedPreferences prefs =
                                     await SharedPreferences.getInstance();
                                 prefs.setString('DOB', selectedDate.toString());
+                                // ignore: use_build_context_synchronously
                                 Navigator.of(context)
                                     .popUntil((route) => route.isFirst);
 

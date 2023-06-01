@@ -1,5 +1,3 @@
-// ignore_for_file: avoid_unnecessary_containers, use_build_context_synchronously
-
 import 'package:bootstrap_icons/bootstrap_icons.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -8,7 +6,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:warriors/pages/disclaimer_page.dart';
 import 'package:warriors/pages/privacy_policy_page.dart';
-
 import '../Onboarding/splash_screen.dart';
 import '../consts/app_colors.dart';
 
@@ -78,11 +75,12 @@ class _SettingPageState extends State<SettingPage> {
                   ListTile(
                     onTap: () {
                       showModalBottomSheet(
+                        showDragHandle: true,
                         isScrollControlled: true,
                         shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(10),
-                            topRight: Radius.circular(10),
+                            topLeft: Radius.circular(20),
+                            topRight: Radius.circular(20),
                           ),
                         ),
                         context: context,
@@ -92,17 +90,6 @@ class _SettingPageState extends State<SettingPage> {
                             padding: const EdgeInsets.symmetric(horizontal: 20),
                             child: ListView(
                               children: [
-                                const SizedBox(height: 10),
-                                Center(
-                                  child: Container(
-                                    height: 5,
-                                    width: 50,
-                                    decoration: BoxDecoration(
-                                      borderRadius: BorderRadius.circular(10),
-                                      color: AppColors.blue,
-                                    ),
-                                  ),
-                                ),
                                 ListTile(
                                   contentPadding:
                                       const EdgeInsets.only(left: -15),
@@ -120,6 +107,8 @@ class _SettingPageState extends State<SettingPage> {
                                     ],
                                   ),
                                   subtitle: Column(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: [
                                       const Text(
                                         'We\'re here to help! If you have any questions or concerns, please don\'t hesitate to contact us.',
@@ -128,76 +117,71 @@ class _SettingPageState extends State<SettingPage> {
                                           fontFamily: 'Nunito',
                                         ),
                                       ),
+                                      const SizedBox(height: 20),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceAround,
                                         children: [
                                           GestureDetector(
                                             onTap: _launchEmail,
-                                            child: Container(
-                                              child: const Column(
-                                                children: [
-                                                  Icon(
-                                                    BootstrapIcons.envelope,
+                                            child: const Column(
+                                              children: [
+                                                Icon(
+                                                  BootstrapIcons.envelope,
+                                                  color: AppColors.blue,
+                                                  size: 30,
+                                                ),
+                                                SizedBox(height: 10),
+                                                Text(
+                                                  'Email',
+                                                  style: TextStyle(
                                                     color: AppColors.blue,
-                                                    size: 30,
+                                                    fontFamily: 'Nunito',
                                                   ),
-                                                  SizedBox(height: 10),
-                                                  Text(
-                                                    'Email',
-                                                    style: TextStyle(
-                                                      color: AppColors.blue,
-                                                      fontFamily: 'Nunito',
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                           const Spacer(),
                                           GestureDetector(
                                             onTap: _launchPhone,
-                                            child: Container(
-                                              child: const Column(
-                                                children: [
-                                                  Icon(
-                                                    BootstrapIcons.telephone,
+                                            child: const Column(
+                                              children: [
+                                                Icon(
+                                                  BootstrapIcons.telephone,
+                                                  color: AppColors.blue,
+                                                  size: 30,
+                                                ),
+                                                SizedBox(height: 10),
+                                                Text(
+                                                  'Phone',
+                                                  style: TextStyle(
                                                     color: AppColors.blue,
-                                                    size: 30,
+                                                    fontFamily: 'Nunito',
                                                   ),
-                                                  SizedBox(height: 10),
-                                                  Text(
-                                                    'Phone',
-                                                    style: TextStyle(
-                                                      color: AppColors.blue,
-                                                      fontFamily: 'Nunito',
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                           const Spacer(),
                                           GestureDetector(
                                             onTap: _launchWhatsapp,
-                                            child: Container(
-                                              child: const Column(
-                                                children: [
-                                                  Icon(
-                                                    BootstrapIcons.chat,
+                                            child: const Column(
+                                              children: [
+                                                Icon(
+                                                  BootstrapIcons.chat,
+                                                  color: AppColors.blue,
+                                                  size: 30,
+                                                ),
+                                                SizedBox(height: 10),
+                                                Text(
+                                                  'Message',
+                                                  style: TextStyle(
                                                     color: AppColors.blue,
-                                                    size: 30,
+                                                    fontFamily: 'Nunito',
                                                   ),
-                                                  SizedBox(height: 10),
-                                                  Text(
-                                                    'Message',
-                                                    style: TextStyle(
-                                                      color: AppColors.blue,
-                                                      fontFamily: 'Nunito',
-                                                    ),
-                                                  ),
-                                                ],
-                                              ),
+                                                ),
+                                              ],
                                             ),
                                           ),
                                         ],
@@ -205,6 +189,7 @@ class _SettingPageState extends State<SettingPage> {
                                     ],
                                   ),
                                 ),
+                                const SizedBox(height: 20),
                                 const Text(
                                   'We look forward to hearing from you!',
                                   style: TextStyle(
@@ -553,8 +538,10 @@ class _SettingPageState extends State<SettingPage> {
                                   SharedPreferences prefs =
                                       await SharedPreferences.getInstance();
                                   await prefs.clear();
+                                  // ignore: use_build_context_synchronously
                                   Navigator.of(context)
                                       .popUntil((route) => route.isFirst);
+                                  // ignore: use_build_context_synchronously
                                   Navigator.of(context).pushReplacement(
                                       MaterialPageRoute(builder: (context) {
                                     return const SplashScreen();

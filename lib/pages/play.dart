@@ -109,6 +109,7 @@ class _PlayPageState extends State<PlayPage> {
                               assetsAudioPlayer.open(
                                 Audio("assets/${widget.music}.mp3"),
                                 showNotification: true,
+                                autoStart: true,
                                 loopMode: LoopMode.single,
                               );
                             }
