@@ -9,18 +9,16 @@ import 'package:warriors/pages/privacy_policy_page.dart';
 import '../Onboarding/splash_screen.dart';
 import '../consts/app_colors.dart';
 
-class SettingPage extends StatefulWidget {
-  const SettingPage({super.key});
+class SettingPage extends StatelessWidget {
+  SettingPage({super.key});
 
-  @override
-  State<SettingPage> createState() => _SettingPageState();
-}
-
-class _SettingPageState extends State<SettingPage> {
   final Uri _whatsapp = Uri.parse('sms:+254742138012');
+
   final Uri _phone = Uri.parse('tel:+254742138012');
+
   final Uri _email = Uri.parse(
-      'mailto:info@dangakeri254.com?subject=Hello&body=Thank you for contacting Kidszoo Kenya By Climax Technologies! Please let us know how we can help you. We are starting a new revolution in E- Learning and we invite you to Join the Revolution!.');
+      'mailto:info@dangakeri254.com?subject=Hello&body=Thank you for contacting Warriors Kenya By Climax Technologies! Please let us know how we can help you. We are starting a new revolution in mental health awareness and we invite you to Join the Revolution!.');
+
   Future<void> _launchWhatsapp() async {
     if (!await launchUrl(_whatsapp)) {
       throw 'Could not launch $_whatsapp';
