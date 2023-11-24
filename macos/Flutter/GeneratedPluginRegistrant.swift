@@ -12,7 +12,7 @@ import firebase_storage
 import flutter_local_notifications
 import flutter_native_timezone
 import path_provider_foundation
-import share_plus_macos
+import share_plus
 import shared_preferences_foundation
 import url_launcher_macos
 

@@ -87,10 +87,10 @@ class NotificationsApi {
         id,
         title,
         body,
-        _scheduleDaily(const Time(7)),
+        _scheduleDaily(const Duration(seconds: 7)),
         await _notificationDetails(),
         payload: payload,
-        androidAllowWhileIdle: true,
+        // androidAllowWhileIdle: true,
         uiLocalNotificationDateInterpretation:
             UILocalNotificationDateInterpretation.absoluteTime,
         matchDateTimeComponents: DateTimeComponents.time,
@@ -107,7 +107,7 @@ class NotificationsApi {
         id,
         title,
         body,
-        _scheduleDaily(const Time(19)),
+        _scheduleDaily(const Duration(seconds: 19)),
         await _notificationDetails(),
         payload: payload,
         androidAllowWhileIdle: true,
@@ -116,7 +116,7 @@ class NotificationsApi {
         matchDateTimeComponents: DateTimeComponents.time,
       );
 
-  static tz.TZDateTime _scheduleDaily(Time time) {
+  static tz.TZDateTime _scheduleDaily(time) {
     final now = tz.TZDateTime.now(tz.local);
     final scheduleDate = tz.TZDateTime(tz.local, now.year, now.month, now.day,
         time.hour, time.minute, time.second);
